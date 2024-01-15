@@ -85,7 +85,7 @@
 \end{prop}
 
 \begin{proof}
-	On commance par noter que $K$ est intègre et donc $K[X]$ aussi.
+	On commence par noter que $K$ est intègre et donc $K[X]$ aussi.
 	Soit $I$ un idéal non nul de $K[X]$. On note $\mathcal{P}$ l'ensemble des degrés des polynômes de $I$:
 	\[\mathcal{P} = \{ \deg(P) \mid P \in I \}\]
 
@@ -97,26 +97,26 @@
 \end{proof}
 
 
-\begin{example}[Example pathologique]
+\begin{example}[Exemple pathologique]
 	$\mathbb{Z}[X]$ n'est pas principal. En effet, soit $I = <2, X>$.
 \end{example}
 
 \begin{theorem}[Propriété universelle de l'anneau de polynômes] \label{thm:prop_univ_anneau_poly}
 	\label{thm:prop_univ_anneau_poly}
-	Soit $A$ un anneau cmmutatif et $B$ un anneau. On considère $f: A \to B$ un morphisme d'anneaux.
+	Soit $A$ un anneau commutatif et $B$ un anneau. On considère $f: A \to B$ un morphisme d'anneaux.
 	Soit $b \in B$ tel que $f(a) = b$ pour tout $a \in A$. Alors il existe un unique morphisme d'anneaux
 	$\tilde{f}: A[X] \to B$ tel que $\tilde{f}(X) = b$ et $\tilde{f}_{|A} = f$.
 \end{theorem}
 
 \begin{definition}[Evaluation]
-	Soit $A$ un anneau commutatif et $a \in A$. On note $\phi_x A[X] \to A$ le morphisme d'anneaux
-	induit par le automorphisme trivial de $A$ en utilisant la propriété universelle de l'anneau de polynômes \ref{thm:prop_univ_anneau_poly}.
+	Soit $A$ un anneau commutatif et $a \in A$. On note $\phi_x: A[X] \to A$ le morphisme d'anneaux
+	induit par l'automorphisme trivial de $A$ en utilisant la propriété universelle de l'anneau de polynômes \ref{thm:prop_univ_anneau_poly}.
 
-	Ce porphisme se correspond à l'évaluation en $a$ : $\phi_x(P) = P(x)$.
+	Ce morphisme correspond à l'évaluation en $x$ : $\phi_x(P) = P(x)$.
 
 \end{definition}
 
-\begin{definition}[Polynôme a plusieurs variables]
+\begin{definition}[Polynôme a plusieurs variables / à n indeterminés]
 	Soit $A$ un anneau commutatif. On définit par récurrence sur $n \in \mathbb{N}$ l'anneau $A[X_1, \dots, X_n]$:
 	\begin{itemize}
 		\item $A[X_1] = A[X]$
@@ -140,7 +140,7 @@
 
 
 \begin{prop}
-	Soit $A$ u n anneau intègre tel que tout élément de $A\setminus\{A^{\times}\}$ est produit d'un nombre fini d'éléments irréductibles, alors les assertions suivantes sont équivalentes:
+	Soit $A$ un anneau intègre tel que tout élément de $A\setminus\{A^{\times}\}$ est produit d'un nombre fini d'éléments irréductibles, alors les assertions suivantes sont équivalentes:
 	\begin{enumerate}
 		\item $A$ est factoriel
 		\item Si $p \in A$ est irréductible, alors l'idéal $<p>$ est premier
