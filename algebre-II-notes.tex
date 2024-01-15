@@ -162,8 +162,28 @@
 
 	\[ ab \in <p>\quad  et \quad a \notin <b> \implies b \in <p> \implies <p> \text{ premier} \]
 
-	Le reste de la preuve est laissé en exercice (je n'arrive pas a bien lire ce qui est écrit dans le cours).
+\end{proof}
 
+\begin{proof}
+
+    2) $\implies$ 1):\\
+    Soit $\mathcal{P}$ un système de représentants des irréductibles. 
+	\begin{equation*}
+        u \cdot \prod_{p \in \mathcal{P}} p^{n_q} (\text{divisible par } q^{n_q} \in <q> ) = v \cdot \prod_{p \in \mathcal{P}} p^{m_q} (\text{divisible par } q^{m_q} \in <q>)
+	\end{equation*}
+	\noindent
+
+    S'il existe $q \in \mathcal{P}$ tel que $m_q > n_q$, alors $q$ divise $u \cdot \prod_{p \ne q} p^{n_q}$ ($\in <q>$), ce qui n'est pas possible par 2).
+
+\end{proof}
+
+\begin{proof}
+
+    1) $\implies$ 3):\\
+    $A$ est factoriel. Si $a$  divise $x$, on écrit $a$, $b$, $c$ sous la forme $u \cdot \prod_{p \in \mathcal{P}} p^{v_{p(x)}}$.
+    On a alors $\forall p \in \mathcal{P}$, $v_p(a) \leqslant v_p(b) \leqslant v_p(c)$ car $a$ divise $bc$.
+    Si $v_p(a) \geqslant b$, alors $v_p(b) = 0$.
+    Pour $H_p \in \mathcal{P}$, $v_p(a) \leqslant v_p(c)$, donc $a$ divise $c$, qui vérifie 3).
 
 \end{proof}
 
