@@ -96,8 +96,8 @@
 	$\mathcal{P}$ est non vide et minoré par $0$. Donc il existe $d \in \mathcal{P}$ tel que $d$ est minimal.
 	On note $Q$ un polynôme de $I$ de degré $d$. Soit $P \in I$. On réalise la division euclidienne de $P$ par $Q$:
 	\[ \exists (U, R) \in K[X] \times K[X] \mid P = UQ + R \text{ et } \deg(R) < \deg(Q) \]
-	On a que $R = P - UQ \in I$ et donc $\deg(R) \in \mathcal{P}$. Donc $\deg(R) \geq d$ par définition de $d$.
-	Donc $\deg(R) = d$ et donc $R = 0$ car $d$ est minimal. Donc $P = UQ$ et donc $I = <Q>$.
+	On a que $R = P - UQ \in I$  car $I$ est un idéal. Comme $\deg(R) < d$ et par définition $d$ est minimal pour
+    tous les éléments non nuls, on a que $R = 0$. Donc $P = UQ$ et donc $I = <Q>$.
 \end{proof}
 
 
