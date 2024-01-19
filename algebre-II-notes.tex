@@ -59,15 +59,46 @@
 
 \end{definition}
 
+\begin{definition}[Anneau intègre]
+	Un anneau $(A, +, \cdot)$ est intègre si pour tout $x, y \in A$,
+	\begin{equation*}
+		xy = 0 \implies x = 0 \quad \text{ ou } \quad y = 0
+	\end{equation*}
+\end{definition}
+
 \begin{prop}
 	Soit $A$ un anneau commutatif.
 	Soient $P, Q \in A[X]$. Alors $\deg(PQ) \leq \deg(P) + \deg(Q)$.
 	De plus, si $A$ est intègre, $\deg(PQ) = \deg(P) + \deg(Q)$.
 \end{prop}
 
+\begin{proof}
+	Soient $P=a_n x^n+\ldots+a_0$ et $Q=b_m x^m+$ $\cdots+b_0$ avec $a_n \neq 0$ et $b_m \neq 0$.
+	Ainsi, $\deg(P)=n$ et $\deg(Q)=m$. Le terme de plus haut degré dans $P Q$ vient de $a_n X^n \cdot b_m X^m=a_n \cdot b_m X^{n+m}$.
+	Par conséquent, $\deg(P Q) \leq n+m=\deg(P)+\deg(Q)$.
+
+	Si A est intègre, alors $a_n b_m \neq 0$ si $a_n \neq 0$ et $b_m \neq 0$. Ainsi:
+	$$
+		\deg(P Q)=n+m=\deg(P)+\deg(Q).
+	$$
+\end{proof}
+
 \begin{coro}
 	$A[X]$ intègre $\iff A$ intègre.
 \end{coro}
+
+\begin{proof}
+	$\Rightarrow$ c'est immédiat, car un sous-anneau d'un anneau intègre est intègre.
+
+$\Leftarrow$ Si $A$ trivial, alors $A[X]$ intègre est évident.
+Soient $P, Q \in A[X]$ non nuls. on a donc $\deg(P) \geqslant 0$ et $\deg(Q) \geqslant 0$.
+	Mais alors, on a :
+	$$
+		\deg(P Q)=\deg(P)+\deg(Q) \geqslant 0, \text{par la proposition précédente}
+	$$
+
+	Ce qui entraine que $P Q$ est non nul, d'où l'intégrité de $A[X]$.
+\end{proof}
 
 \begin{example}
 	$\mathbb{F}_p=\mathbb{Z}/p\mathbb{Z}$ est intègre, donc $\mathbb{F}_p[X] = \mathbb{Z}/p\mathbb{Z}[X]$ est intègre
