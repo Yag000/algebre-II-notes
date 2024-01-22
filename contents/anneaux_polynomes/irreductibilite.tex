@@ -25,7 +25,7 @@
 	Soit $P \in \mathbb[R][X]$ irréductible alors:
 	\begin{itemize}
 		\item Soit $\deg P = 1$.
-		\item Soit $\deg P = 2$ et $P$ n'admet ps de racines dans $\mathbb{R}$.
+		\item Soit $\deg P = 2$ et $P$ n'admet pas de racines dans $\mathbb{R}$.
 	\end{itemize}
 \end{prop}
 
@@ -49,27 +49,27 @@
 \end{exemple}
 
 \begin{exemple}
-    $k = \mathbb{q}, p = (x^2 + 2 )$ n'a pas de racines, donc irréductible dans $\mathbb{q}[x]$, mais il a des racines sur $\mathbb{r}[x]$, donc pas irrédutible sur $\mathbb{r}[x]$.
+	$k = \mathbb{q}, p = (x^2 + 2 )$ n'a pas de racines, donc irréductible dans $\mathbb{q}[x]$, mais il a des racines sur $\mathbb{r}[x]$, donc pas irrédutible sur $\mathbb{r}[x]$.
 \end{exemple}
 
 
 \begin{theorem}[Critère d'Eisenstein]
-    Soit $A$ un anneau factoriel, $P$ un polynôme  de $A[X]$ de degré $\geq 1$, $p$ un irréductible de $A$.
-    On écrit $P = \sum_{i=0}^n a_iX^i$ avec $a_i \neq 0$ si on a les trois propriétés suivantes: 
-    \begin{itemize}
-        \item $p$ ne divise pas $a_n$
-        \item $p$ divise pas $a_k \forall k < n$
-        \item $p^2$ ne divise pas $a_0$
-    \end{itemize}
-    Alors $P$ est irréductible dans $K[X]$(avec $K$ corps des fractions).
+	Soit $A$ un anneau factoriel, $P$ un polynôme  de $A[X]$ de degré $\geq 1$, $p$ un irréductible de $A$.
+	On écrit $P = \sum_{i=0}^n a_iX^i$ avec $a_i \neq 0$ si on a les trois propriétés suivantes:
+	\begin{itemize}
+		\item $p$ ne divise pas $a_n$
+		\item $p$ divise pas $a_k \forall k < n$
+		\item $p^2$ ne divise pas $a_0$
+	\end{itemize}
+	Alors $P$ est irréductible dans $K[X]$(avec $K$ corps des fractions).
 \end{theorem}
 
 \begin{exemple}
-    $P(X) = X^5 + 2X^4 + 2024X + 6\in \mathbb{Q}[X]$. On a que $P$ est 2-eisenstein et donc irréductible.
+	$P(X) = X^5 + 2X^4 + 2024X + 6\in \mathbb{Q}[X]$. On a que $P$ est 2-eisenstein et donc irréductible.
 \end{exemple}
 
 
 
 \begin{coro}
-    Si de plus $P$ est primitif de $A[X]$, alors $P$ est irréductible dans $A[X]$.
+	Si de plus $P$ est primitif de $A[X]$, alors $P$ est irréductible dans $A[X]$.
 \end{coro}
