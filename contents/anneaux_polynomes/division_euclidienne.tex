@@ -27,9 +27,9 @@
 \end{proof}
 
 
-\begin{example}[Exemple pathologique]
+\begin{exemple}[Exemple pathologique]
 	$\mathbb{Z}[X]$ n'est pas principal. En effet, soit $I = <2, X>$.
-\end{example}
+\end{exemple}
 
 \begin{theorem}[Propriété universelle de l'anneau de polynômes] \label{thm:prop_univ_anneau_poly}
 	\label{thm:prop_univ_anneau_poly}
@@ -59,7 +59,8 @@
 	Soit $A$ un anneau commutatif. On dit que $A$ est factoriel si:
 	\begin{itemize}
 		\item $A$ est intègre
-		\item Tout élément non nul de $A$ est inversible ou est produit d'un nombre fini d'éléments irréductibles ( $a = u p_1 \dots p_n$ avec $u$ inversible et $p_i$ irréductible)
+		\item Tout élément non nul de $A$ est inversible ou est produit d'un nombre fini
+		      d'éléments irréductibles ( $a = u p_1 \dots p_n$ avec $u$ inversible et $p_i$ irréductible)
 		\item La décomposition est unique à l'ordre près et à l'association près.
 	\end{itemize}
 \end{definition}
@@ -112,3 +113,177 @@
 	Pour $H_p \in \mathcal{P}$, $v_p(a) \leqslant v_p(c)$, donc $a$ divise $c$, qui vérifie 3).
 
 \end{proof}
+
+
+\begin{definition}[pgcd]
+	Le plus grand commun diviseur est défini ainsi:
+
+	$$d = pgcd (a,d), \forall \text{diviseur de } \quad     b \text{divize} d$$
+	et $d$ divise $a$ et $b$
+\end{definition}
+
+\begin{prop}
+	Si $A$ est un anneau factoriel, alors deux element snon nuls de $A$ admettent un $pgcd$ défini à un facteur inversible pres.
+\end{prop}
+
+\begin{proof}
+	Soit $\mathcal{P}$ un système de réprésenatnts de irréductiobles de $A$.
+	On écrit
+	$$ a = u \prod\limits_{p \in \mathcal{P} } p^{n_p} \text{ou} u \in A^\times $$
+	$$ b = v \prod \limits_{p \in \mathcal{P} } p^{m_p} \text{ou} u \in A^\times $$
+	$$ pgcd(a,b)= \prod \limits_{p \in \mathcal{P}} p^{\min{m_p, m_p}} \text{ou} u \in A^\times $$
+	à facteur $\omega \in A^\times$ près
+\end{proof}
+
+\begin{exemple}
+	$$A  = \mathbb{Z}, \quad  pgcd(-6,2) = 2\quad \text{ou}\quad -2$$
+\end{exemple}
+
+\begin{theorem}[admis]
+	$A$  principal $\implies A$ factoriel
+\end{theorem}
+
+\begin{prop}
+	Dans un anneau principal on écrit
+	$$ <a,b> = <d>, \quad \text{ou}\quad d = pgcd (a,b) $$
+\end{prop}
+
+\begin{definition}
+	Soit $A$ un anneau factoriel, et $P \in A[X]$, le contenu (notée $c(P)$) dún polynôme $P$ est le
+	$pgcd$ de ses coéfficients non nuls.
+	$P$ est dit primitif si $c(P)=1$ ( ou $c(P) \in A^\times$)
+\end{definition}
+
+
+\begin{exemple}
+	$$A  = \mathbb{Z}, \quad  c(3X + 2) = 1$$
+	$$A  = \mathbb{Z}, \quad  c(14X^2 + 24X + 2) = 2$$
+\end{exemple}
+
+\begin{remarque}
+	Si $K$ est un corps, il y a un seul idéal non nul, qui est $K$ et donc
+	tous les $pgcd$ valent $1$.
+\end{remarque}
+
+\begin{lemme}
+	Pour tout $P,Q \in A[X]$ on a
+	$$ c(PQ) = c(P)c(Q)$$
+	à facteur $\in A^\times$ près.
+\end{lemme}
+
+\begin{proof}
+	Commençons par montrer que $P$ et $Q$ primitifs implique $PQ$ primitif. \\
+	Sinon, il existe un irréductible $p \in A $ tel que $p$ divise tous les coéfficients de $PQ$.
+	Supposons que $P$ et $Q$ sont primitifs.
+
+	On a $P = \sum a_iX^i$ et  $Q = \sum b_jX^j$
+
+	On a que $$D = \{i | p \text{ne divise pas } a_i \}$$ n'est pas vide. Si $D$ st vide alors $p | ai \forall i \implies p | c(P)$.
+	On note $i_0$ l'indice minimal tel que $a_{i_0}$ ne soit pas divisible par $p$.
+	On note $j_0$ l'indice minimal tel que $b_{j_0}$ ne soit pas divisible par $p$.
+
+	$$\forall i, \, 0 \leq i \leq i_0\,, p | a_i$$
+	$$\forall j, \, 0 \leq j \leq j_0\,, p | b_j$$
+
+
+	le coéfficent de degré $i_0 \neq j_j0$ de
+	\begin{eqnarray*}
+		PQ &=& \sum\limits^{i_0 + j_0}_{k=0 a_k b_{i_0 + j_0 - k}} \\
+		&=& a_{i_0}b_{j_0} + \text{un multiple de } p
+	\end{eqnarray*}
+	Si $k \neq i_0$, soit  $k\leq i_0 -1$ soit $i_0+j_o - \leq j_0 -1$ et donc $ p | a_kb_{i_0 + j_0 - }$
+	TODO: AJOUTER EXPLICATION EXTRA (en ahut a gauche du tableau)
+	Donc le coeéfficient de degré $i_0+j_0$ de $PQ$ n'est pas divisible par $p$ ce qui contredit les hypotèses.
+
+	Donc on a $P$ et $Q$ primitif $\implies$ $PQ$ primitif.
+	Dans le cas géneral
+	\begin{eqnarray*}
+		c(PQ) &=& c(\frac{P}{c(P)}\frac{Q}{c(Q))}c(P)c(Q))\\
+		&=& c(\frac{P}{c(P))}\frac{Q}{c(Q))}c(P)c(Q)\\
+		&=& c(P)c(Q)
+	\end{eqnarray*}
+	car $\frac{P}{c(P))}$ sest un polynome primitif de $A[X]$ et
+	$pgcd(ka, kb) = k pgcd(a,b)$ et donc $c(kP) = kc(P)$.
+\end{proof}
+
+
+\begin{definition}[Corps de fraction]
+	Soit $A$ un anneau  commutatif intègre.
+	On introduit $E = \left\{ (a,b) \in A\times A | b \neq 0 \right\}$ %TODO FIX
+	On munit  $E$ de 2 lois internes:
+	\begin{itemize}
+		\item $\times : (a,b) \times (a', b') = (aa',bb')$.
+		\item $+ : (a,b) + (a', b') = (ab' + ba',bb')$.
+	\end{itemize}
+
+	On définit une relation d'équivalence $~$:
+	$$ (a,b) ~ (a',b') \iff ab' = a'b $$
+
+	Alors $K/~$ (les classes d'équivalence de $E$ sur $~$) est un corps et $A$ se plonge dans $K$ avec:
+	$$ a \in A  \mapsto (a,1 )$$ %TODO: Add overline 
+\end{definition}
+
+
+
+\begin{exemple}
+	\begin{itemize}
+		\item $Frac(\mathbb(Z)) = \mathbb{Q}$
+		\item $Frac(\mathbb(K[X])) = K(X)$
+	\end{itemize}
+\end{exemple}
+
+
+\begin{exemple}
+	$2X^2 + 2X +2$ n'est pas irréductible dans $\mathbb{Z}[X]$ mais il est irréductible dans $\mathbb{Q}[X] (2 \in \mathbb{Q}^\times)$.
+\end{exemple}
+
+
+\begin{theorem}[Clasification des irréductibles dans A[X]]
+	Soit $A$ un anneau factoriel de corps de fraction $K$.
+	Alors le irréductibles de $A[X]$ sont de deux types:
+	\begin{itemize}
+		\item Le polynômes constants $P = p, \, p \text{irréductible dans } A$.
+		\item Le polynômes primitifs de $\deg \geq 1 $ qui sontirréductibles dans $K[X]$.
+	\end{itemize}
+\end{theorem}
+
+
+\begin{proof}
+	Comme $A[X]times = A^\times$
+	Si $P$ est constant, i.e. $P = p \in A$,
+	Alors
+	$$ P \text{inversible} \iff p \text{inversible dans} A $$
+
+	Si $P$ primitif aec $\deg \geq 1$ dans $A[X]$, qui est irréductible dans $K[X]$, on écrit
+	$P = QR$, avec $Q,R \in A[X]$.
+	on a que
+	$c(P) = c(Q) c(R) \in A^\times$ donc $c(Q) \in A^\times$ et $c(R) \in A^\times$.
+	La relation $P = QR \in K[X]$ implique que $Q$ et $R$ snt de dégré 0 (car P primitif).
+	Comme ils sont primitifs, $Q$ et $R \in A^\times \implies \in A[X]^\times$
+	donc $P$ est irréductible dans $A[X]$.
+
+
+	Soit $P$ irréductiible de $A[X]$ avec $\deg \geq 1$.
+	Alors $c(P)$ divise $P$ donc $c(P) \in A^\times \implies P$ primitif.
+	Montrns $P$ irréductible dans $K[X]$.
+
+	On écrit $P = QR $ avec $Q,R \in K[X]$ On choisit $a,b \in A$ tel que $aQ \in A[X]$ et  $bR \in A[X]$.
+	On a donc que
+
+	\begin{eqnarray*}
+		abP &=& aQbR \\
+		c(aQ)c(bR) &=& c(abP) \\
+		&=& ab
+	\end{eqnarray*}
+
+	$$P = \frac{aQ}{c(aQ)} \frac{bR}{c(bR)} $$
+	donc $P$ produit de deux éléments de $A[X]$, donc comme P irréductible dans
+	$A[X]$ on a : $$ \deg (Q)= 0 \text{ou} \deg(R) = 0 $$
+\end{proof}
+
+
+\begin{theorem} [Admis]
+	$A$ factoriel $\implies$ $A[X]$ factoriel.
+\end{theorem}
+
+
