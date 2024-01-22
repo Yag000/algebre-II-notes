@@ -1,64 +1,55 @@
 \subsection{Critères d'irréductibilité dan $K[X]$}
 
-
 \begin{prop}
 	Un polynôme de degré 1 dans $K[X]$ est irréductible dans $K[X]$.
 \end{prop}
 
 \begin{proof}
 	Si $P = QR$ on a $ 1 = \deg(P) = \deg(Q) + \deg(R)$, donc $Q$ ou $R$ est de dégré 0, donc c'est un inversible.
-\end{proof}:
-
+\end{proof}
 
 \begin{theorem}[d'Alambert-Gauss]
 	Les irréductibles de $\mathbb{C}[X]$ sont les polynômes de degré 1.
 \end{theorem}
 
-
 \begin{proof}
 	Tout polynôme $P\in \mathbb{C}[X]$ de degré $\geq 1$ admet $\alpha \in \mathbb{C}$ racine et donc $X-\alpha$ divise $P$.
 \end{proof}
 
-
-
 \begin{prop}
-	Soit $P \in \mathbb[R][X]$ irréductible alors:
+	Soit $P \in \mathbb{R}[X]$ irréductible alors:
 	\begin{itemize}
 		\item Soit $\deg P = 1$.
 		\item Soit $\deg P = 2$ et $P$ n'admet pas de racines dans $\mathbb{R}$.
 	\end{itemize}
 \end{prop}
 
-
 \begin{proof}
-	$P(\alpha) = 0 \implies P(\alpha) = 0$ %TODO overline
-	Sur $\mathbb{C} \setminus \mathbb{R}, \, (X- \alpha) (X- \alpha) = X ^2(\alpha + \alpha)X + \alpha\alpha \in \mathbb{R}[X]$ %TODO overline
+	$P(\alpha) = 0 \implies P(\bar{\alpha}) = 0$
+	dur $\mathbb{C} \setminus \mathbb{R}, \, (X- \alpha) (X- \bar{\alpha}) = X ^2(\alpha + \bar{\alpha})X +
+		\alpha\bar{\alpha} \in \mathbb{R}[X]$
 	et divise $P$.
 \end{proof}
-
-
 
 \begin{prop}
 	Soit $P \in K[X]$ de degré 2 ou 3,
 	$P$ est irréductible dans $K[X]$ $\iff$ $P$ n'admet pas de racines dans $K$.
 \end{prop}
 
-
 \begin{exemple}[contre-exemple]
-	$K = \mathbb{R}, P = (X^2 + 1 )^2$ n'a pas de racines dans $\mathbb{R}$, mais iln'est pas irréductible $(\deg P = 4 > 3)$.
+	$K = \mathbb{R}, P = (X^2 + 1 )^2$ n'a pas de racines dans $\mathbb{R}$, mais il n'est pas irréductible $(\deg P = 4 > 3)$.
 \end{exemple}
 
 \begin{exemple}
 	$k = \mathbb{Q}, \,p = (x^2 + 2 )$ n'a pas de racines, donc irréductible dans $\mathbb{Q}[x]$, mais il a des racines sur $\mathbb{R}[x]$, donc pas irrédutible sur $\mathbb{R}[x]$.
 \end{exemple}
 
-
 \begin{theorem}[Critère d'Eisenstein]
 	Soit $A$ un anneau factoriel, $P$ un polynôme  de $A[X]$ de degré $\geq 1$, $p$ un irréductible de $A$.
-	On écrit $P = \sum_{i=0}^n a_iX^i$ avec $a_i \neq 0$ si on a les trois propriétés suivantes:
+	On écrit $P = \sum\limits_{i=0}^n a_iX^i$ avec $a_i \neq 0$. Si on a les trois propriétés suivantes:
 	\begin{itemize}
 		\item $p$ ne divise pas $a_n$
-		\item $p$ divise pas $a_k \forall k < n$
+		\item $p$ divise pas $a_k \ \forall \ k < n$
 		\item $p^2$ ne divise pas $a_0$
 	\end{itemize}
 	Alors $P$ est irréductible dans $K[X]$(avec $K$ corps des fractions).
@@ -67,8 +58,6 @@
 \begin{exemple}
 	$P(X) = X^5 + 2X^4 + 2024X + 6\in \mathbb{Q}[X]$. On a que $P$ est 2-eisenstein et donc irréductible.
 \end{exemple}
-
-
 
 \begin{coro}
 	Si de plus $P$ est primitif de $A[X]$, alors $P$ est irréductible dans $A[X]$.

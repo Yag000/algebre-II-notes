@@ -65,7 +65,7 @@
 	\end{itemize}
 \end{definition}
 
-\begin{prop}
+\begin{prop}[Admis]
 	Soit $A$ un anneau factoriel. Alors $A[X]$ est factoriel.
 \end{prop}
 
@@ -204,8 +204,8 @@
 
 \begin{definition}[Corps de fraction]
 	Soit $A$ un anneau  commutatif intègre.
-	On introduit 
-    $$E = \left\{ (a,b) \in A\times A | b \neq 0 \right\}$$
+	On introduit
+	$$E = \left\{ (a,b) \in A\times A | b \neq 0 \right\}$$
 	On munit  $E$ de 2 lois internes:
 	\begin{itemize}
 		\item $\times : (a,b) \times (a', b') = (aa',bb')$.
@@ -216,7 +216,7 @@
 	$$ (a,b) \backsim  (a',b') \iff ab' = a'b $$
 
 	Alors $K/\backsim $ (les classes d'équivalence de $E$ sur $\backsim$) est un corps et $A$ se plonge dans $K$ avec:
-    $$ a \in A  \mapsto \overline{(a,1)}$$
+	$$ a \in A  \mapsto \overline{(a,1)}$$
 \end{definition}
 
 
@@ -234,12 +234,12 @@
 \end{exemple}
 
 
-\begin{theorem}[Clasification des irréductibles dans A[X]]
+\begin{theorem}[Clasification des irréductibles]
 	Soit $A$ un anneau factoriel de corps de fraction $K$.
 	Alors le irréductibles de $A[X]$ sont de deux types:
 	\begin{itemize}
-		\item Le polynômes constants $P = p, \, p \text{irréductible dans } A$.
-		\item Le polynômes primitifs de $\deg \geq 1 $ qui sontirréductibles dans $K[X]$.
+		\item Le polynômes constants $P = p$,  $p$ irréductible dans $A$.
+		\item Le polynômes primitifs de $\deg \geq 1 $ qui sont irréductibles dans $K[X]$.
 	\end{itemize}
 \end{theorem}
 
@@ -248,38 +248,31 @@
 	Comme $A[X]times = A^\times$
 	Si $P$ est constant, i.e. $P = p \in A$,
 	Alors
+
 	$$ P \text{inversible} \iff p \text{inversible dans} A $$
 
-	Si $P$ primitif aec $\deg \geq 1$ dans $A[X]$, qui est irréductible dans $K[X]$, on écrit
+	Si $P$ primitif avec $\deg \geq 1$ dans $A[X]$, qui est irréductible dans $K[X]$, on écrit
 	$P = QR$, avec $Q,R \in A[X]$.
-	on a que
-	$c(P) = c(Q) c(R) \in A^\times$ donc $c(Q) \in A^\times$ et $c(R) \in A^\times$.
-	La relation $P = QR \in K[X]$ implique que $Q$ et $R$ snt de dégré 0 (car P primitif).
+
+	On a que $c(P) = c(Q) c(R) \in A^\times$ donc $c(Q) \in A^\times$ et $c(R) \in A^\times$.
+	La relation $P = QR \in K[X]$ implique que $Q$ et $R$ sont de dégré 0 (car $P$ primitif).
 	Comme ils sont primitifs, $Q$ et $R \in A^\times \implies \in A[X]^\times$
 	donc $P$ est irréductible dans $A[X]$.
 
 
 	Soit $P$ irréductiible de $A[X]$ avec $\deg \geq 1$.
 	Alors $c(P)$ divise $P$ donc $c(P) \in A^\times \implies P$ primitif.
-	Montrns $P$ irréductible dans $K[X]$.
+
+	Montrons $P$ irréductible dans $K[X]$.
 
 	On écrit $P = QR $ avec $Q,R \in K[X]$ On choisit $a,b \in A$ tel que $aQ \in A[X]$ et  $bR \in A[X]$.
 	On a donc que
-
 	\begin{eqnarray*}
 		abP &=& aQbR \\
 		c(aQ)c(bR) &=& c(abP) \\
 		&=& ab
 	\end{eqnarray*}
-
 	$$P = \frac{aQ}{c(aQ)} \frac{bR}{c(bR)} $$
 	donc $P$ produit de deux éléments de $A[X]$, donc comme P irréductible dans
-	$A[X]$ on a : $$ \deg (Q)= 0 \text{ou} \deg(R) = 0 $$
+	$A[X]$ on a : $$ \deg (Q)= 0 \ \text{ou}\  \deg(R) = 0 $$
 \end{proof}
-
-
-\begin{theorem} [Admis]
-	$A$ factoriel $\implies$ $A[X]$ factoriel.
-\end{theorem}
-
-
