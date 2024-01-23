@@ -128,9 +128,9 @@
 \begin{proof}
 	Soit $\mathcal{P}$ un système de réprésentants des irréductiobles de $A$.
 	On écrit
-	$$ a = u \prod\limits_{p \in \mathcal{P} } p^{n_p} \ \text{ou}\  u \in A^\times $$
-	$$ b = v \prod \limits_{p \in \mathcal{P} } p^{m_p} \ \text{ou}\  u \in A^\times $$
-	$$ pgcd(a,b)= \prod \limits_{p \in \mathcal{P}} p^{\min(m_p, m_p)}\  \text{ou} \  u \in A^\times $$
+	$$ a = u \prod\limits_{p \in \mathcal{P} } p^{n_p} \ \text{où}\  u \in A^\times $$
+	$$ b = v \prod \limits_{p \in \mathcal{P} } p^{m_p} \ \text{où}\  v \in A^\times $$
+	$$ pgcd(a,b)= \prod \limits_{p \in \mathcal{P}} p^{\min(m_p, m_p)}\  \text{où} \  u \in A^\times $$
 	à facteur $\omega \in A^\times$ près
 \end{proof}
 
@@ -144,7 +144,7 @@
 
 \begin{prop}
 	Dans un anneau principal on écrit
-	$$ <a,b> \ = \  <d>, \quad \text{ou}\quad d = pgcd (a,b) $$
+	$$ <a,b> \ = \  <d>, \quad \text{où}\quad d = pgcd (a,b) $$
 \end{prop}
 
 \begin{definition}
@@ -164,7 +164,7 @@
 	tous les $pgcd$ valent $1$.
 \end{remarque}
 
-\begin{lemma}
+\begin{lemma}[Lemme de Gauss]
 	Pour tout $P,Q \in A[X]$ on a
 	$$ c(PQ) = c(P)c(Q)$$
 	à facteur inversible près.
@@ -172,7 +172,7 @@
 
 \begin{proof}
 	Commençons par montrer que $P$ et $Q$ primitifs implique $PQ$ primitif. \\
-	Sinon, il existe un irréductible $p \in A $ tel que $p$ divise tous les coéfficients de $PQ$. \\
+	Sinon, il existe un irréductible $p \in A $ tel que $p$ divise tous les coefficients de $PQ$. \\
 
 	Supposons que $P$ et $Q$ sont primitifs. On pose $P = \sum a_iX^i$ et  $Q = \sum b_jX^j$
 	On a que $$D = \{i \,|\, p\  \text{ne divise pas}\  a_i \}$$ n'est pas vide, car si $D$ est vide alors $ \forall\  i,\, p \,|\, a_i \implies p | c(P)$.
@@ -245,18 +245,18 @@
 
 
 \begin{proof}
-	Comme $A[X]times = A^\times$
+	Comme $A[X]^\times = A^\times$
 	Si $P$ est constant, i.e. $P = p \in A$,
 	Alors
 
-	$$ P \text{inversible} \iff p \text{inversible dans} A $$
+	$$ P \text{ inversible } \iff p \text{ inversible dans } A $$
 
 	Si $P$ primitif avec $\deg \geq 1$ dans $A[X]$, qui est irréductible dans $K[X]$, on écrit
 	$P = QR$, avec $Q,R \in A[X]$.
 
 	On a que $c(P) = c(Q) c(R) \in A^\times$ donc $c(Q) \in A^\times$ et $c(R) \in A^\times$.
 	La relation $P = QR \in K[X]$ implique que $Q$ et $R$ sont de dégré 0 (car $P$ primitif).
-	Comme ils sont primitifs, $Q$ et $R \in A^\times \implies \in A[X]^\times$
+	Comme ils sont primitifs, $Q$ ou $R \in A^\times \implies \in A[X]^\times$
 	donc $P$ est irréductible dans $A[X]$.
 
 
