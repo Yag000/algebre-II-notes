@@ -9,11 +9,11 @@
 \end{proof}
 
 \begin{theorem}[d'Alambert-Gauss]
-	Les irréductibles de $\mathbb{C}[X]$ sont les polynômes de degré 1.
+	Les irréductibles de $\CX$ sont les polynômes de degré 1.
 \end{theorem}
 
 \begin{proof}
-	Tout polynôme $P\in \mathbb{C}[X]$ de degré $\geq 1$ admet $\alpha \in \mathbb{C}$ racine et donc $X-\alpha$ divise $P$.
+	Tout polynôme $P\in \CX$ de degré $\geq 1$ admet $\alpha \in \C$ racine et donc $X-\alpha$ divise $P$.
 \end{proof}
 
 \begin{prop}
@@ -26,8 +26,8 @@
 
 \begin{proof}
 	$P(\alpha) = 0 \implies P(\bar{\alpha}) = 0$
-	sur $\mathbb{C} \setminus \mathbb{R}, \, (X- \alpha) (X- \bar{\alpha}) = X ^2 - (\alpha + \bar{\alpha})X +
-		\alpha\bar{\alpha} \in \mathbb{R}[X]$
+	sur $\C \setminus \R, \, (X- \alpha) (X- \bar{\alpha}) = X ^2 - (\alpha + \bar{\alpha})X +
+		\alpha\bar{\alpha} \in \RX$
 	et divise $P$.
 \end{proof}
 
@@ -37,15 +37,15 @@
 \end{prop}
 
 \begin{example}[contre-exemple]
-	$K = \mathbb{R}, P = (X^2 + 1 )^2$ n'a pas de racines dans $\mathbb{R}$, mais il n'est pas irréductible $(\deg P = 4 > 3)$.
+	$K = \R, P = (X^2 + 1 )^2$ n'a pas de racines dans $\R$, mais il n'est pas irréductible $(\deg P = 4 > 3)$.
 \end{example}
 
 \begin{example}
-	$k = \mathbb{Q}, \,p = (x^2 + 2 )$ n'a pas de racines, donc irréductible dans $\mathbb{Q}[X]$, mais il a des racines sur $\mathbb{R}[X]$, donc pas irrédutible sur $\mathbb{R}[X]$.
+	$k = \Q, \,p = (x^2 + 2 )$ n'a pas de racines, donc irréductible dans $\QX$, mais il a des racines sur $\RX$, donc pas irrédutible sur $\RX$.
 \end{example}
 
 \begin{theorem}[Critère d'Eisenstein]
-	Soit $A$ un anneau factoriel, $P$ un polynôme  de $A[X]$ de degré $\geq 1$, $p$ un irréductible de $A$.
+	Soit $A$ un anneau factoriel, $P$ un polynôme  de $\AX$ de degré $\geq 1$, $p$ un irréductible de $A$.
 	On écrit $P = \sum\limits_{i=0}^n a_iX^i$ avec $a_i \neq 0$. Si on a les trois propriétés suivantes:
 	\begin{itemize}
 		\item $p$ ne divise pas $a_n$
@@ -56,9 +56,9 @@
 \end{theorem}
 
 \begin{example}
-	$P(X) = X^5 + 2X^4 + 2024X + 6\in \mathbb{Q}[X]$. On a que $P$ est 2-eisenstein et donc irréductible.
+	$P(X) = X^5 + 2X^4 + 2024X + 6\in \QX$. On a que $P$ est 2-eisenstein et donc irréductible.
 \end{example}
 
 \begin{coro}
-	Si de plus $P$ est primitif de $A[X]$, alors $P$ est irréductible dans $A[X]$.
+	Si de plus $P$ est primitif de $\AX$, alors $P$ est irréductible dans $A[X]$.
 \end{coro}
