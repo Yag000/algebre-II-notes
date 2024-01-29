@@ -1,0 +1,129 @@
+\subsection{Fonctions polynomiales}
+
+\begin{definition}[Fonction polynomiale]
+	Soit $P \in A[X]$, $P = \sum\limits_{i=0}^n a_iX^i$.
+	On appelle fonction polynomiale associée à $P$ la fonction de $A$ dans $A$ définie par:
+	$\Pt(x): \sum\limits_{i=0}^n a_ix^i$.
+\end{definition}
+
+\begin{example}
+	$A = \Zn{p}$, $P = X^p - X$, avec $p$ premier.
+	Alors $$\Pt(x) = x^p - x = 0 \text{ petit théorème de Fermat}$$.
+	Donc $\Pt$ est nulle sur $\Zn{p}$ mais $P$ n'est pas nul dans $\Zn{p}[X]$.
+\end{example}
+
+\begin{prop}
+	Soient $P,Q$ deux polynômes de $A[X]$.
+	\begin{itemize}
+		\item $\Pt + \Qt = \widetilde{P+Q}$
+		\item $\Pt \cdot \Qt = \widetilde{P \cdot Q}$
+	\end{itemize}
+	Et l'application $P \mapsto \Pt$ est un morphisme d'anneaux de $A[X]$ dans l'anneau des fonctions applications polynomiales.
+	(En général il n'est pas injectif, voire exemple ci-dessus).
+\end{prop}
+
+
+\begin{definition}[Polynôme composé]
+	Soit $P = \sum\limits_{i=0}^n a_iX^i \in A[X]$ un polynôme de $A[X]$. et $Q \in A[X]$.
+	On appelle le polynome composé de $P$ par $Q$ le polynôme $$P(Q) = a_nQ^n + a_{n-1}Q^{n-1} + \dots + a_0$$
+	(On remplace l'indéterminée $X$ par le polynôme $Q$).
+\end{definition}
+
+\begin{prop}
+	$\tilde{P(Q)} = \Pt \circ \Qt$
+\end{prop}
+
+\noindent
+Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
+
+\begin{definition}[Racine d'un polynôme]
+	Soit $P \in A[X]$. On dit que $a \in A$ est une racine e $P$ si et seulement si $P(a) = 0$.
+\end{definition}
+
+\begin{prop}
+	$$ p(a) = 0 \iff (X-a) \mid P \text{ dans } A[X]$$
+\end{prop}
+
+\begin{proof}
+	\begin{itemize}
+		\item Si $P = (X-a)Q$, avec $Q \in A[X]$, alors $P(a) = 0$.
+		\item Réciproquement, si $P(a) = 0$
+		      \begin{eqnarray*}
+			      P(X) &=& \sum_{i=0}^n b_iX^i \\
+			      &=& \sum_{i=0}^n b_i(X)^i  - P(a), \ \text{car}  \ P(a) = 0 \\
+			      &=& \sum_{i=0}^n b_i(X^i-a^i)
+		      \end{eqnarray*}
+		      On a que $X^i - a^i = (X-a)(X^{i-1} + X^{i-2}a + \dots + Xa^{i-2} + a^{i-1})$. %TODO: Add explanation
+		      Donc $X-a$ divise $P$.
+	\end{itemize}
+\end{proof}
+
+\begin{definition}[Multiplicité d'une racine]
+	On dit que $a \in A$ est une racine de $P$ de multiplicité $m$ si et seulement si $(X-a)^m \mid P$ et $(X-a)^{m+1} \nmid P$.
+\end{definition}
+
+\begin{prop}
+	Sit $A$ est un anneau intègre, alors $P \in A[X]$ admet au plus $\deg(P)$ racines distinctes dans $A$.
+\end{prop}
+
+\begin{proof}
+	On montre par récurrence sur $n = \deg(P)$ que $\sum\limits_{a \in A} m_p(a) \leq n$, ou $m_p(a)$ est la multiplicité de $a$ dans $P$.
+
+	\begin{itemize}
+		\item Initialisation: $n = 0$, $P = a_0 \in A$, $a_0 \neq 0$.
+		      Alors $P$ n'a pas de racines dans $A$.
+		\item Hérédité: Supposons que $\sum\limits_{a \in A} m_p(a) \leq n$. Soit $P \in A[X]$ de degré $n+1$.
+		      \begin{itemize}
+			      \item Premier cas, $P$ n'a pas de racines dans $A$.
+			            Alors $\sum\limits_{a \in A} m_p(a) = 0 \leq n+1$.
+			      \item Deuxième cas, il existe $b \in A$ tel que $P(b) = 0$
+			            Alors il existe $Q \in A[X]$ tel que $P = (X-b)Q$
+			            et $\deg(Q) = n$. De plus
+			            $$ m_P(a) = \left\{ \begin{array}{ll}
+					            m_Q(a) + 1 & \text{si } a = b \\
+					            m_Q(a)     & \text{sinon}
+				            \end{array} \right. $$
+			            et donc $\sum\limits_{a \in A} m_P(a) = \sum\limits_{a \in A} m_Q(a) + 1 \leq n+1$.
+		      \end{itemize}
+
+		      On a montré donc le résultat par récurrence.
+	\end{itemize}
+
+	Si $A = \C$ l'inégalité est une égalité.
+\end{proof}
+
+\begin{coro}
+	Si $A$ est intègre et possède un nombre infini d'éléments, alors les polynômes de $A[X]$ sont entièrement déterminés par leur fonctions polynomiales associées.
+\end{coro}
+
+\begin{definition}[Dérivée d'un polynôme]
+
+	Soit $P \in A[X]$, $P = \sum\limits_{i=0}^n a_iX^i$.
+	On appelle dérivée de $P$ le polynôme $P' = \sum\limits_{i=1}^n ia_iX^{i-1}$.
+	Et on définit par récurrence $P^{(k)} = (P^{(k-1)})'$ et $P^{(0)} = P$.
+\end{definition}
+
+\begin{prop}
+	On a la relation suivante:
+	$$ (PQ)' = P'Q + PQ' $$
+\end{prop}
+
+\begin{lemma}
+	Soit $A$ un anneau intègre, $P \in A[X]$ et $a \in A$.
+	Alors :
+	$$ m_p(a) = n \implies P^{(k)}(a) = 0 , \, \forall\, 0 \leq k \leq n-1$$
+\end{lemma}
+
+\begin{proof}
+	On démontre le résultat par récurrence sur $n$, la multiplicité de $a$ dans $P$.
+	\begin{itemize}
+		\item Initilisation: Pour $n = 1$, $X-a \mid P$ et donc $P(a) = 0$
+		\item Posons $n$ tel que c'est vrai pour tout polyonôme de multiplicité $n$.
+		      Soit $P$ tel ue $m_p(a) = n+1$. Il existe $Q \in A[X]$ tel que $P = (X-a)^{n+1}Q$.
+		      $$P' = (n+1)(X-a)^nQ + (X-a)^{n+1}Q' = (X-a)^n((n+1)Q + (X-a)Q')$$
+		      Comme $Q(a) \neq 0$, on applique l'hypothèse de récurrence à $P$ et on obtient que
+		      $$ \forall k \leq n-1 \quad (P')^{(k)}(a) = P^{(k+1)}(a) = 0 $$
+	\end{itemize}
+\end{proof}
+
+
