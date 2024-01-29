@@ -63,10 +63,6 @@
 	Si de plus $P$ est primitif de $\AX$, alors $P$ est irréductible dans $A[X]$.
 \end{coro}
 
-\begin{remarque} %TODO: Move to definition of Corps des fractions
-	$A, K  = Frac(A)$ Alors il y a un plogement $\phi: A \to K$ et ne génñeral, on identifie $A$ avec $\phi(A)$ de sorte que $A \subset K$.
-	Ainsi un polynôme $P \in A[X]$  peut etre vu comme un polynôme dans $K[X]$.
-\end{remarque}
 
 \begin{proof}
 	Quite a diviser par $c(P)$, on peut supposer $P$ primitif et de dégré $\geq 2$.
@@ -78,7 +74,7 @@
 	donc $\bar{b_s} \neq 0$ et $\bar{c_r} \neq 0$ et $\bar{b_s}\bar{c_r} = \bar{a_n}$ dans $B$.
 	Donc $\bar{Q}$ et $\bar{R}$ sont de degré $>0$ et $\bar{Q}\bar{R} = \bar{a_n}X^n$ dans $B[X]$.
 
-	On veut qlql chose $\bar{a_n}X^n= \bar{Q}\bar{R}$ dans $B[X]$ qui est principal et donc factoriel.
+	On voit la relation $\bar{a_n}X^n= \bar{Q}\bar{R}$ dans $B[X]$ qui est principal et donc factoriel.
 
 
 	$\bar{Q}$ et $\bar{R}$ sont des polynomes irréductiobles dans $B[X]$. Donc en particulier
@@ -87,11 +83,14 @@
 
 
 \begin{example}
-	$A = \Z$, $p$ premier,
-	$Q \in \Z[X] \implies \bar{Q} \in \Zn{p}[X]$.
-	$\bar{Q}$ est défini par la classe mod $p$ de ses coefficients.
-
-	TODO: Add function tableau 2
+	$A = \Z$, $p$ premier,\\
+	$Q \in \Z[X] \implies \bar{Q} \in \Zn{p}[X]$.\\
+	$\bar{Q}$ est défini par la classe $mod\  p$ de ses coefficients.
+	$$X \mid \bar{Q} \text{ dans } \Zn{p}[X] \iff p \mid Q(0) \text{ dans } \Z$$
+	\begin{eqnarray*}
+		\Z[X] &\to& \Zn{p}[X] \\
+		\sum a_iX^i &\mapsto& \sum \bar{a_i}X^i
+	\end{eqnarray*}
 \end{example}
 
 
