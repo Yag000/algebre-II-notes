@@ -16,7 +16,7 @@
 \begin{definition}[Anneau intègre]
 	Un anneau $(A, +, \cdot)$ est intègre s'il est commutatif, non trivial et pour tout $x, y \in A$,
 	\begin{equation*}
-		xy = 0 \implies x = 0 \quad \text{ ou } \quad y = 0
+		xy = 0 \implies x = 0 \ \text{ ou } \ y = 0
 	\end{equation*}
 \end{definition}
 
@@ -42,15 +42,12 @@
 \end{coro}
 
 \begin{proof}
-	$\Rightarrow$ c'est immédiat, car un sous-anneau d'un anneau intègre est intègre.
+	$\Rightarrow$ C'est immédiat, car un sous-anneau d'un anneau intègre est intègre.\\
 
-	$\Leftarrow$ Si $A$ trivial, alors $A[X]$ intègre est évident.
+	$\Leftarrow$
 	Soient $P, Q \in A[X]$ non nuls. on a donc $\deg(P) \geqslant 0$ et $\deg(Q) \geqslant 0$.
 	Mais alors, on a :
-	$$
-		\deg(P Q)=\deg(P)+\deg(Q) \geqslant 0, \text{par la proposition précédente}
-	$$
-
+	$$ \deg(P Q)=\deg(P)+\deg(Q) \geqslant 0, \text{par la proposition précédente} $$
 	Ce qui entraine que $P Q$ est non nul, d'où l'intégrité de $A[X]$.
 \end{proof}
 
