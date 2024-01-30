@@ -8,7 +8,7 @@
 
 \begin{example}
 	$A = \Zn{p}$, $P = X^p - X$, avec $p$ premier.
-	Alors $$\Pt(x) = x^p - x = 0 \text{ petit théorème de Fermat}$$.
+    Alors $$\Pt(x) = x^p - x = 0 \text{ (petit théorème de Fermat)}$$.
 	Donc $\Pt$ est nulle sur $\Zn{p}$ mais $P$ n'est pas nul dans $\Zn{p}[X]$.
 \end{example}
 
@@ -18,26 +18,26 @@
 		\item $\Pt + \Qt = \widetilde{P+Q}$
 		\item $\Pt \cdot \Qt = \widetilde{P \cdot Q}$
 	\end{itemize}
-	Et l'application $P \mapsto \Pt$ est un morphisme d'anneaux de $A[X]$ dans l'anneau des fonctions applications polynomiales.
-	(En général il n'est pas injectif, voire exemple ci-dessus).
+	Et l'application $P \mapsto \Pt$ est un morphisme d'anneaux de $A[X]$ dans l'anneau des applications polynomiales.
+	(En général il n'est pas injectif: voir exemple ci-dessus).
 \end{prop}
 
 
 \begin{definition}[Polynôme composé]
 	Soit $P = \sum\limits_{i=0}^n a_iX^i \in A[X]$ un polynôme de $A[X]$. et $Q \in A[X]$.
-	On appelle le polynome composé de $P$ par $Q$ le polynôme $$P(Q) = a_nQ^n + a_{n-1}Q^{n-1} + \dots + a_0$$
-	(On remplace l'indéterminée $X$ par le polynôme $Q$).
+	On appelle le polynôme composé de $P$ par $Q$ le polynôme $$P(Q) = a_nQ^n + a_{n-1}Q^{n-1} + \dots + a_0$$
+	(On remplace l'indéterminé $X$ par le polynôme $Q$).
 \end{definition}
 
 \begin{prop}
-	$\tilde{P(Q)} = \Pt \circ \Qt$
+	$\widetilde{P(Q)} = \Pt \circ \Qt$
 \end{prop}
 
 \noindent
 Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 
 \begin{definition}[Racine d'un polynôme]
-	Soit $P \in A[X]$. On dit que $a \in A$ est une racine e $P$ si et seulement si $P(a) = 0$.
+	Soit $P \in A[X]$. On dit que $a \in A$ est une racine de $P$ si et seulement si $P(a) = 0$.
 \end{definition}
 
 \begin{prop}
@@ -63,7 +63,7 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 \end{definition}
 
 \begin{prop}
-	Sit $A$ est un anneau intègre, alors $P \in A[X]$ admet au plus $\deg(P)$ racines distinctes dans $A$.
+	Soit $A$ est un anneau intègre, alors $P \in A[X]$ admet au plus $\deg(P)$ racines distinctes dans $A$.
 \end{prop}
 
 \begin{proof}
@@ -76,7 +76,7 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 		      \begin{itemize}
 			      \item Premier cas, $P$ n'a pas de racines dans $A$.
 			            Alors $\sum\limits_{a \in A} m_p(a) = 0 \leq n+1$.
-			      \item Deuxième cas, il existe $b \in A$ tel que $P(b) = 0$
+			      \item Deuxième cas, il existe $b \in A$ tel que $P(b) = 0$.
 			            Alors il existe $Q \in A[X]$ tel que $P = (X-b)Q$
 			            et $\deg(Q) = n$. De plus
 			            $$ m_P(a) = \left\{ \begin{array}{ll}
@@ -117,9 +117,9 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 \begin{proof}
 	On démontre le résultat par récurrence sur $n$, la multiplicité de $a$ dans $P$.
 	\begin{itemize}
-		\item Initilisation: Pour $n = 1$, $X-a \mid P$ et donc $P(a) = 0$
+		\item Initialisation: Pour $n = 1$, $X-a \mid P$ et donc $P(a) = 0$
 		\item Posons $n$ tel que c'est vrai pour tout polyonôme de multiplicité $n$.
-		      Soit $P$ tel ue $m_p(a) = n+1$. Il existe $Q \in A[X]$ tel que $P = (X-a)^{n+1}Q$.
+		      Soit $P$ tel que $m_p(a) = n+1$. Il existe $Q \in A[X]$ tel que $P = (X-a)^{n+1}Q$.
 		      $$P' = (n+1)(X-a)^nQ + (X-a)^{n+1}Q' = (X-a)^n((n+1)Q + (X-a)Q')$$
 		      Comme $Q(a) \neq 0$, on applique l'hypothèse de récurrence à $P$ et on obtient que
 		      $$ \forall k \leq n-1 \quad (P')^{(k)}(a) = P^{(k+1)}(a) = 0 $$
