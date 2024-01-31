@@ -1,14 +1,15 @@
 \subsection{Fonctions polynomiales}
 
 \begin{definition}[Fonction polynomiale]
-	Soit $P \in A[X]$, $P = \sum\limits_{i=0}^n a_iX^i$.
+	Soit $P \in A[X]$, $P = \sum\limits_{i=0}^n a_iX^i$.\\
 	On appelle fonction polynomiale associée à $P$ la fonction de $A$ dans $A$ définie par:
-	$\Pt(x): \sum\limits_{i=0}^n a_ix^i$.
+	$$\Pt(x): \sum\limits_{i=0}^n a_ix^i$$
 \end{definition}
 
 \begin{example}
 	$A = \Zn{p}$, $P = X^p - X$, avec $p$ premier.
-    Alors $$\Pt(x) = x^p - x = 0 \text{ (petit théorème de Fermat)}$$.
+	Alors
+	$$\Pt(x) = x^p - x = 0 \href{https://fr.wikipedia.org/wiki/Petit_th%C3%A9or%C3%A8me_de_Fermat}{\text{ (petit théoreme de Fermat)}}$$
 	Donc $\Pt$ est nulle sur $\Zn{p}$ mais $P$ n'est pas nul dans $\Zn{p}[X]$.
 \end{example}
 
@@ -24,12 +25,13 @@
 
 
 \begin{definition}[Polynôme composé]
-	Soit $P = \sum\limits_{i=0}^n a_iX^i \in A[X]$ un polynôme de $A[X]$. et $Q \in A[X]$.
-	On appelle le polynôme composé de $P$ par $Q$ le polynôme $$P(Q) = a_nQ^n + a_{n-1}Q^{n-1} + \dots + a_0$$
+	Soit $P = \sum\limits_{i=0}^n a_iX^i \in A[X]$ un polynôme de $A[X]$ et $Q \in A[X]$. \\
+	On appelle le polynôme composé de $P$ par $Q$ le polynôme
+	$$P(Q) = a_nQ^n + a_{n-1}Q^{n-1} + \dots + a_0$$
 	(On remplace l'indéterminé $X$ par le polynôme $Q$).
 \end{definition}
 
-\begin{prop}
+\begin{prop}[Admis]
 	$\widetilde{P(Q)} = \Pt \circ \Qt$
 \end{prop}
 
@@ -37,11 +39,12 @@
 Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 
 \begin{definition}[Racine d'un polynôme]
-	Soit $P \in A[X]$. On dit que $a \in A$ est une racine de $P$ si et seulement si $P(a) = 0$.
+	Soit $P \in A[X]$.\\
+	On dit que $a \in A$ est une racine de $P$ si et seulement si $P(a) = 0$.
 \end{definition}
 
 \begin{prop}
-	$$ p(a) = 0 \iff (X-a) \mid P \text{ dans } A[X]$$
+	$$ P(a) = 0 \iff (X-a) \mid P \text{ dans } A[X]$$
 \end{prop}
 
 \begin{proof}
@@ -97,9 +100,8 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 \end{coro}
 
 \begin{definition}[Dérivée d'un polynôme]
-
-	Soit $P \in A[X]$, $P = \sum\limits_{i=0}^n a_iX^i$.
-	On appelle dérivée de $P$ le polynôme $P' = \sum\limits_{i=1}^n ia_iX^{i-1}$.
+	Soit $P \in A[X]$, $P = \sum\limits_{i=0}^n a_iX^i$. \\
+	On appelle dérivée de $P$ le polynôme $P' = \sum\limits_{i=1}^n ia_iX^{i-1}$.\\
 	Et on définit par récurrence $P^{(k)} = (P^{(k-1)})'$ et $P^{(0)} = P$.
 \end{definition}
 

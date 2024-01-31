@@ -49,7 +49,7 @@
 	On écrit $P = \sum\limits_{i=0}^n a_iX^i$ avec $a_i \neq 0$. Si on a les trois propriétés suivantes:
 	\begin{itemize}
 		\item $p$ ne divise pas $a_n$
-		\item $p$ divise pas $a_k \ \forall \ k < n$
+		\item $p$ divise $a_k \ \forall \ k < n$
 		\item $p^2$ ne divise pas $a_0$
 	\end{itemize}
 	Alors $P$ est irréductible dans $K[X]$(avec $K$ corps des fractions).
@@ -65,20 +65,18 @@
 
 
 \begin{proof}
-    Quitte à diviser par $c(P)$, on peut supposer $P$ primitif et de degré $\geq 2$.
+	Quitte à diviser par $c(P)$, on peut supposer $P$ primitif et de degré $\geq 2$.
 	Si $P$ n'est pas irréductible, il s'écrit $P=RQ$, avec $R, Q \in A[X]$ de degré $>0$.
-	On écrit $$Q = b_sX^s + \cdots + b_0$$ et $$R = c_rX^r + \cdots + c_0$$
-	Soit $B = A/<p>$ intègre et on a $A[X]/pA[X] \simeq B[X]$.
+	On écrit
+	$$Q = b_sX^s + \cdots + b_0$$ et $$R = c_rX^r + \cdots + c_0$$
+	Soit $B = A/<p>$ intègre et on a $A[X]/pA[X] \simeq B[X]$. \\
 	Dans $B[X]$, on a $\bar{P} = \bar{R}\bar{Q}$,
-	Or d'après les hypothèses on a $\bar{P} = \bar{a}_0X^n$ et $\bar{a_n} \neq 0 $ dans $B$.
+	or d'après les hypothèses on a $\bar{P} = \bar{a}_0X^n$ et $\bar{a_n} \neq 0 $ dans $B$. \\
 	Donc $\bar{b_s} \neq 0$ et $\bar{c_r} \neq 0$ et $\bar{b_s}\bar{c_r} = \bar{a_n}$ dans $B$,
-	et $\bar{Q}$ et $\bar{R}$ sont de degré $>0$ et $\bar{Q}\bar{R} = \bar{a_n}X^n$ dans $B[X]$.
-
-	On voit la relation $\bar{a_n}X^n= \bar{Q}\bar{R}$ dans $B[X]$ qui est principal et donc factoriel.
-
-
-    $\bar{Q}$ et $\bar{R}$ sont des polynomes irréductibles dans $(Frac B)[X]$. Donc en particulier
-	$p$ divise $b_0$ et $c_0$, donc $p^2$ divise $b_0c_0 = a_0$, ce qui est absurde.
+	et $\bar{Q}$ et $\bar{R}$ sont de degré $>0$ et $\bar{Q}\bar{R} = \bar{a_n}X^n$ dans $B[X]$. \\
+	On voit la relation $\bar{a_n}X^n= \bar{Q}\bar{R}$ dans $B[X]$ qui est principal et donc factoriel. \\
+	Et donc $\bar{Q}$ et $\bar{R}$ sont des polynomes irréductibles dans $(Frac \ B)[X]$.\\
+	Donc en particulier $p$ divise $b_0$ et $c_0$, donc $p^2$ divise $b_0c_0 = a_0$, ce qui est absurde.
 \end{proof}
 
 
@@ -102,7 +100,7 @@
 		\item Le coéfficient dominant de $X^{p-1}$ est $\binom{p}{p} = 1$ et $p$ ne divise pas 1.
 		\item Pour tout $k < p-1$, le coefficient de $X^k$ est $\binom{p}{k+1} = \frac{p!}{(k+1)!(p-k-1)!} = p \underbrace{\frac{(p-1)!}{(k+1)!(p-k-1)!}}_{\in A}$.
 		      $p$ divise $p! = k!(p-k)!\binom{p}{k}$ et $p$ premier à $k!(p-k)!$, donc $p$ divise $\binom{p}{k}$.
-		\item $\binom{p}{1} = p$ et $p^2$ ne divise pas $p$. donc
+		\item $\binom{p}{1} = p$ et $p^2$ ne divise pas $p$.
 	\end{itemize}
 	Donc $\Phi_p(X+1)$ est irréductible dans $\Q[X]$ et donc $\Phi_p(X)$ est irréductible dans $\Q[X]$.
 \end{example}
@@ -114,7 +112,7 @@
 \end{prop}
 
 \begin{proof}
-    $P$ est primitif, donc si P est est non irrédutible dans $\Z[X]$ alors il existe $Q, R \in \Z[X]$ non constants, tels que $P = QR$.
+	$P$ est primitif, donc si P est est non irrédutible dans $\Z[X]$ alors il existe $Q, R \in \Z[X]$ non constants, tels que $P = QR$.
 	et donc $\bar{P} = \bar{Q}\bar{R}$ dans $\Zn{p}[X]$.
 	De plus, on a:
 	\begin{itemize}
@@ -122,6 +120,6 @@
 		\item $\deg R = \deg \bar{R}$
 
 	\end{itemize}
-	car leurs coefficients dominants ne divisent pas $p$.
+	car leurs coefficients dominants ne divisent pas $p$.\\
 	Donc $\bar{P} = \bar{Q}\bar{R} \implies \bar{P}$ n'est pas irréductible dans $\Zn{p}[X]$ ce qui contredit l'hypothèse.
 \end{proof}
