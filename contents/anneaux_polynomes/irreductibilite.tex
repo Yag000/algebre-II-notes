@@ -65,20 +65,20 @@
 
 
 \begin{proof}
-	Quite a diviser par $c(P)$, on peut supposer $P$ primitif et de dégré $\geq 2$.
-	Si $P$ n'est pas irréductible il s'écrit $P=RQ$, avec $R, Q \in A[X]$ de degré $>0$.
-	On écrit $$Q = b_sl^s + \cdots + b_0$$ et $$R = c_rX^r + \cdots + c_0$$
-	Soit $B = A/<p>$ integre et on a $A[X]/pA[X] \simeq B[X]$.
+    Quitte à diviser par $c(P)$, on peut supposer $P$ primitif et de degré $\geq 2$.
+	Si $P$ n'est pas irréductible, il s'écrit $P=RQ$, avec $R, Q \in A[X]$ de degré $>0$.
+	On écrit $$Q = b_sX^s + \cdots + b_0$$ et $$R = c_rX^r + \cdots + c_0$$
+	Soit $B = A/<p>$ intègre et on a $A[X]/pA[X] \simeq B[X]$.
 	Dans $B[X]$, on a $\bar{P} = \bar{R}\bar{Q}$,
 	Or d'après les hypothèses on a $\bar{P} = \bar{a}_0X^n$ et $\bar{a_n} \neq 0 $ dans $B$.
-	donc $\bar{b_s} \neq 0$ et $\bar{c_r} \neq 0$ et $\bar{b_s}\bar{c_r} = \bar{a_n}$ dans $B$.
-	Donc $\bar{Q}$ et $\bar{R}$ sont de degré $>0$ et $\bar{Q}\bar{R} = \bar{a_n}X^n$ dans $B[X]$.
+	Donc $\bar{b_s} \neq 0$ et $\bar{c_r} \neq 0$ et $\bar{b_s}\bar{c_r} = \bar{a_n}$ dans $B$,
+	et $\bar{Q}$ et $\bar{R}$ sont de degré $>0$ et $\bar{Q}\bar{R} = \bar{a_n}X^n$ dans $B[X]$.
 
 	On voit la relation $\bar{a_n}X^n= \bar{Q}\bar{R}$ dans $B[X]$ qui est principal et donc factoriel.
 
 
-	$\bar{Q}$ et $\bar{R}$ sont des polynomes irréductiobles dans $B[X]$. Donc en particulier
-	$p$ divise $b_s$ et $c_r$, donc $p^2$ divise $a_0$, ce qui est absurde.
+    $\bar{Q}$ et $\bar{R}$ sont des polynomes irréductibles dans $(Frac B)[X]$. Donc en particulier
+	$p$ divise $b_0$ et $c_0$, donc $p^2$ divise $b_0c_0 = a_0$, ce qui est absurde.
 \end{proof}
 
 
@@ -96,32 +96,32 @@
 
 \begin{example}
 	$\Phi_p(x) = x^{p-1} + \cdots + x + 1  = \frac{x^p - 1}{x-1} \in \Z[X]$.
-	On applique e critère d'Eisenstein a $Phi_p(X+1)$.
-	$$ \Phi_p(X+1) = \frac{(X+1)^p - 1}{X} = \sum_{k=1}^p \binom{p}{k} X^{k-1} == \sum_{k=0}^{p-1} \binom{p}{k+1} X^k$$
+	On applique le critère d'Eisenstein à $\Phi_p(X+1)$.
+	$$ \Phi_p(X+1) = \frac{(X+1)^p - 1}{X} = \sum_{k=1}^p \binom{p}{k} X^{k-1} = \sum_{k=0}^{p-1} \binom{p}{k+1} X^k$$
 	\begin{itemize}
 		\item Le coéfficient dominant de $X^{p-1}$ est $\binom{p}{p} = 1$ et $p$ ne divise pas 1.
 		\item Pour tout $k < p-1$, le coefficient de $X^k$ est $\binom{p}{k+1} = \frac{p!}{(k+1)!(p-k-1)!} = p \underbrace{\frac{(p-1)!}{(k+1)!(p-k-1)!}}_{\in A}$.
 		      $p$ divise $p! = k!(p-k)!\binom{p}{k}$ et $p$ premier à $k!(p-k)!$, donc $p$ divise $\binom{p}{k}$.
 		\item $\binom{p}{1} = p$ et $p^2$ ne divise pas $p$. donc
 	\end{itemize}
-	Donc $\Phi_p(X+1)$ est irréductible dans $\Z[X]$ et donc $\Phi_p(X)$ est irréductible dans $\Q[X]$.
+	Donc $\Phi_p(X+1)$ est irréductible dans $\Q[X]$ et donc $\Phi_p(X)$ est irréductible dans $\Q[X]$.
 \end{example}
 
 
 \begin{prop}
-	Soi $P \in \Z[X]$ primitif de coéfficient dominant non multiple de $p$, où $p$ est un premier.
-	Si $\bar{P}$ est irréductible dans  $\Zn{p}[X]$, $P$, alors $P$ est irréductible dans $\Z[X]$.
+	Soi $P \in \Z[X]$ primitif de coefficient dominant non multiple de $p$, où $p$ est un premier.
+	Si $\bar{P}$ est irréductible dans  $\Zn{p}[X]$, alors $P$ est irréductible dans $\Z[X]$.
 \end{prop}
 
 \begin{proof}
-	$P$ est primitif et ... alors il existe $Q, R \in \Z[X]$ tels que $P = QR$.
+    $P$ est primitif, donc si P est est non irrédutible dans $\Z[X]$ alors il existe $Q, R \in \Z[X]$ non constants, tels que $P = QR$.
 	et donc $\bar{P} = \bar{Q}\bar{R}$ dans $\Zn{p}[X]$.
-	et de plus on a:
+	De plus, on a:
 	\begin{itemize}
 		\item $\deg Q = \deg \bar{Q}$
 		\item $\deg R = \deg \bar{R}$
 
 	\end{itemize}
-	Car leur coéffiients dominant ne divisen pas $p$.
+	car leurs coefficients dominants ne divisent pas $p$.
 	Donc $\bar{P} = \bar{Q}\bar{R} \implies \bar{P}$ n'est pas irréductible dans $\Zn{p}[X]$ ce qui contredit l'hypothèse.
 \end{proof}
