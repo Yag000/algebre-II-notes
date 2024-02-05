@@ -20,12 +20,19 @@
 \end{theorem}
 
 
-%TODO: Format this properly on a "rappel" environment and add more info
-\begin{itemize}
-	\item Comme $\pi$ est irréductible on a que $A<\pi>$ est un corpps, donc $\goatp_{\pi}$ n'est pas maximal. %TODO: Check this
-	\item Soit $f \in A[x]$, $\bar{f}$ est la classe de $f$ dans $A/<\pi>[X] = A[X]/<\pi>$.
-	      $f$ irréductible modulo $\pi$ signifie que $\bar{F}$ est irréductible dans $A/<\pi>$.
-\end{itemize}
+\begin{rappel}[Irréductibilité]
+	\begin{itemize}
+		\item
+		      Si $\pi$ est un élément irréductible de $A$, alors $A/<\pi>$ est un corps parce que dans un anneau
+		      principal l'idéal engendré par un élément irréductible est maximal.\\
+		\item Soit  $f \in A[X]$et $\bar{f}$ la classe de $f$ dans $A/<\pi>[X] = A[X]/<\pi>$.\\
+		      alors $f$ irréductuble modulo $\pi$ signifie que $\bar{f}$ est irréductible dans $A/<\pi>[X]$.
+	\end{itemize}
+\end{rappel}
+
+\begin{rappel}
+	Si $f$ est un polynôme primitif de $A[X]$ de coéfficient dominant inversible modulo $\pi$, et $\bar{f}$ est irréductible dans $A/<\pi>[X]$, alors $f$ est irréductible dans $A[X]$.
+\end{rappel}
 
 \begin{proof}
 	\begin{itemize}
