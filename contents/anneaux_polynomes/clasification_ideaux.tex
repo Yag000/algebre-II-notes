@@ -1,0 +1,95 @@
+\subsection{Clasification des ideaux premiers de $A[X]$, avec $A$ anneau principal}
+
+\begin{example}[Anneau factoriel non principal]
+	$\Z[X]$ est un anneau factoriel, mais non principal.
+\end{example}
+
+\begin{theorem}
+	Soit $A$ un anneau principal. Alors les udéaux premiers non nuls de $A[X]$ sont les idéaux de la liste suivante:
+	\begin{itemize}
+		\item $\goatp_pi = <\pi>$ ou $\pi$ est un élément irréductible de $A$. %TODO: Add { saying that they are the irreducible elements of A[X]}
+		\item $\goatp_f = <f>$, où $f \in A[X]$ est un polynôme irréductible de degré $\geq 1$.
+		\item $\goatm_{\pi,f} = <\pi,f>$, où $\pi$ est un élément irréductible de $A$ et $f \in A[X]$ unitaire, irréductible modulo $\pi$.
+	\end{itemize}
+	De plus
+	\begin{itemize}
+		\item $\goatp_{\pi}$ n'est pas maximal.
+		\item Si $A$ possede une infinitée d'éléments irréductibles deux à deux disjoints non associés, alors $p_f$ est premier mais pas maximal.
+		\item $\goatm_{\pi,f}$ est maximal.
+	\end{itemize}
+\end{theorem}
+
+
+%TODO: Format this properly on a "rappel" environment and add more info
+\begin{itemize}
+	\item Comme $\pi$ est irréductible on a que $A<\pi>$ est un corpps, donc $\goatp_{\pi}$ n'est pas maximal. %TODO: Check this
+	\item Soit $f \in A[x]$, $\bar{f}$ est la classe de $f$ dans $A/<\pi>[X] = A[X]/<\pi>$.
+	      $f$ irréductible modulo $\pi$ signifie que $\bar{F}$ est irréductible dans $A/<\pi>$.
+\end{itemize}
+
+\begin{proof}
+	\begin{itemize}
+		\item Si $\pi$ est un irréductible de $A$. Soit $g \in A[X]$ et on note $\bar{g} \in (A/<\pi>)[X]$ la classe de $g$ modulo $\pi$.
+		      On rappelle
+		      $$ A[X]/<\pi> \cong (A[X]/<\pi>A[X])$$
+		      Comme $A$ est principal, $A/<\pi>$ est un corps et donc $(A/<\pi>)[X]$ est un anneau intègre (qui n'est pas un corps car les éléments
+		      inversibles sont des polynômes constants). Donc $<\pi>$ est un idéal de $A[X]$ premier mais pas maximal.
+		\item Soit $f \in A[X]$ de dégré $\geq 1$ et irréductible.$A$ principal $\implies A$ factoriel $\implies A[X]$ factoriel.
+		      Tout élément irréductible de $A[X]$ engendre un idéal premier. \\
+		      Si de plus $A$ possède une infinité d'éléments irréductibles deux à deux disjoints non associés, alors il exites $\pi \in A$ irréductinle de $A$
+		      tel que $\pi$ ne divise pas le coefficient dominant de $f$.\\
+		      Alors $<f>  \subset <\pi,f>$, et c'est une inclusion stricte.\\
+		      En effet, si on avait $\pi \in <f>$ alors
+		      $$\exists g \in A[X]\quad \pi = fg$$ ce qui n'est pas possible quand on regarde les dégrées \\
+		      Montrons que $<\pi, f> \neq A[X]$.
+		      Supposons que $<\pi, f> = A[X]$, autrent dit, il existe $g,h \in A[X]$ tels que $\pi g + fh = 1$.\\
+		      $ \bar{f}\bar{g} = 1$ dans $(A/<\pi>)[X]$.\\
+		      Comme $\bar{f}$ est inversible dans $(A/<\pi>)[X]$ et comme $A/<\pi>$ est intègre on a que $\deg \bar{f} = 0$.\\
+		      Comme $\pi$ new divise pas le coefficient dominant de $f$, on a $\deg \bar{f} = \deg f = 0$, ce qui contredit $\deg f \geq 1$.\\
+		      Donc $<\pi, f> \neq A[X]$ et $\goatp_f = <f>$ est un idéal premier mais pas maximal.
+		\item  Soit $\pi$ irréductble de $A$, $f$ unitaire de $A[X]$ irréductible modulo $\pi$.\\
+		      $$A[X] \to A/<\pi>[X] \to (A/<\pi>[X])/<f> $$ %TODO: Add phi
+		      Le morphisme $\phi$ est surjectif de noyau $<\pi,f>$.
+		      $$ A[X]/\goatm_{\pi,f} \cong (A/<\pi>[X]/<\bar{f}>)$$
+		      Et donc $A/<\pi>[X]$ est principal.
+		      $A$ est principal donc $<\pi>$ est maximal donc $A/<\pi>$ est un corps. Comme $A/<\pi>$ est un corps donc $(A/<\pi>)[X]$ est principal.\\
+		      Comme $\bar{f}$ est un irréductible de $(A/<\pi>)[X]$, on a que $A/<\pi>[X]/<\bar{f}>$ est un corps.\\
+		      Donc $A[X]/\goatm_{\pi,f}$ est un corps, donc $\goatm_{\pi,f}$ est maximal.
+	\end{itemize}
+	\vspace{0.25cm}
+	\noindent Reciproquement, on choisit $\goatp$ un idéal non nul de $A[X]$ qui est premier. \\
+	$\goatp \cap A$ est un idéal de A premier.
+	Comme $A$ est principal, soit $\goatp \cap A = \{0\}$, soit il eciste $\pi$ irréductible de $A$ tel que $\goatp \cap A = <\pi>$.
+	\begin{itemize}
+		\item Supposons que $\goatp \cap A = <\pi>$.\\
+		      On prend $\bar{\goatp}$ l'image de $\goatp$ dans $A/<\pi>[X]$ qui est principal.\\
+		      $\bar{\goatp}$ est in idéal premier de l'a nneau principal $A/<\pi>[X]$.\\
+		      \begin{itemize}
+			      \item Soit $\bar{\goatp} = \{0\} \implies \goatp = <\pi>$.
+			      \item Soit $\bar{\goatp}$ est engendré par un polynôme unitaie et irréductible de $A/<\pi>[X]$.
+			            $$ \bar{\goatp} = <\bar{f}> $$
+			            $f$ est un polynôme unitaire de $A[X]$ tel que $\bar{f}$est irréductible. \\
+			            Donc il existe $g \in \goatp$ telle que $\bar{g} = \bar{f}$.
+			            $$ \exists h \in A[X] \quad f = g + \pi h k$$
+			            Comme $\pi \in \goatp$a, on a $f \in \goatp$.
+			            Donc $\goatm_{\pi,f} \subset \goatp \subsetneq A$
+			            donc $\goatm_{\pi,f} = \goatp$.
+		      \end{itemize}
+		\item Supposons que $\goatp \cap A = \{0\}$.\\
+		      On choisit $f$ un élément non nul de $\goatp$ de degré minimal et par hypothèse, $\deg f \geq 1$.\\
+		      On écrit $f = \alpha f_0$, avec $f_0 \in A[X]$ primitif et $\alpha \in A$.\\
+		      Nous avons donc que $\alpha \in \goatp$ ou $f_0 \in \goatp$. \\
+		      Or $\alpha \notin \goatp$ car $\goatp \cap A = \{0\}$, donc $f_0 \in \goatp$.\\
+		      Suppososns $g \in \goatp$ non nu, alors $ \deg g \geq \deg f \geq 1$.
+		      On écrit $g = hf + r$, avec $h \in K[X]$, ou $K$ est le corps des fractions de $A$ et $r \in K[X]$ de degré $< \deg f_0$.
+		      (Division euclidienne dans $K[X]$).
+		      On a $h \neq 0$ oar minimalité du degré de $f_0$. On aurait sinon
+		      $g = r$ et $\deg r < \deg f_0$, ce qui est absurde.\\
+		      On choisit $d in A$ tel que $dh$ et $df_0$ soient dans $A[X]$.\\
+		      $$ dr = \underbrace{d}_{\in A} \underbrace{g}_{\in \goatp} - \underbrace{dh}_{\in A[X]} \underbrace{f_0}_{\in \goatp} \in \goatp$$
+		      $$ dg =f_0hd \text{ et } c(dg) = c(f_0)c(dh) = c(dh) = dc(g)$$
+		      donc $h \in A[X]$ car $g = f_0h$ et donc $\goatp = <f_0>$.
+	\end{itemize}
+\end{proof}
+
+
