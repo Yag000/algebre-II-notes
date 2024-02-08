@@ -2,8 +2,8 @@
 
 \begin{definition}[Fonction polynomiale]
 	Soit $P \in A[X]$, $P = \sum\limits_{i=0}^n a_iX^i$.\\
-	On appelle fonction polynomiale associée à $P$ la fonction de $A$ dans $A$ définie par:
-	$$\Pt(x): \sum\limits_{i=0}^n a_ix^i$$
+	On appelle fonction polynomiale associée à $P$ la fonction $\Pt:: A \to A$ définie par:
+	$$\Pt(x) = \sum\limits_{i=0}^n a_ix^i$$
 \end{definition}
 
 \begin{example}
@@ -36,7 +36,7 @@
 \end{prop}
 
 \noindent
-Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
+Par soucis de simplification on va noter $P(a)$ au lieu de $\Pt(a)$.
 
 \begin{definition}[Racine d'un polynôme]
 	Soit $P \in A[X]$.\\
@@ -56,7 +56,7 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 			      &=& \sum_{i=0}^n b_i(X)^i  - P(a), \ \text{car}  \ P(a) = 0 \\
 			      &=& \sum_{i=0}^n b_i(X^i-a^i)
 		      \end{eqnarray*}
-		      On a que $X^i - a^i = (X-a)(X^{i-1} + X^{i-2}a + \dots + Xa^{i-2} + a^{i-1})$. %TODO: Add explanation
+		      On a que $X^i - a^i = (X-a)(X^{i-1} + X^{i-2}a + \dots + Xa^{i-2} + a^{i-1})$. %TODO: Add explanation\\
 		      Donc $X-a$ divise $P$.
 	\end{itemize}
 \end{proof}
@@ -66,7 +66,8 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 \end{definition}
 
 \begin{prop}
-	Soit $A$ est un anneau intègre, alors $P \in A[X]$ admet au plus $\deg(P)$ racines distinctes dans $A$.
+	Soit $A$ est un anneau intègre, alors $P \in A[X]$ admet au plus $\deg(P)$ racines distinctes dans $A$.\\
+	Si $A = \C$ l'inégalité est une égalité.
 \end{prop}
 
 \begin{proof}
@@ -91,8 +92,6 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 
 		      On a montré donc le résultat par récurrence.
 	\end{itemize}
-
-	Si $A = \C$ l'inégalité est une égalité.
 \end{proof}
 
 \begin{coro}
@@ -120,7 +119,7 @@ Par soucis de simplification on va noter $P(A)$ au lieu de $\Pt(A)$.
 	On démontre le résultat par récurrence sur $n$, la multiplicité de $a$ dans $P$.
 	\begin{itemize}
 		\item Initialisation: Pour $n = 1$, $X-a \mid P$ et donc $P(a) = 0$
-		\item Posons $n$ tel que c'est vrai pour tout polyonôme de multiplicité $n$.
+		\item Posons $n$ tel que c'est vrai pour tout polynôme de multiplicité $n$.
 		      Soit $P$ tel que $m_p(a) = n+1$. Il existe $Q \in A[X]$ tel que $P = (X-a)^{n+1}Q$.
 		      $$P' = (n+1)(X-a)^nQ + (X-a)^{n+1}Q' = (X-a)^n((n+1)Q + (X-a)Q')$$
 		      Comme $Q(a) \neq 0$, on applique l'hypothèse de récurrence à $P$ et on obtient que
