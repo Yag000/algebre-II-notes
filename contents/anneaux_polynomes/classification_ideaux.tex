@@ -1,4 +1,4 @@
-\subsection{Clasification des ideaux premiers de $A[X]$, avec $A$ anneau principal}
+\subsection{Classification des idéaux premiers de $A[X]$, avec $A$ anneau principal}
 
 \begin{theorem}
 	Soit $A$ un anneau principal. Alors les idéaux premiers non nuls de $A[X]$ sont les idéaux de la liste suivante:
@@ -10,7 +10,7 @@
 	De plus
 	\begin{itemize}
 		\item $\goatp_{\pi}$ n'est pas maximal.
-		\item Si $A$ possede une infinité d'éléments irréductibles deux à deux disjoints non associés, alors $p_f$ est premier mais pas maximal.
+		\item Si $A$ possède une infinité d'éléments irréductibles deux à deux disjoints non associés, alors $p_f$ est premier mais pas maximal.
 		\item $\goatm_{\pi,f}$ est maximal.
 	\end{itemize}
 \end{theorem}
@@ -22,12 +22,12 @@
 		      Si $\pi$ est un élément irréductible de $A$, alors $A/<\pi>$ est un corps parce que dans un anneau
 		      principal l'idéal engendré par un élément irréductible est maximal.\\
 		\item Soit  $f \in A[X]$et $\bar{f}$ la classe de $f$ dans $A/<\pi>[X] = A[X]/<\pi>$.\\
-		      alors $f$ irréductuble modulo $\pi$ signifie que $\bar{f}$ est irréductible dans $A/<\pi>[X]$.
+		      alors $f$ irréductible modulo $\pi$ signifie que $\bar{f}$ est irréductible dans $A/<\pi>[X]$.
 	\end{itemize}
 \end{rappel}
 
 \begin{rappel}
-	Si $f$ est un polynôme primitif de $A[X]$ de coéfficient dominant inversible modulo $\pi$, et $\bar{f}$ est irréductible dans $A/<\pi>[X]$, alors $f$ est irréductible dans $A[X]$.
+	Si $f$ est un polynôme primitif de $A[X]$ de coefficient dominant inversible modulo $\pi$, et $\bar{f}$ est irréductible dans $A/<\pi>[X]$, alors $f$ est irréductible dans $A[X]$.
 \end{rappel}
 
 \begin{proof}
@@ -39,16 +39,16 @@
 		      inversibles sont des polynômes constants). Donc $<\pi>$ est un idéal de $A[X]$ premier mais pas maximal.
 		\item Soit $f \in A[X]$ de dégré $\geq 1$ et irréductible.$A$ principal $\implies A$ factoriel $\implies A[X]$ factoriel.
 		      Tout élément irréductible de $A[X]$ engendre un idéal premier. \\
-		      Si de plus $A$ possède une infinité d'éléments irréductibles deux à deux disjoints non associés, alors il exites $\pi \in A$ irréductinle de $A$
+		      Si de plus $A$ possède une infinité d'éléments irréductibles deux à deux disjoints non associés, alors il existe $\pi \in A$ irréductible de $A$
 		      tel que $\pi$ ne divise pas le coefficient dominant de $f$.\\
 		      Alors $<f>  \subset <\pi,f>$, et c'est une inclusion stricte.\\
 		      En effet, si on avait $\pi \in <f>$ alors
-		      $$\exists g \in A[X]\quad \pi = fg$$ ce qui n'est pas possible quand on regarde les dégrées \\
+		      $$\exists g \in A[X]\quad \pi = fg$$ ce qui n'est pas possible quand on regarde les degrés \\
 		      Montrons que $<\pi, f> \neq A[X]$.
-		      Supposons que $<\pi, f> = A[X]$, autrent dit, il existe $g,h \in A[X]$ tels que $\pi g + fh = 1$.\\
+		      Supposons que $<\pi, f> = A[X]$, autrement dit, il existe $g,h \in A[X]$ tels que $\pi g + fh = 1$.\\
 		      $ \bar{f}\bar{g} = 1$ dans $(A/<\pi>)[X]$.\\
 		      Comme $\bar{f}$ est inversible dans $(A/<\pi>)[X]$ et comme $A/<\pi>$ est intègre on a que $\deg \bar{f} = 0$.\\
-		      Comme $\pi$ new divise pas le coefficient dominant de $f$, on a $\deg \bar{f} = \deg f = 0$, ce qui contredit $\deg f \geq 1$.\\
+		      Comme $\pi$ ne divise pas le coefficient dominant de $f$, on a $\deg \bar{f} = \deg f = 0$, ce qui contredit $\deg f \geq 1$.\\
 		      Donc $<\pi, f> \neq A[X]$ et $\goatp_f = <f>$ est un idéal premier mais pas maximal.
 		\item  Soit $\pi$ irréductble de $A$, $f$ unitaire de $A[X]$ irréductible modulo $\pi$.\\
 		      $$A[X] \to A/<\pi>[X] \to (A/<\pi>[X])/<f> $$ %TODO: Add phi
@@ -66,7 +66,7 @@
 	\begin{itemize}
 		\item Supposons que $\goatp \cap A = <\pi>$.\\
 		      On prend $\bar{\goatp}$ l'image de $\goatp$ dans $A/<\pi>[X]$ qui est principal.\\
-		      $\bar{\goatp}$ est in idéal premier de l'a nneau principal $A/<\pi>[X]$.\\
+		      $\bar{\goatp}$ est un idéal premier de l'anneau principal $A/<\pi>[X]$.\\
 		      \begin{itemize}
 			      \item Soit $\bar{\goatp} = \{0\} \implies \goatp = <\pi>$.
 			      \item Soit $\bar{\goatp}$ est engendré par un polynôme unitaie et irréductible de $A/<\pi>[X]$.
@@ -74,7 +74,7 @@
 			            $f$ est un polynôme unitaire de $A[X]$ tel que $\bar{f}$est irréductible. \\
 			            Donc il existe $g \in \goatp$ telle que $\bar{g} = \bar{f}$.
 			            $$ \exists h \in A[X] \quad f = g + \pi h k$$
-			            Comme $\pi \in \goatp$a, on a $f \in \goatp$.
+			            Comme $\pi \in \goatp$, on a $f \in \goatp$.
 			            Donc $\goatm_{\pi,f} \subset \goatp \subsetneq A$
 			            donc $\goatm_{\pi,f} = \goatp$.
 		      \end{itemize}
@@ -83,12 +83,12 @@
 		      On écrit $f = \alpha f_0$, avec $f_0 \in A[X]$ primitif et $\alpha \in A$.\\
 		      Nous avons donc que $\alpha \in \goatp$ ou $f_0 \in \goatp$. \\
 		      Or $\alpha \notin \goatp$ car $\goatp \cap A = \{0\}$, donc $f_0 \in \goatp$.\\
-		      Suppososns $g \in \goatp$ non nu, alors $ \deg g \geq \deg f \geq 1$.
+		      Supposons $g \in \goatp$ non nul, alors $ \deg g \geq \deg f \geq 1$.
 		      On écrit $g = hf + r$, avec $h \in K[X]$, ou $K$ est le corps des fractions de $A$ et $r \in K[X]$ de degré $< \deg f_0$.
 		      (Division euclidienne dans $K[X]$).
-		      On a $h \neq 0$ oar minimalité du degré de $f_0$. On aurait sinon
+		      On a $h \neq 0$ par minimalité du degré de $f_0$. On aurait sinon
 		      $g = r$ et $\deg r < \deg f_0$, ce qui est absurde.\\
-		      On choisit $d in A$ tel que $dh$ et $df_0$ soient dans $A[X]$.\\
+		      On choisit $d \in A$ tel que $dh$ et $df_0$ soient dans $A[X]$.\\
 		      $$ dr = \underbrace{d}_{\in A} \underbrace{g}_{\in \goatp} - \underbrace{dh}_{\in A[X]} \underbrace{f_0}_{\in \goatp} \in \goatp$$
 		      $$ dg =f_0hd \text{ et } c(dg) = c(f_0)c(dh) = c(dh) = dc(g)$$
 		      donc $h \in A[X]$ car $g = f_0h$ et donc $\goatp = <f_0>$.
