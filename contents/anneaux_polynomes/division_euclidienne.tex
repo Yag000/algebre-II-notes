@@ -125,7 +125,7 @@
 \end{prop}
 
 \begin{proof}
-	Soit $\mathcal{P}$ un système de réprésentants des irréductiobles de $A$.
+	Soit $\mathcal{P}$ un système de représentants des irréductibles de $A$.
 	On écrit
 	$$ a = u \prod\limits_{p \in \mathcal{P} } p^{n_p} \ \text{où}\  u \in A^\times $$
 	$$ b = v \prod \limits_{p \in \mathcal{P} } p^{m_p} \ \text{où}\  v \in A^\times $$
@@ -148,7 +148,7 @@
 
 \begin{definition}
 	Soit $A$ un anneau factoriel, et $P \in A[X]$, le contenu (notée $c(P)$) d'un polynôme $P$ est le
-	$pgcd$ de ses coéfficients non nuls.
+	$pgcd$ de ses coefficients non nuls.
 	$P$ est dit primitif si $c(P)=1$ ( ou $c(P) \in A^\times$)
 \end{definition}
 
@@ -180,7 +180,7 @@
 		\forall i, \, 0 \leq i \leq i_0\,,& p | a_i \\
 		\forall j, \, 0 \leq j \leq j_0\,,& p | b_j
 	\end{eqnarray*}
-	On a donc que le coéfficient de degré $i_0 + j_0$ de $PQ$ est:
+	On a donc que le coefficient de degré $i_0 + j_0$ de $PQ$ est:
 	\begin{eqnarray*}
 		PQ_{i_0+j_0}&=& \sum\limits^{i_0 + j_0}_{k=0} a_k b_{i_0 + j_0 - k} \\
 		&=& a_{i_0}b_{j_0} + \text{un multiple de } p
@@ -188,7 +188,7 @@
 	Si $k \neq i_0$, soit  $k\leq i_0 -1$ soit $i_0+j_o - \leq j_0 -1$ et donc $ p | a_kb_{i_0 + j_0 - k}$\\
 	TODO: AJOUTER EXPLICATION EXTRA (en haut a gauche du tableau) \\
 
-	Donc le coéfficient de degré $i_0+j_0$ de $PQ$ n'est pas divisible par $p$ ce qui contredit les hypotèses.
+	Donc le coefficient de degré $i_0+j_0$ de $PQ$ n'est pas divisible par $p$ ce qui contredit les hypothèses.
 	Donc on a $P$ et $Q$ primitif $\implies$ $PQ$ primitif. \\
 	Dans le cas géneral
 	\begin{eqnarray*}
@@ -220,7 +220,7 @@
 
 \begin{remarque}
 	$A, K  = Frac(A)$ Le plogement $\phi: A \to K$ nous permet identifier $A$ avec $\phi(A)$ de sorte que $A \subset K$.
-	Ainsi un polynôme $P \in A[X]$  peut etre vu comme un polynôme dans $K[X]$.
+	Ainsi un polynôme $P \in A[X]$  peut être vu comme un polynôme dans $K[X]$.
 \end{remarque}
 
 \begin{example}
@@ -246,7 +246,7 @@
 \end{theorem}
 
 
-\begin{proof} On va traiter en prmier les polynomes constnats et apres le reste.
+\begin{proof} On va traiter en premier les polynômes constants et après le reste.
 	\begin{itemize}
 		\item
 		      Comme $A[X]^\times = A^\times$
@@ -254,14 +254,14 @@
 		      alors
 
 		      $$ P \text{ inversible } \iff p \text{ inversible dans } A $$
-		\item Montrons les deux implications pour les polyômes non constants.
+		\item Montrons les deux implications pour les polynômes non constants.
 		      \begin{itemize}
 			      \item
 			            Si $P$ primitif avec $\deg \geq 1$ dans $A[X]$ et irréductible dans $K[X]$, on écrit
 			            $P = QR$, avec $Q,R \in A[X]$.
 
 			            On a que $c(P) = c(Q) c(R) \in A^\times$ donc $c(Q) \in A^\times$ et $c(R) \in A^\times$. \\
-			            La relation $P = QR \in K[X]$ implique que $Q$ et $R$ sont de dégré 0 (car $P$ primitif). \\
+			            La relation $P = QR \in K[X]$ implique que $Q$ et $R$ sont de degré 0 (car $P$ primitif). \\
 			            Comme ils sont primitifs, $Q \text{ ou } R \in A^\times \implies Q \text{ ou } R  \in A[X]^\times$
 			            donc $P$ est irréductible dans $A[X]$.
 			      \item
