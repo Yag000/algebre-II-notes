@@ -41,7 +41,7 @@
 \end{example}
 
 \begin{example}
-	$k = \Q, \,P = (x^2 - 2 )$ n'a pas de racines, donc irréductible dans $\QX$, mais il a des racines sur $\RX$, donc pas irréductible sur $\RX$.
+	$K = \Q, \,P = (x^2 - 2 )$ n'a pas de racines, donc irréductible dans $\QX$, mais il a des racines sur $\RX$, donc pas irréductible sur $\RX$.
 \end{example}
 
 \begin{theorem}[Critère d'Eisenstein]
@@ -65,17 +65,17 @@
 
 
 \begin{proof}
-	Quitte à diviser par $c(P)$, on peut supposer $P$ primitif et de degré $\geq 2$.
+	Quitte à diviser par $c(P)$, on peut supposer $P$ primitif et de degré $\geq 2$.\\
 	Si $P$ n'est pas irréductible, il s'écrit $P=RQ$, avec $R, Q \in A[X]$ de degré $>0$.
 	On écrit
 	$$Q = b_sX^s + \cdots + b_0$$ et $$R = c_rX^r + \cdots + c_0$$
 	Soit $B = A/<p>$ intègre et on a $A[X]/pA[X] \simeq B[X]$. \\
 	Dans $B[X]$, on a $\bar{P} = \bar{R}\bar{Q}$,
-	or d'après les hypothèses on a $\bar{P} = \bar{a}_0X^n$ et $\bar{a_n} \neq 0 $ dans $B$. \\
+	or d'après les hypothèses on a $\bar{P} = \bar{a}_nX^n$ et $\bar{a_n} \neq 0 $ dans $B$. \\
 	Donc $\bar{b_s} \neq 0$ et $\bar{c_r} \neq 0$ et $\bar{b_s}\bar{c_r} = \bar{a_n}$ dans $B$,
 	et $\bar{Q}$ et $\bar{R}$ sont de degré $>0$ et $\bar{Q}\bar{R} = \bar{a_n}X^n$ dans $B[X]$. \\
 	On voit la relation $\bar{a_n}X^n= \bar{Q}\bar{R}$ dans $B[X]$ qui est principal et donc factoriel. \\
-	Et donc $\bar{Q}$ et $\bar{R}$ sont des polynomes irréductibles dans $(Frac \ B)[X]$.\\
+	Et donc $\bar{Q}$ et $\bar{R}$ sont des polynômes irréductibles dans $(Frac \ B)[X]$.\\
 	Donc en particulier $p$ divise $b_0$ et $c_0$, donc $p^2$ divise $b_0c_0 = a_0$, ce qui est absurde.
 \end{proof}
 
@@ -112,7 +112,8 @@
 \end{prop}
 
 \begin{proof}
-	$P$ est primitif, donc si P est est non irréductible dans $\Z[X]$ alors il existe $Q, R \in \Z[X]$ non constants, tels que $P = QR$.
+	$P$ est primitif, donc si P est est non irréductible dans $\Z[X]$.\\
+    Alors il existe $Q, R \in \Z[X]$ non constants, tels que $P = QR$
 	et donc $\bar{P} = \bar{Q}\bar{R}$ dans $\Zn{p}[X]$.
 	De plus, on a:
 	\begin{itemize}
