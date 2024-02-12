@@ -1,0 +1,160 @@
+\subsection{Corps et espaces vectoriels}
+
+
+\begin{definition}
+	Soit $K$ un corps. Une extension de $K$ est un corps $L$ tel que $K$ soit soit un sous corps de $L$.
+\end{definition}
+
+
+\begin{remarque}
+	Si $L$ est une extension de $K$, (on note ça parfois par $L/K$).
+	$L$ est muni ipso facto d'une structure de $K$ espace vectoriel via la loi $\times$ dans $L$.\\
+	En effet la loi externe définissant la multiplication par un scalaire (élément de $K$) est la loi interne de multiplication dans $L$.
+
+	D'autre part, si $\phi : K \to L$ est un morphisme de corps, il est injectif. (Le noyau de $\phi$ est un idéal de $K$.
+	Comme $K$ est un corps, ses seuls idéals sont $\{0\}$ et $K$. On note que il ne peut pas être $K$ car $\phi(1_K) = 1=L$).
+
+	Alors on peut identifier $K$ a $\phi(K)$. $L$ est une extension de $\phi(K)$. On étend la définition par précédente en disant que $L$ est une extension de $K$.
+\end{remarque}
+
+\begin{example}
+	$K(T)$ est une extension de $K$.
+\end{example}
+
+\begin{definition}
+	Soit $L$ une extension de dimension finie sur $K$.\\
+	Alors la dimisión de ce $K$ espace vectoriel est un entier supérieur à 0 qu'on appelle
+	le degré de $L$ sur $K$ que l'on note $[L : K]$. On dit dans ce cas que $L$ est finie sur $K$.
+\end{definition}
+
+\begin{theorem}[de la base télescopique]
+	Soit $M$ un corps, $L$ un sous corps de $M$ et $K$ un sous corps de$ L$.\\
+	Alors lorsque $(e_i)_{i\in I}$ est une base de $L$ sous $K$ et $(f_i)_{i\in I}$ est une base de $M$ sous $L$, alors lafamille
+	$(e_if_j)_{(i,j)\in I\times J}$ est une base de $M$ sous $K$.
+\end{theorem}
+
+
+\begin{example}
+	$\Q[\sqrt{2}] = \left\{ a + bi \mid a,b \in \Q \right\}$ est une extension sur $\Q$ de degré 2.\\
+	$M \left\{ x + iy \mid x,y \in \Q(\sqrt{2}) \right\}$ est une extension $\Q(\sqrt{2})$ de degré 2.\\
+	$M$ est une extension de $\Q$ de dimension 4 et une bas est $\left\{ 1, i , \sqrt{2}, i\sqrt{2}\right\}$.
+\end{example}
+
+
+\begin{proof}
+	\begin{itemize}
+		\item  Montrons que $(e_if_j)$ est libre. \\ %TODO: add indexes
+		      Soient $\lambda_{i,j} \in K$ tels que
+		      $$ \sum\limits_{i,j \in I \times J} \lambda_{i,j} e_i f_j = 0$$
+		      et $(\lambda{i,j})$ es une famille presque nulle. Alors  on a
+		      $$ \sum\limits_{j \in J} \left( \sum\limits_{i \in I} \lambda_{i,j} e_i \right) f_j $$
+		      $(f_j)$ est une famille libre de $M$ sous $L$, ce qui implique que pour tout $j \in J$.
+		      $$ \sum\limits_{i\in I } \lambda_{i,j} e_i = 0$$
+		      La liberté de la famille $(e_i)$ sous $K$ implique que pour tout $j \in J$ et tout $i \in I$, $\lambda_{i,j} = 0$.
+		\item Montrons que $(e_if_j)$  est génératrice de $M$ sur $K$.\\
+		      La famille $f_j$ est génératrice de $M$ sur $L$.\\
+		      Soit $x \in M$, $\exists f_j$ une famille presque nulle de $L$ telle que $X = \sum\limits_{j\in J} x_j f_j$.\\
+		      La famille $e_i$ est génératrice de $L$ sur $K$.\\
+		      Pour tout $x_j \neq 0 $, $\exists (\lambda_{i,j})_{i \in I}$ presque nulle telle que $x_j = \sum\limits_{i \in I} \lambda{i,j}$.\\
+		      Pour tout $j$ tel que $x_j = 0$, on choisit $\lambda_{i,j} = 0$. \\
+		      On a $x = \sum\limits_{(i,j)\in I\times J} \lambda_{i,j} e_i f_j$, avec $(\lambda_{i,j})$ une famille presque nulle.
+	\end{itemize}
+\end{proof}
+
+
+\begin{coro}[important]
+	SI $L / K$ est finit et $M/L$ est fini, alors $M/L$ est fini et
+	$$ [M:K] = [M:L] [L:K] $$ %TODO: Add drawing
+\end{coro}
+
+
+\begin{definition}
+	On considère $L/K$ une extension de corps et $\alpha \in L$. \\
+	\begin{itemize}
+		\item On note $K[\alpha]$ le sous anneau de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $P(\alpha)$ avec $P \in K[X]$:
+		\item $K(\alpha)$ le sous corps de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $F(\alpha)$ où $F \in K(X)$.
+	\end{itemize}
+\end{definition}
+
+
+\begin{definition}
+	Soir $L/K$  une extension de corps et $\alpha \in L$.\\
+	On a un morphisme $\phi$ d'anneaux et de $K$ espace vectoriels:
+	\begin{eqnarray*}
+		\phi: K[X] &\to& L \\
+		P &\mapsto& P(\alpha)
+	\end{eqnarray*}
+	\begin{itemize}
+		\item Si $\phi$ est injectif, alors $K[\alpha] \cong K[X]$ et $K(\alpha) \cong K(X)$. On dit que $\alpha$ est transcendent sur $K$.
+		\item Si $\phi$ est non injectif, on note $\pi$ le générateur de $Ker \phi$. On dit que $\alpha$ est algébrique sur $K$ et on note $\pi$ le polynôme minomal de
+		      $\alpha$ sur $K$. %TODO: Unicité et unitaire pi
+	\end{itemize}
+\end{definition}
+
+\begin{remarque}
+	Bien noter que les notions d'éléments algébriques ou trascendente dépendent du corps de base $K$. Tout élément de $L$ est algébrique sur $L$.\\
+	Notons que $\pi$ est irreducible sur $K$.Comme $L$est integre, alors si le produit de deux polynômes de $K[X]$ s'annule en $\alpha$, alors l'un deux s'annule en $\alpha$.
+\end{remarque}
+
+\begin{example}
+	\begin{itemize}
+		\item $i$ est algébrique sur $\Q$ de polynôme minimal $X^2+1$, $L = \C, K = \Q$.
+		\item Si $P \in [X]$ unitaire tel que $P(\alpha) = 0$, alors $P$ est le polynôme minimal de $\alpha$ si et seulement si $P$ est irréductible sur $K$.
+	\end{itemize}
+\end{example}
+
+\begin{remarque}
+	Le nombre d'éléments de $\C$ algébriques sur $\Q$ est dénombrable. Donc il y a une infinité d'éléments transcendats sur $\Q$.\\
+	$e$ est transcendant sur $\Q$.
+\end{remarque}
+
+
+\begin{prop}
+	Soir $L/K$ une extension de corps et $\alpha \in L$.\\
+	Il y a equivalence entre les assenions suivantes:
+	\begin{itemize}
+		\item  $\alpha$ est algébrique sur $K$
+		\item $K[\alpha] = K(\alpha)$
+		\item $K[\alpha]$ est un $K$ espace vectoriel de dimension finie.
+	\end{itemize}
+	Si on a l'une de ces assertions, alors l'entier $[K(\alpha)] : K]$ est le degré du polynôme minimal de $\alpha$ sur $K$ et on l'appelle le degré $\alpha$ sur $K$.
+\end{prop}
+
+\begin{proof}
+	\begin{itemize}
+		\item $1 \implies 2$\\
+		      Si $\alpha$ algébrique sur $K[\alpha] \cong K[X]/(\pi)$ et $\pi$ est un irréductible de $K[X]$.
+		      Donc $K[X]/(\pi)$ est un corps.\\
+		      $K[X]$ est un corps qui est égal a son cors des fractions.
+		\item Réciproquement, $\alpha$ est transcendant sur $K$.
+		      $K[\alpha] \cong [T]$ qui n'est pas un corps, donc on n'a pas $K[\alpha] = K(\alpha)$.
+
+		\item $1 \implies 3$\\
+		      Si $\pi$ est un polynôme minimal de $\alpha$ sur $K$, alors $K[\alpha] \cong K[X]/(\pi)$ qui est un $K$ espace vectoriel de dimension le degré de $\pi$.
+		\item Réciproquement. \\
+		      Si $\alpha$ est transcendent sur $K$, le $K$ espace vectoriel $K[\alpha]$ est isomorphe a $K[X]$ qui est de dimension infini.
+	\end{itemize}
+	%TODO: Add explanation
+\end{proof}
+
+\begin{definition}
+	Une extension $/$ est dite algébrique si tout élément de $L$ est algébrique sur $K$.\\
+\end{definition}
+
+\begin{remarque}
+	Ainsi, toute extension finie est algébrique. \\
+	Soit $LK$ finie et $\alpha \in L$, $K[\alpha] \subset L$ et donc c'est un espace vectoriel de dimension finie. Donc d'après la proposition précédente, $\alpha$ est algébrique sur $K$.
+\end{remarque}
+
+\begin{theorem} %TODO finish
+	Soit $L/$ une expansion de corps. \\
+	On note $M$ l'ensemble des éléments de $L$ qui sont algébriques sur $K$.
+	\begin{itemize}
+		\item $M$ est un sous corps de $L$.
+		\item
+	\end{itemize}
+\end{theorem}
+
+
+
+
