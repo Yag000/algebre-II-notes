@@ -74,7 +74,7 @@
 	\begin{enumerate}
 		\item $A$ est factoriel
 		\item Si $p \in A$ est irréductible, alors l'idéal $<p>$ est premier
-		\item Soient $a,b,c \in A\setminus\{0\}$ tels que $a \mid bc$ et $a$ et $b$ sont premiers entre eux. Alors $a \mid c$ (le lemme de Gauss).
+		\item Soient $a,b,c \in A\setminus\{0\}$ tels que $a \mid bc$ et $a$ et $b$ sont premiers entre eux. Alors $a \mid c$ (lemme de Gauss).
 	\end{enumerate}
 \end{prop}
 
@@ -177,7 +177,6 @@
 \begin{proof}
 	Commençons par montrer que $P$ et $Q$ primitifs implique $PQ$ primitif. \\
 	Sinon, il existe un irréductible $p \in A $ tel que $p$ divise tous les coefficients de $PQ$. \\
-
 	Supposons que $P$ et $Q$ sont primitifs. On pose $P = \sum a_iX^i$ et  $Q = \sum b_jX^j$
 	On a que $$D = \{i \,\mid \, p\  \text{ne divise pas}\  a_i \}$$ n'est pas vide, car si $D$ est vide alors $ \forall\  i,\, p \,|\, a_i \implies p | c(P)$.
 	On note $i_0$ (resp. $j_0$) l'indice minimal tel que $a_{i_0}$ (resp. $b_{j_0}$) ne soit pas divisible par $p$ et :
@@ -191,7 +190,6 @@
 		&=& a_{i_0}b_{j_0} + \text{un multiple de } p
 	\end{eqnarray*}
 	Si $k \neq i_0$, soit  $k\leq i_0 -1$ soit $i_0+j_0 - \leq j_0 -1$ et donc $ p \mid a_kb_{i_0 + j_0 - k}$\\
-
 	Donc le coefficient de degré $i_0+j_0$ de $PQ$ n'est pas divisible par $p$ ce qui contredit les hypothèses.
 	Donc on a $P$ et $Q$ primitif $\implies$ $PQ$ primitif. \\
 	Dans le cas général
