@@ -2,17 +2,18 @@
 
 
 \begin{definition}
-	Soit $K$ un corps. Une extension de $K$ est un corps $L$ tel que $K$ soit soit un sous corps de $L$.
+	Soit $K$ un corps. Une extension de $K$ est un corps $L$ tel que $K$ soit un sous corps de $L$.
 \end{definition}
 
 
 \begin{remarque}
-	Si $L$ est une extension de $K$, (on note ça parfois par $L/K$).
+	Si $L$ est une extension de $K$, (on note ça parfois par $L/K$).\\
 	$L$ est muni ipso facto d'une structure de $K$ espace vectoriel via la loi $\times$ dans $L$.\\
 	En effet la loi externe définissant la multiplication par un scalaire (élément de $K$) est la loi interne de multiplication dans $L$.
 
-	D'autre part, si $\phi : K \to L$ est un morphisme de corps, il est injectif. (Le noyau de $\phi$ est un idéal de $K$.
-	Comme $K$ est un corps, ses seuls idéals sont $\{0\}$ et $K$. On note que il ne peut pas être $K$ car $\phi(1_K) = 1=L$).
+	D'autre part, si $\phi : K \to L$ est un morphisme de corps, il est injectif: \\
+	Le noyau de $\phi$ est un idéal de $K$. Comme $K$ est un corps, ses seuls idéaux sont $\{0\}$ et $K$.\\
+	On note que il ne peut pas être $K$ car $\phi(1_K) = 1_L$).
 
 	Alors on peut identifier $K$ a $\phi(K)$. $L$ est une extension de $\phi(K)$. On étend la définition par précédente en disant que $L$ est une extension de $K$.
 \end{remarque}
@@ -23,27 +24,27 @@
 
 \begin{definition}
 	Soit $L$ une extension de dimension finie sur $K$.\\
-	Alors la dimisión de ce $K$ espace vectoriel est un entier supérieur à 0 qu'on appelle
+	Alors la dimension de ce $K$ espace vectoriel est un entier supérieur à 0 qu'on appelle
 	le degré de $L$ sur $K$ que l'on note $[L : K]$. On dit dans ce cas que $L$ est finie sur $K$.
 \end{definition}
 
 \begin{theorem}[de la base télescopique]
-	Soit $M$ un corps, $L$ un sous corps de $M$ et $K$ un sous corps de$ L$.\\
-	Alors lorsque $(e_i)_{i\in I}$ est une base de $L$ sous $K$ et $(f_i)_{i\in I}$ est une base de $M$ sous $L$, alors lafamille
+	Soit $M$ un corps, $L$ un sous corps de $M$ et $K$ un sous corps de $L$.\\
+	Alors lorsque $(e_i)_{i\in I}$ est une base de $L$ sous $K$ et $(f_i)_{i\in I}$ est une base de $M$ sous $L$, alors la famille
 	$(e_if_j)_{(i,j)\in I\times J}$ est une base de $M$ sous $K$.
 \end{theorem}
 
 
 \begin{example}
-	$\Q[\sqrt{2}] = \left\{ a + bi \mid a,b \in \Q \right\}$ est une extension sur $\Q$ de degré 2.\\
-	$M \left\{ x + iy \mid x,y \in \Q(\sqrt{2}) \right\}$ est une extension $\Q(\sqrt{2})$ de degré 2.\\
-	$M$ est une extension de $\Q$ de dimension 4 et une bas est $\left\{ 1, i , \sqrt{2}, i\sqrt{2}\right\}$.
+	$\Q(\sqrt{2}) = \left\{ a + b\sqrt{2} \mid a,b \in \Q \right\}$ est une extension sur $\Q$ de degré 2.\\
+	$M = \left\{ x + iy \mid x,y \in \Q(\sqrt{2}) \right\}$ est une extension $\Q(\sqrt{2})$ de degré 2.\\
+	$M$ est une extension de $\Q$ de dimension 4 et une base est $\left\{ 1, i , \sqrt{2}, i\sqrt{2}\right\}$.
 \end{example}
 
 
 \begin{proof}
 	\begin{itemize}
-		\item  Montrons que $(e_if_j)$ est libre. \\ %TODO: add indexes
+		\item Montrons que $(e_if_j)$ est libre. \\ %TODO: add indexes
 		      Soient $\lambda_{i,j} \in K$ tels que
 		      $$ \sum\limits_{i,j \in I \times J} \lambda_{i,j} e_i f_j = 0$$
 		      et $(\lambda{i,j})$ es une famille presque nulle. Alors  on a
@@ -78,15 +79,15 @@
 
 
 \begin{definition}
-	Soir $L/K$  une extension de corps et $\alpha \in L$.\\
-	On a un morphisme $\phi$ d'anneaux et de $K$ espace vectoriels:
+	Soit $L/K$ une extension de corps et $\alpha \in L$.\\
+	On a un morphisme d'anneaux et de $K$ espace vectoriels:
 	\begin{eqnarray*}
 		\phi: K[X] &\to& L \\
 		P &\mapsto& P(\alpha)
 	\end{eqnarray*}
 	\begin{itemize}
-		\item Si $\phi$ est injectif, alors $K[\alpha] \cong K[X]$ et $K(\alpha) \cong K(X)$. On dit que $\alpha$ est transcendent sur $K$.
-		\item Si $\phi$ est non injectif, on note $\pi$ le générateur de $Ker \phi$. On dit que $\alpha$ est algébrique sur $K$ et on note $\pi$ le polynôme minomal de
+		\item Si $\phi$ est injectif, alors $K[\alpha] \cong K[X]$ et $K(\alpha) \cong K(X)$. On dit que $\alpha$ est transcendant sur $K$.
+		\item Si $\phi$ est non injectif, on note $\pi$ le générateur de $Ker \phi$. On dit que $\alpha$ est algébrique sur $K$ et on note $\pi$ le polynôme minimal de
 		      $\alpha$ sur $K$. %TODO: Unicité et unitaire pi
 	\end{itemize}
 \end{definition}
@@ -104,35 +105,33 @@
 \end{example}
 
 \begin{remarque}
-	Le nombre d'éléments de $\C$ algébriques sur $\Q$ est dénombrable. Donc il y a une infinité d'éléments transcendats sur $\Q$.\\
+	Le nombre d'éléments de $\C$ algébriques sur $\Q$ est dénombrable. Donc il y a une infinité d'éléments transcendants sur $\Q$.\\
 	$e$ est transcendant sur $\Q$.
 \end{remarque}
 
 
 \begin{prop}
 	Soir $L/K$ une extension de corps et $\alpha \in L$.\\
-	Il y a equivalence entre les assenions suivantes:
+	Il y a equivalence entre les assertions suivantes:
 	\begin{itemize}
 		\item  $\alpha$ est algébrique sur $K$
 		\item $K[\alpha] = K(\alpha)$
 		\item $K[\alpha]$ est un $K$ espace vectoriel de dimension finie.
 	\end{itemize}
-	Si on a l'une de ces assertions, alors l'entier $[K(\alpha)] : K]$ est le degré du polynôme minimal de $\alpha$ sur $K$ et on l'appelle le degré $\alpha$ sur $K$.
+	Si on a l'une de ces assertions, alors l'entier $[K(\alpha) : K]$ est le degré du polynôme minimal de $\alpha$ sur $K$ et on l'appelle le degré $\alpha$ sur $K$.
 \end{prop}
 
 \begin{proof}
 	\begin{itemize}
 		\item $1 \implies 2$\\
-		      Si $\alpha$ algébrique sur $K[\alpha] \cong K[X]/(\pi)$ et $\pi$ est un irréductible de $K[X]$.
-		      Donc $K[X]/(\pi)$ est un corps.\\
-		      $K[X]$ est un corps qui est égal a son cors des fractions.
+		      Si $\alpha$ algébrique sur $K[\alpha] \cong K[X]/(\pi)$ et $\pi$ est un irréductible de $K[X]$ on a que $K[X]/(\pi)$ est un corps.\\
+		      $K[X]$ est un corps qui est égal a son corps des fractions.
 		\item Réciproquement, $\alpha$ est transcendant sur $K$.
 		      $K[\alpha] \cong [T]$ qui n'est pas un corps, donc on n'a pas $K[\alpha] = K(\alpha)$.
-
 		\item $1 \implies 3$\\
 		      Si $\pi$ est un polynôme minimal de $\alpha$ sur $K$, alors $K[\alpha] \cong K[X]/(\pi)$ qui est un $K$ espace vectoriel de dimension le degré de $\pi$.
 		\item Réciproquement. \\
-		      Si $\alpha$ est transcendent sur $K$, le $K$ espace vectoriel $K[\alpha]$ est isomorphe a $K[X]$ qui est de dimension infini.
+		      Si $\alpha$ est transcendant sur $K$, le $K$ espace vectoriel $K[\alpha]$ est isomorphe a $K[X]$ qui est de dimension infini.
 	\end{itemize}
 	%TODO: Add explanation
 \end{proof}
