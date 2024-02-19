@@ -7,15 +7,15 @@
 
 
 \begin{remarque}
-	Si $L$ est une extension de $K$, (on note ça parfois par $L/K$).\\
-	$L$ est muni ipso facto d'une structure de $K$ espace vectoriel via la loi $\times$ dans $L$.\\
+	Si $L$ est une extension de $K$, (on noté $L/K$).\\
+	Alors $L$ est muni ipso facto d'une structure de $K$ espace vectoriel via la loi $\times$ dans $L$.\\
 	En effet la loi externe définissant la multiplication par un scalaire (élément de $K$) est la loi interne de multiplication dans $L$.
 
 	D'autre part, si $\phi : K \to L$ est un morphisme de corps, il est injectif: \\
 	Le noyau de $\phi$ est un idéal de $K$. Comme $K$ est un corps, ses seuls idéaux sont $\{0\}$ et $K$.\\
 	On note que il ne peut pas être $K$ car $\phi(1_K) = 1_L$).
 
-	Alors on peut identifier $K$ a $\phi(K)$. $L$ est une extension de $\phi(K)$. On étend la définition par précédente en disant que $L$ est une extension de $K$.
+	Alors on peut identifier $K$ a $\phi(K)$. $L$ est une extension de $\phi(K)$. On étend la définition précédente en disant que $L$ est une extension de $K$.
 \end{remarque}
 
 \begin{example}
@@ -44,19 +44,19 @@
 
 \begin{proof}
 	\begin{itemize}
-		\item Montrons que $(e_if_j)$ est libre. \\ %TODO: add indexes
+		\item Montrons que $(e_if_j)$ est libre. \\
 		      Soient $\lambda_{i,j} \in K$ tels que
 		      $$ \sum\limits_{i,j \in I \times J} \lambda_{i,j} e_i f_j = 0$$
-		      et $(\lambda{i,j})$ es une famille presque nulle. Alors  on a
+		      et $(\lambda_{i,j})$ est une famille presque nulle. Alors  on a
 		      $$ \sum\limits_{j \in J} \left( \sum\limits_{i \in I} \lambda_{i,j} e_i \right) f_j $$
 		      $(f_j)$ est une famille libre de $M$ sous $L$, ce qui implique que pour tout $j \in J$.
 		      $$ \sum\limits_{i\in I } \lambda_{i,j} e_i = 0$$
 		      La liberté de la famille $(e_i)$ sous $K$ implique que pour tout $j \in J$ et tout $i \in I$, $\lambda_{i,j} = 0$.
 		\item Montrons que $(e_if_j)$  est génératrice de $M$ sur $K$.\\
 		      La famille $f_j$ est génératrice de $M$ sur $L$.\\
-		      Soit $x \in M$, $\exists f_j$ une famille presque nulle de $L$ telle que $X = \sum\limits_{j\in J} x_j f_j$.\\
+		      Soit $x \in M$, $\exists \, x_j$ une famille presque nulle de $L$ telle que $x = \sum\limits_{j\in J} x_j f_j$.\\
 		      La famille $e_i$ est génératrice de $L$ sur $K$.\\
-		      Pour tout $x_j \neq 0 $, $\exists (\lambda_{i,j})_{i \in I}$ presque nulle telle que $x_j = \sum\limits_{i \in I} \lambda{i,j}$.\\
+		      Pour tout $x_j \neq 0 $, $\exists (\lambda_{i,j})_{i \in I}$ presque nulle telle que $x_j = \sum\limits_{i \in I} \lambda_{i,j}e_i$.\\
 		      Pour tout $j$ tel que $x_j = 0$, on choisit $\lambda_{i,j} = 0$. \\
 		      On a $x = \sum\limits_{(i,j)\in I\times J} \lambda_{i,j} e_i f_j$, avec $(\lambda_{i,j})$ une famille presque nulle.
 	\end{itemize}
