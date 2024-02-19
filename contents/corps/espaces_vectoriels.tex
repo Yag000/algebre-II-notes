@@ -64,7 +64,7 @@
 
 
 \begin{coro}[important]
-	SI $L / K$ est finit et $M/L$ est fini, alors $M/L$ est fini et
+	Si $L / K$ est fini et $M/L$ est fini, alors $M/K$ est fini et
 	$$ [M:K] = [M:L] [L:K] $$
 \end{coro}
 
@@ -72,7 +72,7 @@
 \begin{definition}
 	On considère $L/K$ une extension de corps et $\alpha \in L$. \\
 	\begin{itemize}
-		\item On note $K[\alpha]$ le sous anneau de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $P(\alpha)$ avec $P \in K[X]$:
+		\item On note $K[\alpha]$ le sous anneau de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $P(\alpha)$ avec $P \in K[X]$.
 		\item $K(\alpha)$ le sous corps de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $F(\alpha)$ où $F \in K(X)$.
 	\end{itemize}
 \end{definition}
@@ -87,14 +87,14 @@
 	\end{eqnarray*}
 	\begin{itemize}
 		\item Si $\phi$ est injectif, alors $K[\alpha] \cong K[X]$ et $K(\alpha) \cong K(X)$. On dit que $\alpha$ est transcendant sur $K$.
-		\item Si $\phi$ est non injectif, on note $\pi$ le générateur de $Ker \phi$. On dit que $\alpha$ est algébrique sur $K$ et on note $\pi$ le polynôme minimal de
+		\item Si $\phi$ est non injectif, on note $\pi$ le générateur de $\ker\ \phi$. On dit que $\alpha$ est algébrique sur $K$ et on note $\pi$ le polynôme minimal de
 		      $\alpha$ sur $K$. Ce polynôme est unique et unitaire.
 	\end{itemize}
 \end{definition}
 
 \begin{remarque}
 	Bien noter que les notions d'éléments algébriques ou trascendente dépendent du corps de base $K$. Tout élément de $L$ est algébrique sur $L$.\\
-	Notons que $\pi$ est irreducible sur $K$.Comme $L$est integre, alors si le produit de deux polynômes de $K[X]$ s'annule en $\alpha$, alors l'un deux s'annule en $\alpha$.
+	Notons que $\pi$ est irreducible sur $K$. Comme $L$ est integre, alors si le produit de deux polynômes de $K[X]$ s'annule en $\alpha$, alors l'un deux s'annule en $\alpha$.
 \end{remarque}
 
 \begin{example}
@@ -111,7 +111,7 @@
 
 
 \begin{prop}
-	Soir $L/K$ une extension de corps et $\alpha \in L$.\\
+	Soit $L/K$ une extension de corps et $\alpha \in L$.\\
 	Il y a equivalence entre les assertions suivantes:
 	\begin{itemize}
 		\item  $\alpha$ est algébrique sur $K$
@@ -125,9 +125,9 @@
 	\begin{itemize}
 		\item $1 \implies 2$\\
 		      Si $\alpha$ algébrique sur $K[\alpha] \cong K[X]/(\pi)$ et $\pi$ est un irréductible de $K[X]$ on a que $K[X]/(\pi)$ est un corps.\\
-		      $K[X]$ est un corps qui est égal a son corps des fractions.
+		      $K[X]$ est un corps qui est égal à son corps des fractions.
 		\item Réciproquement, $\alpha$ est transcendant sur $K$.
-		      $K[\alpha] \cong [T]$ qui n'est pas un corps, donc on n'a pas $K[\alpha] = K(\alpha)$.
+		      $K[\alpha] \cong K[T]$ qui n'est pas un corps, donc on n'a pas $K[\alpha] = K(\alpha)$.
 		\item $1 \implies 3$\\
 		      Si $\pi$ est un polynôme minimal de $\alpha$ sur $K$, alors $K[\alpha] \cong K[X]/(\pi)$ qui est un $K$ espace vectoriel de dimension le degré de $\pi$.
 		\item Réciproquement. \\
@@ -137,16 +137,16 @@
 \end{proof}
 
 \begin{definition}
-	Une extension $/$ est dite algébrique si tout élément de $L$ est algébrique sur $K$.\\
+	Une extension $L/K$ est dite algébrique si tout élément de $L$ est algébrique sur $K$.\\
 \end{definition}
 
 \begin{remarque}
-	Ainsi, toute extension finie est algébrique. \\
-	Soit $LK$ finie et $\alpha \in L$, $K[\alpha] \subset L$ et donc c'est un espace vectoriel de dimension finie. Donc d'après la proposition précédente, $\alpha$ est algébrique sur $K$.
+	Ainsi, toute extension finie est algébrique.\\
+	Soit $L/K$ finie et $\alpha \in L$, $K[\alpha] \subset L$ et donc c'est un espace vectoriel de dimension finie. Donc d'après la proposition précédente, $\alpha$ est algébrique sur $K$.
 \end{remarque}
 
 \begin{theorem}
-	Soit $L/$ une expansion de corps. \\
+	Soit $L/K$ une expansion de corps.\\
 	On note $M$ l'ensemble des éléments de $L$ qui sont algébriques sur $K$.
 	\begin{itemize}
 		\item $M$ est un sous corps de $L$.
