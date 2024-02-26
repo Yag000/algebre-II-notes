@@ -157,4 +157,57 @@
 
 
 
+\begin{example}
+	$\C$ est une clôture algébrique de $\R$.
+\end{example}
+
+\begin{example}
+	$\C$ n'est pas une clôture algébrique de $\Q$. \\
+	Si on note $\bar{\Q}$ l'ensemble des éléments de $\C$ algébriques sur $\Q$ on a que $\bar{Q} \neq \C$. On peut montrer que $\bar{\Q}$ est dénombrable.
+\end{example}
+
+\begin{proof}
+	\begin{itemize}
+		\item $0,1 \in M \implies K \subset M$ \\
+		      \begin{itemize}
+			      \item
+			            Montrons que si $x \in M, x \neq 0, \  x^{-1} \in M \text{ et } -x \in M$. \\
+			            Si $x \in M, \ x \in L$ et $P \in K[X], \ P \neq 0$ tel que $P (x) = 0$.\\
+			            $x^{-1} \in L \text{ et } -x \in L$. Si $d = \deg P$ on a $Q(X) = X^d P(1/x) \in K[X]$ et $Q(x^{-1}) = 0$.\\
+			            $S(x) = P(-x) \in K[x]$ et $S(-x) = 0$. \\
+			            Ici on a construit explicitement les polynômes $Q$ et $S$ à partir de $P$.\\
+			            Alors $x^{-1}$ et $-x \ \in M$
+			      \item Montrons que si $x,y \in M, \  x + y \text{ et } x*y \in M$. \\
+			            $K[x]$ est un$K$-espace vectoriel de dimension finie, \\
+			            $y$ est algébrique sur $K$, donc a fortiori $K(x) =  K[x]$, donc $K[x][y]$ est de dimension finie.\\
+			            $x+y $et $x*y\in K[x][y]$ donc $K[x+y]$ et $K[x*y]$ sont des $K$ espaces vectoriels de dimension finie car
+			            ce sont des sous espaces vectoriels de $K[x][y]$
+		      \end{itemize}
+		      Alors $M$ est un sous corps de $L$
+		\item Soit $\alpha$ in $L$ algébrique sur $M$.\\
+		      Il existe $P \in M[X]$
+		      $$ P = X^na_n + \cdots + a_0$$
+		      tel que $P(\alpha) = 0$. Comme chaque $a_j$ est algébrique sur $K$, on a par itération que $K'=K[a_0,\cdots, a_{n-1}]$ est un corps qui est une extension finie de $K$.\\
+		      $K'[\alpha]$ est une extension finie de $K'$ puisque $P(\alpha)=0$ et$P \in K'[X]$. f
+		      $$ \left[K[\alpha] : K\right]  =  \left[K[\alpha] : K'\right] \left[K' : K\right] < \infty $$
+		      donc $\alpha$ est algébrique sur $K$ et donc $\alpha \in M$.
+		\item
+		      Si $P \in M[X]$ non constant il admet une racine $\alpha \in L$ (car $L$ est algébriquement clos). \\
+		      $\alpha$ est algébrique sur $M \implies \alpha \text{ algébrique sur K} \implies \alpha \in M$\ \\ % TODO: say that the First implies comes from the second point of the theorem.
+		      $M$ est dont algébriquement clos.
+	\end{itemize}
+\end{proof}
+
+\begin{remarque}
+	Si $\alpha \in M$, $K[X]$ est un $K$-espace vectoriel mais la clôture algébrique sur
+	$K$ n'est pas forcement un $K$-espace vectoriel de dimension finie.
+\end{remarque}
+
+\begin{remarque}
+	$\bar{Q}$ est dénombrable car $\Q$ est dénombrable.\\
+	$\C$ n'est pas dénombrable ce qui démontre l'existence de nombres transcendants sur $\Q$.
+\end{remarque}
+
+
+
 
