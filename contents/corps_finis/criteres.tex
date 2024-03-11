@@ -1,0 +1,65 @@
+\subsection{Critères de réductibilité sur $\Q$ et $\F_p = \Z/p\Z$}
+Pour étudier la réductibilité d'un polynôme sur $\Q$ on peut toujours se ramener à un
+polynôme sur $\Z$ primitif.
+
+
+
+\begin{prop}
+	Soit $P = a_nX^n + \ldots + a_0 \in \Z[X]$.\\
+	Soir $p$ un nombre premier tel que $p \nmid a_n$.\\
+	Si $\bar{P}$,la réduction modulo $p$, est irréductible sur $\F_p$, alors $P$ est irréductible sur $\Q$.
+	De plus, si $P$ est primitif, alors $P$ est irréductible sur $\Z$.
+\end{prop}
+
+
+\begin{remarque}
+	$a \nmid b$ est essentiel : $2X^2 - X + 1$ est irréductible sur $\F_2$ mais réductible sur $\Q$, 1 est une racine.
+\end{remarque}
+
+\begin{remarque}
+	Ce critère est une condition suffisante mais pas nécessaire.\\
+\end{remarque}
+
+
+\begin{proof}
+	On suppose $P$ primitif, réductible sur $\Q$ et donc aussi sur $\Z$.\\
+	Alors il existe $R, S \in \Q[X]$ , tels que $P = RS$
+	$$ \exists a, b \in \N* \text{ tels que } aR, bS \in \Z[X]$$
+	$$ abP = aRbS$$
+	$$ c(abP) = ab = c(aR)c(vS) $$
+	$$P =   \frac{c(aR)}{c(aR)} \frac{c(bS)}{c(bS)}$$
+	Modulo $p$ $\bar{P} = \bar{Q}\bar{R}$.
+	De plus, on a:
+	\begin{itemize}
+		\item $\deg Q = \deg \bar{Q}$
+		\item $\deg R = \deg \bar{R}$
+
+	\end{itemize}
+	car leurs coefficients dominants ne divisent pas $p$.\\
+	Donc $\bar{P} = \bar{Q}\bar{R} \implies \bar{P}$ n'est pas irréductible dans $\Zn{p}[X]$.\\
+	On a donc montré la contraposée de la proposition.
+\end{proof}
+
+
+\begin{prop}
+	Soit $P \in K[X]$ et $\deg P = n$ n'a pas de racines dans toute extension
+	de $K$ de degré au plus $\frac{n}{2}$, alors $P$ est irréductible sur $K$.
+\end{prop}
+
+\begin{remarque}
+	Si $n = 2$ ou $n = 3$ ce résultat dit que si $P$ n'a pas de racines dans $K$, alors $P$ est irréductible.
+\end{remarque}
+
+
+\begin{proof}
+	Soit $P$ réductible sur $K$. Alors il existe $Q$ irréductible de degré $\leq \frac{n}{2}$ qui divise $P$.\\
+	Soit un corps de rupture pour $Q$ sur $K$.\\
+	$$ [L : K] = \deg Q \leq \frac{n}{2}$$
+	$L$contient une racine de $Q$ et donc une racine de $P$.
+\end{proof}
+
+
+%TODO
+
+
+

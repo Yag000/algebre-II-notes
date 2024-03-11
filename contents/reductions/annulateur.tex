@@ -1,0 +1,48 @@
+\subsection{Polygones annulateur et polynôme minimal}
+
+
+\begin{definition}
+	Soit $y \in \LE$ et$P \in K[X]$. On dit que $P$ est un polynôme annulateur de $u$ si $P(u) = 0_{\LE}$
+\end{definition}
+
+
+\begin{prop}
+	Tout endomorphisme dans un espace vectoriel de dimension finie admet un polynôme annulateur non nul.
+\end{prop}
+
+
+\begin{proof}
+	$\set{u^k \mid 0 \leq k \leq n^2}$ est une famille liée car $\dim \LE = n^2$.\\
+\end{proof}
+
+
+\begin{remarque}
+	Le théorème de Cayley-Hamilton nous dira que le polynôme caractéristique est un polynôme annulateur.
+\end{remarque}
+
+\begin{remarque}
+	Si $E$ n'est pas de dimension finie, cela n'est pas vrai en general:
+
+	Soit $ D : K[X] \to K[X]$ l'application qui à un polynôme associe sa dérivée. Alors $D$ n'a pas de polynôme annulateur.\\
+	Soit $Q = \sum\limits_{i=0}^n a_iX^i \in K[X]$.
+	$$Q(D)(P) = \sum\limits_{k=0}^n ia_i P^{(k)}$$
+\end{remarque}
+
+
+
+\begin{prop}
+	L'ensemble $I_u$ des polynômes annulateurs de $u \in \LE$ est un idéal de $K[X]$.
+	Si $I_u \neq \set{0}$, alors il admet un générateur unique appelé polynôme minimal de $u$ et noté $\mu_u$.
+\end{prop}
+
+
+\begin{definition}
+	Un endomorphisme $u$ est dit nilpotent si il existe $n \in \N$ tel que $u^n = 0_{\LE}$.\\
+	Dans ce cas, le polynôme minimal de $u$ est de la forme $X^n$et on appelle $n$ l'indice de nilpotence de $u$.
+\end{definition}
+
+
+\begin{remarque}
+    remarque
+\end{remarque}
+

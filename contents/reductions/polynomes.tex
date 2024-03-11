@@ -1,0 +1,35 @@
+\subsection{Polynômes d'endomorphisme}
+On note $\LE$ l'ensemble des endomorphismes de $E$.
+
+\begin{definition}
+	Soir $u \in \LE$. Pour tout polynôme $P \in K[X] = a_0 + a_1X + \ldots + a_nX^n$, on définit $P(u)$ par:
+	$$P(u) = a_0 Id_E + a_1 u + \ldots + a_n u^n$$
+	L'application $P \mapsto P(u)$ est un morphisme d'algèbres (d'anneaux) de $K[X]$ dans $\LE$.
+	$$(PQ)(u) = P(u)\circ Q(u)$$
+\end{definition}
+
+\begin{prop}
+	Soit $u \in \LE$ et $P, Q \in K[X]$. Alors:
+	$P(u)$ et $Q(u)$ commutent: $P(u)\circ Q(u) = Q(u)\circ P(u)$
+\end{prop}
+
+\begin{proof}
+	Grâce à la linéarité il suffit de le montrer pour $P = X^m$ et $Q = X^n$.
+	$$u^m\circ u^n = u^{m+n} = u^{n+m} = u^n\circ u^m$$
+\end{proof}
+
+\begin{remarque}
+	Si $U$ admet un polynôme minimal $\mu_U$ de degré $d$, alors
+	$$ dim K[u] = d $$
+\end{remarque}
+
+
+
+\begin{proof}
+	%TODO: add function
+	$$Ker \phi = <\mu_U(u)>$$
+	$$ K[u] \cong K[X] / <\mu_U>$$
+	Donc $dim K[u] = deg \mu_U = d$
+	%TODO
+\end{proof}
+

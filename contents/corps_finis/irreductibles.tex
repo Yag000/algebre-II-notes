@@ -11,14 +11,38 @@ Soit $I(n,q)$ le plus petit polynôme unitaire de degré $n$ sur $\F_q$.
 
 	où $\mu$ est la fonction de Möbius:
 
-	\[ \mu(k) = \begin{array}{ll}
+	\[ \mu(k) = \left\{\begin{array}{ll}
 			0      & \text{si il existe } l \text{ premier tel que } l^2 \text{ divise } k                            \\
 			(-1)^r & \text{si } k = p_1 \cdot p_2 \cdot \ldots \cdot p_r \text{ avec } p_i \text{ premiers distincts}
-		\end{array} \]
+		\end{array} \right.\]
 
 \end{theorem}
 
 \begin{proof}
 	%TODO
+\end{proof}
+
+\begin{example}
+	$ q = 2, \ n = 4, \ 2^4 = 16 $
+	$$	X ^16 - X = X(X-1)(X^2 + X + 1)(X^4 + X + 1)(X^4 + X^3 + 1)(X^4 + x^3 + x^2 + x + 1) $$
+	$$	I(2,2) = \frac{1}{2}\sum_{d|2} \mu(\frac{2}{d}) 2^d = \frac{1}{2}(4-2) = 1$$
+	$$	I(4,2) = \frac{1}{4}\sum_{d|4} \mu(\frac{4}{d}) 2^d = \frac{1}{4}(2^4 - 2^2) = 3$$
+\end{example}
+
+
+\begin{coro}
+	Pour tout $n$ et tout $ $ puissance d'un nombre premier:
+	$$ I (n, q) > 0 $$
+\end{coro}
+
+
+\begin{proof}
+	\begin{eqnarray*}
+		n I(n, q) & = & \sum_{d|n} \mu(\frac{n}{d}) q^d \\
+		&>& q^n - \sum_{d|n, d < n} q^d \\
+		&>& q^n - \sum_{1 \leq d\leq \frac{n}{2}} q^d \\
+		&=& q^n - q\frac{q^{\frac{n}{2}} - 1}{q-1} \\ %TODO: Use partie entière
+		&>& 0
+	\end{eqnarray*}
 \end{proof}
 
