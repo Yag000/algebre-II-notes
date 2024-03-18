@@ -1,0 +1,102 @@
+\subsection{Lemme des noyaux}
+
+\subsubsection{Etude du $\ker P(u)$}
+
+
+\begin{prop}
+	Soient $P,$ et $Q \in K[X]$ tels que $\pgcd{P}{Q} = D$ et $u \in \LE$.
+	Alors
+	$$\ker P(u) \cap \ker Q(u) = \ker D(u).$$
+\end{prop}
+
+\begin{proof}
+	\begin{itemize}
+		\item $D \mid P \implies \ker D(u) \subset \ker P(u)$\\
+		      En effet, $P = RD$, $P(u)(x) = R(u)(D(u)(x)) = 0$.\\
+		      Donc $D(u)(x) = 0 \implies P(u)(x) = 0$
+		      $$ \ker D(u) \subset \ker P(u) \cap \ker Q(u).$$
+
+		\item Montrons l'autre inclusion.\\
+		      Le théorème de Bézout affirme l'existence de $U$ et $V \in K[X]$ tels que $U(X)P(X) + V(X)Q(X) = D(X)$.\\
+		      Donc $\forall x \in E$,
+		      $$ D(u)(x) = U(u)P(u)(x) + V(u)Q(u)(x) = 0$$
+		      Donc $x \in \ker P(u) \cap \ker Q(u) \implies x \in \ker D(u)$.
+	\end{itemize}
+\end{proof}
+
+\begin{coro}
+	Soit $u \in \LE$ de polynôme minimal de $\mu_u$.
+	Soit $P \in K[X]$.
+	$$\ker P(u) = \ker D(u)$$
+	Où $D = \pgcd{P}{\mu_u}$.
+\end{coro}
+
+\begin{remarque}
+	Ce résultat nous permet de nous restreindre a des $P$ tels que $P \mid \mu_u$.
+\end{remarque}
+
+%TODO: add example showing that \mu_u in not necessarily irreducible
+
+\begin{proof}
+	Par définition $\ker \mu_u(u) = E$, car $\mu_u(u) = 0_{\LE}$, donc
+	\begin{eqnarray*}
+		\ker P(u)  &=& \ker P(u) \cap E \\
+		&=& \ker P(u) \cap \ker \mu_u(u) \\
+		&=& \ker D(u)
+	\end{eqnarray*}
+\end{proof}
+
+\begin{coro}
+	Soit $u \in \LE$ de polynôme minimal $\mu_u$ et $P \in K[X]$ unitaire, avec $P \mid \mu_u$.\\
+	Soit $v = u_{| \ker P(u)}$.\\ %TODO: make this a command
+	Alors $\mu_v = P$.
+\end{coro}
+
+
+\begin{proof}
+	Pour tout $P$, $\ker P(u) $ est stable par $u$.\\
+	En effet, si $x \in \ker P(u)$, alors $P(u)(x) = 0$, donc
+	\begin{eqnarray*}
+		P(u)(u(x)) &=& (P (u) \circ u)(x) \\
+		&=& (u \circ P(u))(x) \\
+		&=& u(P(u)(x)) \\
+		&=& 0_{\LE}
+	\end{eqnarray*}
+	Donc $u(x) \in \ker P(u)$.\\ %TODO: Maybe add remark about (XP(X))(u)...
+
+	Montrons que $F = \ker P(u), \ \forall x \in F, \ P(v(x)) = P(u)(x) = 0$.\\
+
+	$P(0)=0_{\LE}$, $\mu_v \mid P$.\\
+	Prenons $Q \in K[X]$ tel que $\mu_v = QP$.\\
+	$\mu_v(u) = 0_{\LE} \implies \ker Q(u) \subset \ker P(u)$.\\
+	%TODO: Finish
+\end{proof}
+
+
+
+\subsubsection{Lemme des noyaux}
+
+Soit $u \in \LE$.\\
+Il permet de décomposer un espace vectoriel en some directe de espaces vectoriels stables par $u$ et adaptés à la réduction de $u$.
+
+\begin{lemma}[des noyaux]
+	Soit $(P_k)$ une famille de polynômes 2 à deux premiers entre eux.
+	Soit $u \in \LE$.
+	$$ \ker \left(\left(\prod_{k=1}^N P_k \right)(u)\right) = \bigoplus_{k=1}^N \ker P_k(u)$$
+
+	De plus, la projection de $\ker \left(\left(\prod_{k=1}^N P_k \right)(u)\right)$ sur l'un des  $\ker P_j(u)$ parallèlement 'a la somme des autres est un polynôme en $u$.
+\end{lemma}
+
+\begin{proof}
+	Par récurrence sur $N$.
+
+	\begin{itemize}
+		\item Montrons que si $P_1$ et $P_2$ sont premiers entre eux, alors $\ker (P_1P_2) (u) = \ker P_1(u) \oplus \ker P_2(u)$.\\
+		      %TODO
+	\end{itemize}
+\end{proof}
+
+
+\subsubsection{Conséquences: Décomposition en sous espaces vectoriels stables}
+
+%TODO
