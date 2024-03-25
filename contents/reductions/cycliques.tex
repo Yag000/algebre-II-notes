@@ -1,0 +1,77 @@
+\subsection{Endomorphismes cycliques}
+
+Sot $u \in \LE$ et $x \in E$ non nul.
+Le sous espace vectoriel cyclique $E_{u,x}$ est e plus petit sous espace vectoriel de $E$ contenant $x$ et stable par $u$.
+
+Il est engordé par les $u^k(x), \ k \in \N$ et si la dimension de cet espace est $p$, alors la famille
+$ (x, u(x), \ldots, u^{p-1}(x))$ est une base de $E_{u,x}$.
+
+
+
+\begin{proof}
+	\begin{itemize}
+		\item
+		      Soit $F \subset vect (x, u(x), \ldots, u^{p-1}(x))$.
+		      $x \in F$ et $F$ est stable par $u$.
+		      donc $E_{u,x} \subset F$.
+
+		\item
+		      Réciproquement, les $u^k(x) \in E_{u,x}$ car $x \in E_{u,x}$ et $E_{u,x}$ est stable par $u$.
+		      Donc $F \subset E_{u,x}$.
+	\end{itemize}
+	On en conclut que $E_{u,x} = vect (x, u(x), \ldots, u^{p-1}(x))$.
+\end{proof}
+
+On désigne par $\mu_{u,x}$ le polynôme minimal de $u$ en $x$, c'est à dire le générateur unitaire de l'idéal
+$$ \set{P \in K[X] \mid P(u)(x) = 0_E}$$
+
+Comme $\dim E$ est fini cet idéal est \textbf{non} réduit à $\set{0}$.
+
+
+Si $\mu_{u,x} = X^d + \sum_{k=0}^{d-1} a_k X^k$ alors la famille $(x, u(x), \ldots, u^{d-1}(x))$ est libre.
+
+La famille est génératrice.\\
+En effet, si on écrit $v = \sum \beta_k u^k(x) = P(u)(x)$, avec $P = \sum \beta_k X^k$.
+
+On fait la division euclidienne de $P$ par $\mu_{u,x}$:
+
+$$ P = Q \mu_{u,x} + R, \ \deg R \leq d -1$$
+%TODO Improve this
+$$ v = P(u)(x) = Q(u) \mu_{u,x}(u)(x) + R(u)(x) = R(u)(x)$$
+
+Car $\mu_{u,x}(u)(x) = 0$ par définition.
+
+$$ P(u)(x) \in vect (x, u(x), \ldots, u^{d-1}(x))$$
+
+On a aussi $(u^k(x))_{k \in \N}$ vase de $E_{u,x}$., donc en particulier, $ d = \dim E_{u,x} - p $.
+
+\begin{definition}
+	$u \in \LE$ est dit cyclique \ssi $\exists x \in E$ tel que $E = E_{u,x}$.
+\end{definition}
+
+\begin{example}
+	Si $\dim E = 2$ $u$ est soit une homothétie, soit un endomorphisme cyclique.
+
+	\begin{itemize}
+		\item Soit pour tout $x \in E$ non nul, $\dim (x, u(x)) = 1$.
+
+		      $\forall x \in E, \exists \lambda_x \in K, u(x) = \lambda_x x$.
+
+		      \begin{itemize}
+			      \item $\lambda_x$ ne dépend pas de $x$. En effet, si $x$ et $y$ sont non colinéaires:
+			            $$ u (x+y) = \lambda_{x+y} (x+y) = \lambda_x x + \lambda_y y \implies (\lambda_{x+y} - \lambda_x) x = (\lambda_{x+y} - \lambda_y) y$$
+			            Donc $\lambda_{x+y} = \lambda_x = \lambda_y$.
+
+			      \item Si $x$ et $y$ sont colinéaires, alors $\exists z$ non colinéaire à $x$ et donc à $y$. D'après ce qui précède, $\lambda_x = \lambda_z = \lambda_y$.
+		      \end{itemize}
+
+		      Donc $\lambda_x = \lambda$ ne dépend pas de $x$, et donc $u$ est une homothétie.
+
+		\item Sinon $\exists x \in E$ tel que $(x, u(x))$ est une base de $E$ et dans ce cas $u$ est cyclique
+	\end{itemize}
+\end{example}
+
+\begin{example}
+	Soit $u \in \LE$, $\dim E = n$, On suppose que $u$ admet $n$ valuers propres distinctes. Alors $u$ est cyclique.
+	%TODO
+\end{example}

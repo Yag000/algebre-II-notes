@@ -1,0 +1,146 @@
+\subsection{Rappels d'algèbre linéaire}
+
+
+
+\subsubsection{Déterminants} %Maybe don't use subsubsections
+
+
+Soit $n = \dim E$, pour tout $u \in \LE$, on peut associer $\det u \in K$.
+
+Il y a plusieurs façons de le définir.
+
+
+\begin{itemize}
+	\item De manière canonique : pour toute forme $n$ linéaire alternée $f$ sur $E$ on a:
+	      $$ f \circ u = \det (u) * f$$
+	      En effet, l'espace de ces formes $n$ alternée est de dimension 1. De cette manière, $f$ et $f \circ u$ sont proportionnelles.
+
+	      On qualifie cette définition de canonique car elle ne necesite pas le choix d'une base de $E$.
+
+	\item Soit de manière matricielle : $\det u$ est un polynôme explicite en les coefficients de la matrice de $U$ prise dans une base de $E$.
+	      Ce déterminant ne dépend pas du choix de la base.
+\end{itemize}
+
+
+D'après 1, $det (Id_E) = 1$.
+
+Si $u$ et $v \in \LE$,
+\begin{eqnarray*}
+	f \circ u \circ v &=& \det (u \circ v) f \\
+	&=& \det (v) f  \circ u \\
+	&=& \det (v) \det (u) f
+\end{eqnarray*}
+
+Alors,
+$$\det (u \circ v) = \det (u) \det (v) = \det (v \circ u) $$
+
+En particulier sir $v$ est inversible, alors
+$$ \det (v^{-1}) = (\det v )^{-1} $$
+
+Le déterminant induit un morphisme de groupe
+
+
+\begin{eqnarray*}
+	\det (GL(E), \circ) &\to& (K^{\times}, *)\\
+	u &\mapsto& \det (u)
+\end{eqnarray*}
+
+$u$ est inversible \ssi $det(u) \neq 0$
+
+\subsubsection{Polynôme caractéristique d'un endomorphisme}
+
+On apelle polynôme caractéristique de $u$ le polynôme  $\chi_u$ défini par %Change to another letter
+$$\chi_u(X) = \det (X Id_e - u)$$
+
+On fixe une base $B$ de $E$, on définit $M = Mat_B u$.
+Dans ce cas $\chi_u(X) = \det (CI_n -M)$
+(c'est un polynôme de $X$ de degré $n$ unitaire).
+
+La définition de $\chi_u(X) = \det (XI_n-M)$ ne dépend pas du choix de la base.
+Si $P$ inversible, alors:
+$$ \det (XI_n - PMP^{-1}) = \det (P(XI_n -M) P^{-1}) = \det (P) \det (X-I_nM)\det P^{-1} = \det (XI_n -M)$$
+
+
+De cette manière, si $v$ inversible:
+$$ \chi_{v\circ u \circ v^{-1}} = \chi_{u}$$
+
+
+\subsubsection{Notion de valeur propre}
+
+$\lambda \in $ tel que $\exists x \in E$ non nul vérifiant $u(x) = \lambda x$.
+
+\subsubsection{Notion de vecteur propre associé a une valuer propre}
+
+
+$$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
+
+\begin{prop}
+	Les vecteurs propres associés à des valeurs propres 2 à 2 disjoints forment une famille libre
+\end{prop}
+
+\begin{coro}
+	Soit $E$ de dimension finie $n$ et $u \in LE$, alors $u$ a aun plus $n$ valeurs propres distinctes.
+\end{coro}
+
+
+\begin{prop}
+	Les sous espaces vectoriels correspondant a deux valuers propres distinctes sont en somme directe.
+
+	Autrement dit,
+	$$E_{\lambda_1} \cap E_{\lambda_2} = \set{0} \text { si } \lambda_1 \neq \lambda_2$$
+\end{prop}
+
+\begin{prop}
+	Soit $u \in \LE$ et $P \in K[X]$: Pour toute valeur propre $\lambda$ de u:
+	$$ P(u) = 0_{\LE} \implies P(\lambda) = 0_K$$
+\end{prop}
+
+\begin{proof}
+	Si $x \in E_\lambda , P(u)(x) = P(\lambda) x$ %TODO: add yellow explanation
+\end{proof}
+
+
+\begin{prop}
+	Soit $u \in \LE$ de polynôme minimal $\nu_u$,
+	$$ \lambda \text{ valeur propre de u }\iff \mu_u(\lambda) = 0$$
+\end{prop}
+
+
+\begin{proof}
+	\begin{itemize}
+		\item  $\Rightarrow$:
+		      $\lambda$ valeur propre de $u$ (on dit aussi $\lambda \in Spec(u)$)
+		      $$\exists x \in E \text { non nul tel que } u(x) = \lambda x \ \nu_u(u)(x) = \nu_u(\lambda)x =0$$
+		\item $\Leftarrow$:
+		      $\nu_u(\lambda) = 0 \implies \exists Q \in K[X]$ tel que $\nu_u(X) = (X - \lambda)Q(X)$\\
+		      Si $\lambda$ n'était pas une valuer propre, alors $u-\lambda Id_E$ serait inversible
+		      $$ (u-  \lambda Id) \circ Q = 0 \iff Q(u) = 0_{\LE}$$
+		      Ce qui contredit la minimalité de $\nu$.
+	\end{itemize}
+\end{proof}
+
+
+
+\begin{prop}
+	Soit $u \in \LE$, $E$ de dimension $n$.
+	$F$ un sous espace vectoriel de $E$ stable par $u$.
+	On peut définir $v \in \LE$ par $v = u_{|F}$. On a alors:
+	$$\chi_v \text{ divise } \chi_u$$
+\end{prop}
+
+\begin{proof}
+	%TODO
+\end{proof}
+
+\begin{prop}
+	Soit $u \in \LE$ et $E = F \oplus G$ avec $F$ et $G$ stables par $u$ avec $n = \dim E$.
+
+	$$\chi_u (X)= \chi_v (X) \chi_w(X)$$
+	avec $v = u_{|F}$ et $w = u_{|G}$
+\end{prop}
+
+\begin{proof}
+	La même que précédaient on posant $(f_{p+1}, f_n)$ une base de $E$.
+	%TODO: fix
+\end{proof}
+
