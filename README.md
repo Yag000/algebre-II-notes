@@ -1,12 +1,11 @@
-# Algebre II notes
+# Algèbre II notes
 
 Notes from my algebra II course at the University Paris Cité.
 
 The pdf is available [here](https://yag000.github.io/algebre-II-notes/algebre-II-notes.pdf).
-The latest compiled version is also available at the latest workflow run, under the `artifacts` tab, [here](https://github.com/Yag000/algebre-II-notes/actions/workflows/build_and_deploy.yml).
 
-If you suffer from dyslexia you can use this version over [here](https://yag000.github.io/algebre-II-notes/algebre-II-notes-dyslexia.pdf). If you still have trouble and you
-think another font or font size would help, feel free to open an issue, I'll be happy to help.
+If you suffer from dyslexia you can use this version over [here](https://yag000.github.io/algebre-II-notes/algebre-II-notes-dyslexia.pdf). 
+If you still have trouble and you think another font or font size would help, feel free to open an issue, I'll be happy to help.
 
 ## Contributing
 
