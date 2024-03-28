@@ -72,6 +72,24 @@ On a aussi $(u^k(x))_{k \in \N}$ vase de $E_{u,x}$., donc en particulier, $ d = 
 \end{example}
 
 \begin{example}
-	Soit $u \in \LE$, $\dim E = n$, On suppose que $u$ admet $n$ valuers propres distinctes. Alors $u$ est cyclique.
-	%TODO
+	Soit $u \in \LE$, $\dim E = n$, On suppose que $u$ admet $n$ valeurs propres distinctes. Alors $u$ est cyclique.
+
+	Soit $x_j$ un vecteur propre associé à la valeur propre $\lambda_j$.
+
+	La matrice de passage entre $(x_1, \dots, x_n)$ et $(x, u(x), \dots, u^{n-1}(x))$ est une matrice de Vandermonde.
+
+	$u(x) = \lambda_1^k x_1 + \dots + \lambda_n^{k}x_n$
+	$u^k(x) = \lambda_1^k x + \dots + \lambda_n^{k}x$
+
+	\begin{equation*}
+		M = \begin{pmatrix}
+			1      & \lambda_1 & \lambda_1^2 & \cdots & \lambda_1^{n-1} \\
+			1      & \lambda_2 & \lambda_2^2 & \cdots & \lambda_2^{n-1} \\
+			\vdots & \vdots    & \vdots      &        & \vdots          \\
+			1      & \lambda_n & \lambda_n^2 & \cdots & \lambda_n^{n-1}
+		\end{pmatrix}
+	\end{equation*}
+
+	On a que $\det M = 0 $ \ssi les $\lambda_j$ sont disjoints et
+	$$ \det M = \prod_{i < j} (\lambda_j-\lambda i)$$
 \end{example}
