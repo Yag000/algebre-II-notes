@@ -31,7 +31,7 @@ Soit $I(n,q)$ le plus petit polynôme unitaire de degré $n$ sur $\F_q$.
 
 
 \begin{coro}
-	Pour tout $n$ et tout $ $ puissance d'un nombre premier:
+	Pour tout $n$ et tout $q$ puissance d'un nombre premier:
 	$$ I (n, q) > 0 $$
 \end{coro}
 
@@ -39,9 +39,9 @@ Soit $I(n,q)$ le plus petit polynôme unitaire de degré $n$ sur $\F_q$.
 \begin{proof}
 	\begin{eqnarray*}
 		n I(n, q) & = & \sum_{d|n} \mu(\frac{n}{d}) q^d \\
-		&>& q^n - \sum_{d|n, d < n} q^d \\
-		&>& q^n - \sum_{1 \leq d\leq \frac{n}{2}} q^d \\
-		&=& q^n - q\frac{q^{\frac{n}{2}} - 1}{q-1} \\ %TODO: Use partie entière
+		&>& q^n - \sum_{d|n,\ d < n} q^d \\
+		&>& q^n - \sum_{1 \leq d\leq \lfloor \frac n 2 \rfloor} q^d \\
+		&=& q^n - q\frac{q^{\lfloor \frac n 2 \rfloor} - 1}{q-1} \\
 		&>& 0
 	\end{eqnarray*}
 \end{proof}
