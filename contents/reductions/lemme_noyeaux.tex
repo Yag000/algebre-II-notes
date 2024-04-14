@@ -48,7 +48,7 @@
 
 \begin{coro}
 	Soit $u \in \LE$ de polynôme minimal $\mu_u$ et $P \in K[X]$ unitaire, avec $P \mid \mu_u$.\\
-    Soit $v = \restr u {\ker P(u)}$.\\
+	Soit $v = \restr u {\ker P(u)}$.\\
 	Alors $\mu_v = P$.
 \end{coro}
 
@@ -77,14 +77,14 @@
 \subsubsection{Lemme des noyaux}
 
 Soit $u \in \LE$.\\
-Il permet de décomposer un espace vectoriel en some directe de espaces vectoriels stables par $u$ et adaptés à la réduction de $u$.
+Il permet de décomposer un espace vectoriel en some directe d'espaces vectoriels stables par $u$ et adaptés à la réduction de $u$.
 
 \begin{lemma}[des noyaux]
-	Soit $(P_k)$ une famille de polynômes 2 à deux premiers entre eux.
+	Soit $(P_k)$ une famille de polynômes 2 à 2 premiers entre eux.
 	Soit $u \in \LE$.
 	$$ \ker \left(\left(\prod_{k=1}^N P_k \right)(u)\right) = \bigoplus_{k=1}^N \ker P_k(u)$$
 
-	De plus, la projection de $\ker \left(\left(\prod_{k=1}^N P_k \right)(u)\right)$ sur l'un des  $\ker P_j(u)$ parallèlement 'a la somme des autres est un polynôme en $u$.
+	De plus, la projection de $\ker \left(\left(\prod\limits_{k=1}^N P_k \right)(u)\right)$ sur l'un des  $\ker P_j(u)$ parallèlement à la somme des autres est un polynôme en $u$.
 \end{lemma}
 
 \begin{proof}
@@ -112,7 +112,8 @@ où $\alpha_k \geq k$, les $p_k$ sont irréductibles unitaires et 2 à 2 distinc
 
 \begin{proof}
 	La preuve consiste a utiliser le lemme des noyaux sachant que
-	$$\ker \mu_u(u) = E $$. Les sous espaces vectoriels  $\ker\left( {P_k^{\alpha_k}(u)} \right)$ sont stables par $u$.
+	$$\ker \mu_u(u) = E $$
+    Les sous espaces vectoriels  $\ker\left( {P_k^{\alpha_k}(u)} \right)$ sont stables par $u$.
 	Il suffit pour réduire $u$ de se restreindre à chacun des ces sous espaces vectoriels.
 \end{proof}
 

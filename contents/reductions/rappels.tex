@@ -1,7 +1,5 @@
 \subsection{Rappels d'algèbre linéaire}
 
-
-
 \subsubsection{Déterminants} %Maybe don't use subsubsections
 
 
@@ -49,16 +47,23 @@ $u$ est inversible \ssi $det(u) \neq 0$
 
 \subsubsection{Polynôme caractéristique d'un endomorphisme}
 
-On apelle polynôme caractéristique de $u$ le polynôme  $\chi_u$ défini par %Change to another letter
+On apelle polynôme caractéristique de $u$ le polynôme  $\chi_u$ défini par
 $$\chi_u(X) = \det (X Id_e - u)$$
 
 On fixe une base $B$ de $E$, on définit $M = Mat_B u$.
 Dans ce cas $\chi_u(X) = \det (CI_n -M)$
-(c'est un polynôme de $X$ de degré $n$ unitaire).
+(c'est un polynôme en $X$ de degré $n$ unitaire).
 
 La définition de $\chi_u(X) = \det (XI_n-M)$ ne dépend pas du choix de la base.
 Si $P$ inversible, alors:
-$$ \det (XI_n - PMP^{-1}) = \det (P(XI_n -M) P^{-1}) = \det (P) \det (X-I_nM)\det P^{-1} = \det (XI_n -M)$$
+
+
+\begin{eqnarray*}
+	\det (XI_n - PMP^{-1}) &=& \det (P(XI_n -M) P^{-1})\\
+	&=& \det (P) \det (X-I_nM)\det P^{-1}\\
+	&=& \det (XI_n -M)
+\end{eqnarray*}
+
 
 
 De cette manière, si $v$ inversible:
@@ -67,7 +72,7 @@ $$ \chi_{v\circ u \circ v^{-1}} = \chi_{u}$$
 
 \subsubsection{Notion de valeur propre}
 
-$\lambda \in $ tel que $\exists x \in E$ non nul vérifiant $u(x) = \lambda x$.
+$\lambda \in K$ tel que $\exists x \in E$ non nul vérifiant $u(x) = \lambda x$.
 
 \subsubsection{Notion de vecteur propre associé a une valuer propre}
 
@@ -79,7 +84,7 @@ $$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
 \end{prop}
 
 \begin{coro}
-	Soit $E$ de dimension finie $n$ et $u \in LE$, alors $u$ a aun plus $n$ valeurs propres distinctes.
+	Soit $E$ de dimension finie $n$ et $u \in \LE$, alors $u$ a aun plus $n$ valeurs propres distinctes.
 \end{coro}
 
 
@@ -109,7 +114,7 @@ $$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
 \begin{proof}
 	\begin{itemize}
 		\item  $\Rightarrow$:
-		      $\lambda$ valeur propre de $u$ (on dit aussi $\lambda \in Spec(u)$)
+		      $\lambda$ valeur propre de $u$ (on dit aussi $\lambda \in \spec(u)$)
 		      $$\exists x \in E \text { non nul tel que } u(x) = \lambda x \ \nu_u(u)(x) = \nu_u(\lambda)x =0$$
 		\item $\Leftarrow$:
 		      $\nu_u(\lambda) = 0 \implies \exists Q \in K[X]$ tel que $\nu_u(X) = (X - \lambda)Q(X)$\\
@@ -124,7 +129,7 @@ $$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
 \begin{prop}
 	Soit $u \in \LE$, $E$ de dimension $n$.
 	$F$ un sous espace vectoriel de $E$ stable par $u$.
-	On peut définir $v \in \LE$ par $v = u_{|F}$. On a alors:
+	On peut définir $v \in \LE$ par $v = \restr u F$. On a alors:
 	$$\chi_v \text{ divise } \chi_u$$
 \end{prop}
 
