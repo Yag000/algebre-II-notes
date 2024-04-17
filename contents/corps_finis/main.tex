@@ -20,15 +20,22 @@ A isomorphisme près, il y a un seul corps à $p$ éléments.
 
 $\F_p = \left( \Zn, +, \times \right)$ est un corps \ssi $n$ est premier.
 
+
 \begin{theorem}
 	Soit $q = p^n$, avec $p$ premier et $n \geq 1$. Alors il existe un corps de cardinal $q$ unique à isomorphisme près.
 	C'est le corps de décomposition pour $X^q-X$ sur $\F_p$. On le note $\F_q$.
 \end{theorem}
 
+
+\begin{rappel} [Util pour la preuve]
+	Si $\alpha$ annule $P$ et sa multiplicité est supérieure ou égale à 2, alors $P'(\alpha) = 0$:
+	$$P(X) = (X-\alpha)^2Q(X) \implies P'(X) = 2(X-\alpha)Q(X) + (X-\alpha)^2Q'(X) = 0$$
+\end{rappel}
+
+
 \begin{proof}
 	\begin{itemize}
 		\item Existence:\\
-
 		      Soit $K$ le corps de décomposition de $X^q-C$ sur $F_p$. \\
 		      On note $K'$ l'ensemble des racines dans $K$ de $X^q-X$. \\
 		      $K'$ est en fait un corps: $0, 1 \in K'$. Si $x, y \in K'$'.\\
@@ -47,15 +54,14 @@ $\F_p = \left( \Zn, +, \times \right)$ est un corps \ssi $n$ est premier.
 		      Donc par la définition de corps de décomposition $K' = K$.\\
 
 		      La dérivée de $X^q-X$ est $qX^{q-1} - X$ et $qX^{q-1} - 1 = 1$\\
-		      Donc toutes les racines du polynôme sont simples et il y en a exactement $q$. $K$ est bien un corps de cardinal $q$.\\
+		      Donc toutes les racines du polynôme sont simples et il y en a exactement $q$. $K$ est bien un corps de cardinal $q$.
 
-		      %TODO: Add rappel
 		\item Unicité:\\
-
 		      On considère $L$ un corps de cardinal $q$.\\
-		      On sait que $\forall x \in L \setminus \{0\},\  x^{q-1} = 1$ (théorème de Lagrange).\\ %TODO: Explanation
-		      $\forall x \in L, \ x^q -x = 0$.\\
-		      $X^q-X$ est scindé dans $L$ (car il a $q$ racines distinctes).\\ %TODO: Add explanation
+		      On sait que $\forall x \in L \setminus \{0\},\  x^{q-1} = 1$ (théorème de Lagrange appliqué au groupe multiplicatif $L\setminus \set 0$ et
+		      cardinal $q-1$), donc:
+		      $$\forall x \in L, \ x^q -x = 0$$
+		      $X^q-X$ est scindé dans $L$ (car il a $q$ racines distinctes).\\
 		      $L$ contient un corps de décomposition pour $X^q-X$ sur $\F_p$. Autrement dit, un $K_1$ qui est
 		      isomorphe à $K$ (d'après les propriétés de décomposition).\\
 		      $L_1 \subset L$ et $|K_1| = q = |L| \implies K_1 = L \cong K$.
@@ -65,14 +71,14 @@ $\F_p = \left( \Zn, +, \times \right)$ est un corps \ssi $n$ est premier.
 \begin{example}
 
 	\begin{itemize}
-		\item $X^2+X+1$ est irréductible sur $\F_2$ et
+		\item $P = X^2+X+1$ est irréductible sur $\F_2$ et
 		      $$\F_2[X]/ <x^2+x+1> \cong F_4$$
 
 		      On prend $\alpha$ une racine de $x^2+x+1$.
-		      $$\F_2[X]/ <x^2+x+1> = \set{ a + \alpha b \mid a,b \in \F_2}$$
+		      $$\F_2[X]/ <x^2+x+1> = \set{ a + \alpha b \mid a,b \in \F_2} \cong \F_4$$
 		      La table de multiplication:
 
-		      \begin{center} %TODO: Add explanation
+		      \begin{center}
 			      \begin{tabular}{c|c|c|c|c}
 				      $*$        & 0          & 1        & $\alpha$    & $1+\alpha$  \\
 				      \hline
@@ -85,6 +91,9 @@ $\F_p = \left( \Zn, +, \times \right)$ est un corps \ssi $n$ est premier.
 				      $1+\alpha$ & $1+\alpha$ & $\alpha$ & 1           & $\alpha$    \\
 			      \end{tabular}
 		      \end{center}
+
+		      Car on a $\car \ \F_4 = 2$ et donc $\alpha^2 = (\alpha^2 + \alpha + 1 ) + \alpha + 1 =  P(\alpha) + \alpha + 1 = \alpha + 1$. \\
+		      De plus $\alpha(\alpha + 1) = \alpha^2 + \alpha = \alpha + 1 + \alpha = 1$.
 		\item$x^3+x+1$ est irréductible sur $\F_2$ et $\F_2[X]/ <x^3+x+1> \cong F_6$.
 		\item$ \F_3[X]/ <x^2+1> \cong F_9$
 	\end{itemize}
@@ -99,10 +108,34 @@ $\F_p = \left( \Zn, +, \times \right)$ est un corps \ssi $n$ est premier.
 \begin{remarque}
 	$\F_{p^n}$ est une extension de $\F_{p^m}$ \ssi $m$ divise $n$.\\
 	Ainsi $\F_8$ n'est pas une extension de $\F_4$. \\
-	%TODO: Add proof
 \end{remarque}
 
-%TODO: Add Frobenius
+\begin{proof}
+	\begin{itemize}
+		\item $\degExt {F_{p^n}}{F_{p^m}} = d \in \N$\\
+		      $p^n = |F_{p^n}| = |F_{p^m}|^d = p^{md} \implies n = md$.
+
+		\item Réciproquement, si $m \mid n$, on écrit $n = md$\\
+		      On a $X^{p^m - 1} - 1$ divise $X^{p^n-1} - 1$  et $X^{p^m} - X$ divise $X^{p^n} - X$\\
+		      Toutes les racines de $X^{p^m} - X$ sont racines de $X^{p^n} - X$, donc $F_{p^m} \subset F_{p^n}$.
+	\end{itemize}
+\end{proof}
+
+
+
+\begin{remarque}[Morphisme de Frobenius]
+	Soit $K$ un corps de caractéristique $p >0$ et $\psi : K \to K$ définie par $\psi(x) = x^p$.\\
+	Alors $\psi$ est un morphisme de corps, donc injectif. Si $K$ est fini alors $\psi$ est un automorphisme de corps.\\
+	Ainsi $\psi(x + y) = (x+y)^p = x^p + y^p, \forall x,y \in K$.\\
+	De plus $\set {x \in K \mid x^p = x} = \F_p$.\\
+	Cela fournit une famille de morphisme $K \to K$:
+	$$ \psi,\ \underbrace{\psi \circ \cdots \circ \psi}_{n \text{ fois}} = \psi^n : \begin{cases}
+			K \to K \\
+			x \mapsto x^{p^n}
+		\end{cases}$$
+
+	Pour $P \in F_q[X], \ q = p^n$, on a $\psi(P(x)) = P (\psi(x))$, car $F_q$ est de caractéristique $p$.
+\end{remarque}
 
 
 \input{contents/corps_finis/irreductibles.tex}
