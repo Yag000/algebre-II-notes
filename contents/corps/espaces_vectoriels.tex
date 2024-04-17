@@ -7,15 +7,15 @@
 
 
 \begin{remarque}
-	Si $L$ est une extension de $K$, (on noté $L/K$).\\
-	Alors $L$ est muni ipso facto d'une structure de $K$ espace vectoriel via la loi $\times$ dans $L$.\\
-	En effet la loi externe définissant la multiplication par un scalaire (élément de $K$) est la loi interne de multiplication dans $L$.
+	Si $L$ est une extension de $K$, (noté $L/K$),\\
+	Alors $L$ est muni ipso facto d'une structure de $K$-espace vectoriel via la loi $\times$ dans $L$.\\
+	En effet, la loi externe définissant la multiplication par un scalaire (élément de $K$) est la loi interne de multiplication dans $L$.
 
 	D'autre part, si $\phi : K \to L$ est un morphisme de corps, il est injectif: \\
 	Le noyau de $\phi$ est un idéal de $K$. Comme $K$ est un corps, ses seuls idéaux sont $\{0\}$ et $K$.\\
-	On note que il ne peut pas être $K$ car $\phi(1_K) = 1_L$.
+	On note qu'il ne peut pas être $K$ car $\phi(1_K) = 1_L$.
 
-	Alors on peut identifier $K$ a $\phi(K)$. $L$ est une extension de $\phi(K)$. On étend la définition précédente en disant que $L$ est une extension de $K$.
+	Alors on peut identifier $K$ à $\phi(K)$. $L$ est une extension de $\phi(K)$. On étend la définition précédente en disant que $L$ est une extension de $K$.
 \end{remarque}
 
 \begin{example}
@@ -24,8 +24,8 @@
 
 \begin{definition}
 	Soit $L$ une extension de dimension finie sur $K$.\\
-	Alors la dimension de ce $K$ espace vectoriel est un entier supérieur à 0 qu'on appelle
-	le degré de $L$ sur $K$ que l'on note $[L : K]$. On dit dans ce cas que $L$ est finie sur $K$.
+	Alors la dimension de ce $K$-espace vectoriel est un entier supérieur à 0 qu'on appelle
+	le degré de $L$ sur $K$ que l'on note $[L : K]$. On dit dans ce cas que $L$ est fini sur $K$.
 \end{definition}
 
 \begin{theorem}[de la base télescopique]
@@ -72,7 +72,7 @@
 \begin{definition}
 	On considère $L/K$ une extension de corps et $\alpha \in L$. \\
 	\begin{itemize}
-		\item On note $K[\alpha]$ le sous anneau de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $P(\alpha)$ avec $P \in K[X]$.
+		\item On note $K[\alpha]$ le sous-anneau de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $P(\alpha)$ avec $P \in K[X]$.
 		\item $K(\alpha)$ le sous corps de $L$ engendré par $K$ et $\alpha$. C'est aussi l'ensemble des $F(\alpha)$ où $F \in K(X)$.
 	\end{itemize}
 \end{definition}
@@ -80,7 +80,7 @@
 
 \begin{definition}
 	Soit $L/K$ une extension de corps et $\alpha \in L$.\\
-	On a un morphisme d'anneaux et de $K$ espace vectoriels:
+	On a un morphisme d'anneaux et de $K$-espaces vectoriels:
 	\begin{eqnarray*}
 		\phi: K[X] &\to& L \\
 		P &\mapsto& P(\alpha)
@@ -94,13 +94,13 @@
 
 \begin{remarque}
 	Bien noter que les notions d'éléments algébriques ou transcendants dépendent du corps de base $K$. Tout élément de $L$ est algébrique sur $L$.\\
-	Notons que $\pi$ est irreducible sur $K$. Comme $L$ est integre, alors si le produit de deux polynômes de $K[X]$ s'annule en $\alpha$, alors l'un deux s'annule en $\alpha$.
+	Notons que $\pi$ est irréductible sur $K$. Comme $L$ est intègre, alors si le produit de deux polynômes de $K[X]$ s'annule en $\alpha$, alors l'un d'eux s'annule en $\alpha$.
 \end{remarque}
 
 \begin{example}
 	\begin{itemize}
 		\item $i$ est algébrique sur $\Q$ de polynôme minimal $X^2+1$, $L = \C, K = \Q$.
-		\item Si $P \in K[X]$ unitaire tel que $P(\alpha) = 0$, alors $P$ est le polynôme minimal de $\alpha$ si et seulement si $P$ est irréductible sur $K$.
+		\item Si $P \in K[X]$ unitaire tel que $P(\alpha) = 0$, alors $P$ est le polynôme minimal de $\alpha$ \ssi $P$ est irréductible sur $K$.
 	\end{itemize}
 \end{example}
 
@@ -112,11 +112,11 @@
 
 \begin{prop}
 	Soit $L/K$ une extension de corps et $\alpha \in L$.\\
-	Il y a equivalence entre les assertions suivantes:
+	Il y a équivalence entre les assertions suivantes:
 	\begin{itemize}
 		\item  $\alpha$ est algébrique sur $K$
 		\item $K[\alpha] = K(\alpha)$
-		\item $K[\alpha]$ est un $K$ espace vectoriel de dimension finie.
+		\item $K[\alpha]$ est un $K$-espace vectoriel de dimension finie.
 	\end{itemize}
 	Si on a l'une de ces assertions, alors l'entier $[K(\alpha) : K]$ est le degré du polynôme minimal de $\alpha$ sur $K$ et on l'appelle le degré $\alpha$ sur $K$.
 \end{prop}
@@ -129,9 +129,9 @@
 		\item Réciproquement, $\alpha$ est transcendant sur $K$.
 		      $K[\alpha] \cong K[T]$ qui n'est pas un corps, donc on n'a pas $K[\alpha] = K(\alpha)$.
 		\item $1 \implies 3$\\
-		      Si $\pi$ est un polynôme minimal de $\alpha$ sur $K$, alors $K[\alpha] \cong K[X]/(\pi)$ qui est un $K$ espace vectoriel de dimension le degré de $\pi$.
-		\item Réciproquement. \\
-		      Si $\alpha$ est transcendant sur $K$, le $K$ espace vectoriel $K[\alpha]$ est isomorphe a $K[X]$ qui est de dimension infini.
+		      Si $\pi$ est un polynôme minimal de $\alpha$ sur $K$, alors $K[\alpha] \cong K[X]/(\pi)$ qui est un $K$-espace vectoriel de dimension le degré de $\pi$.
+		\item Réciproquement, \\
+		      Si $\alpha$ est transcendant sur $K$, le $K$-espace vectoriel $K[\alpha]$ est isomorphe a $K[X]$ qui est de dimension infinie.
 	\end{itemize}
 	%TODO: Add explanation
 \end{proof}
@@ -146,7 +146,7 @@
 \end{remarque}
 
 \begin{theorem}
-	Soit $L/K$ une expansion de corps.\\
+	Soit $L/K$ une extension de corps.\\
 	On note $M$ l'ensemble des éléments de $L$ qui sont algébriques sur $K$.
 	\begin{itemize}
 		\item $M$ est un sous corps de $L$.
@@ -163,7 +163,7 @@
 
 \begin{example}
 	$\C$ n'est pas une clôture algébrique de $\Q$. \\
-	Si on note $\bar{\Q}$ l'ensemble des éléments de $\C$ algébriques sur $\Q$ on a que $\bar{Q} \neq \C$. On peut montrer que $\bar{\Q}$ est dénombrable.
+	Si on note $\bar{\Q}$ l'ensemble des éléments de $\C$ algébriques sur $\Q$, on a que $\bar{Q} \neq \C$. On peut montrer que $\bar{\Q}$ est dénombrable.
 \end{example}
 
 \begin{proof}
@@ -178,13 +178,13 @@
 			            Ici on a construit explicitement les polynômes $Q$ et $S$ à partir de $P$.\\
 			            Alors $x^{-1}$ et $-x \ \in M$
 			      \item Montrons que si $x,y \in M, \  x + y \text{ et } x*y \in M$. \\
-			            $K[x]$ est un$K$-espace vectoriel de dimension finie, \\
+			            $K[x]$ est un $K$-espace vectoriel de dimension finie, \\
 			            $y$ est algébrique sur $K$, donc a fortiori $K(x) =  K[x]$, donc $K[x][y]$ est de dimension finie.\\
-			            $x+y $et $x*y\in K[x][y]$ donc $K[x+y]$ et $K[x*y]$ sont des $K$ espaces vectoriels de dimension finie car
+			            $x+y $et $x*y\in K[x][y]$ donc $K[x+y]$ et $K[x*y]$ sont des $K$-espaces vectoriels de dimension finie car
 			            ce sont des sous espaces vectoriels de $K[x][y]$
 		      \end{itemize}
-		      Alors $M$ est un sous corps de $L$
-		\item Soit $\alpha$ in $L$ algébrique sur $M$.\\
+		      Alors $M$ est un sous-corps de $L$
+		\item Soit $\alpha$ \in $L$ algébrique sur $M$.\\
 		      Il existe $P \in M[X]$
 		      $$ P = X^na_n + \cdots + a_0$$
 		      tel que $P(\alpha) = 0$. Comme chaque $a_j$ est algébrique sur $K$, on a par itération que $K'=K[a_0,\cdots, a_{n-1}]$ est un corps qui est une extension finie de $K$.\\
@@ -192,7 +192,7 @@
 		      $$ \left[K[\alpha] : K\right]  =  \left[K[\alpha] : K'\right] \left[K' : K\right] < \infty $$
 		      donc $\alpha$ est algébrique sur $K$ et donc $\alpha \in M$.
 		\item
-		      Si $P \in M[X]$ non constant il admet une racine $\alpha \in L$ (car $L$ est algébriquement clos). \\
+		      Si $P \in M[X]$ non constant, il admet une racine $\alpha \in L$ (car $L$ est algébriquement clos). \\
 		      $\alpha$ est algébrique sur $M \implies \alpha \text{ algébrique sur K} \implies \alpha \in M$\ \\ % TODO: say that the First implies comes from the second point of the theorem.
 		      $M$ est dont algébriquement clos.
 	\end{itemize}
