@@ -3,26 +3,26 @@
 
 Un corps fini est un corps qui a un nombre fini d'éléments.
 
-Sa caractéristique est forcement $p$ premier.
-Si c'était 0 alors $\Z$ s'injecterait dans $K$ et $\Z$ est infini.
+Sa caractéristique est forcément $p$ premier.
+Si c'était 0, alors $\Z$ s'injecterait dans $K$ et $\Z$ serait infini.
 
-$K$ peut etre vu comme une extension de $\F_p$ via le morphisme:
+$K$ peut être vu comme une extension de $\F_p$ via le morphisme:
 \begin{eqnarray*}
 	\F_p & \to & K \\
 	\bar{1} &\mapsto& 1_K
 \end{eqnarray*}
 
-$K$ est en particulier un space vectoriel de dimension finie ${K:\F_p}$ et $|K| = p ^{[K:\F_P]} $
+$K$ est en particulier un espace vectoriel de dimension finie ${K:\F_p}$ et $|K| = p ^{[K:\F_P]} $
 
 
 Ici $\F_p = \left( \Zn{p}, +, \times \right)$, $p$ premier.
-A isomorphisme près il y a un seul corps a $p$ éléments.
+A isomorphisme près, il y a un seul corps à $p$ éléments.
 
-$\F_p = \left( \Zn, +, \times \right)$ est un corps si et seulement si $n$ est premier.
+$\F_p = \left( \Zn, +, \times \right)$ est un corps \ssi $n$ est premier.
 
 \begin{theorem}
-	Soit $q = p^n$, avec $p$ premier et $n \geq 1$. Alors il existe un corps de cardinal $q$ unique a isomorphisme près.
-	C'est le corps de décomposition por $X^q-X$ sur $\F_p$. On le note $\F_q$.
+	Soit $q = p^n$, avec $p$ premier et $n \geq 1$. Alors il existe un corps de cardinal $q$ unique à isomorphisme près.
+	C'est le corps de décomposition pour $X^q-X$ sur $\F_p$. On le note $\F_q$.
 \end{theorem}
 
 \begin{proof}
@@ -30,24 +30,24 @@ $\F_p = \left( \Zn, +, \times \right)$ est un corps si et seulement si $n$ est p
 		\item Existence:\\
 
 		      Soit $K$ le corps de décomposition de $X^q-C$ sur $F_p$. \\
-		      On note $K'$ l'ensemble des racines das $K$ de $X^q-X$. \\
-		      $K'$ est au fait un corps: $0, 1 \in K'$. Si $x, y \in K'$'.\\
+		      On note $K'$ l'ensemble des racines dans $K$ de $X^q-X$. \\
+		      $K'$ est en fait un corps: $0, 1 \in K'$. Si $x, y \in K'$'.\\
 		      Montrons que $(x+y)^q = x^q + y^q = x+ y$.\\
-		      Pour montrer l'identité precedente, on observe que pour tout $>0$ et pour tout $x,y \in K$ on a
-		      $(x+y)^{p^k}= x^{p^k} + y^{p^k}$. Cela se montre par récurrence grâce a la formule $(x+y)^p= x^p + y^p$.\\
+		      Pour montrer l'identité précédente, on observe que pour tout $>0$ et pour tout $x,y \in K$ on a
+		      $(x+y)^{p^k}= x^{p^k} + y^{p^k}$. Cela se montre par récurrence grâce à la formule $(x+y)^p= x^p + y^p$.\\
 		      $p \mid \binom{p}{k}$ lorsque $1 \leq k \leq p-1$ aussi $(x+y)^p = \sum^p_{k=0} \binom{p}{k} x^k y^{p-k} = x^p + y^p$\\
 
-		      $x\in K'$, alors $-x$ et aussi dans $K'$.
-		      En effet si $car K = 2$, $-x = x -2x = x$. \\
-		      Si $car K$ est impair $(-x)^q = -x^q = -x$. \\
-		      Évidement $x,y \in K' \implies xy \in K'$, car $(x*y)^q = x^qy^q = xy$\\
+		      $x\in K'$, alors $-x$ est aussi dans $K'$.
+		      En effet, si $car K = 2$, $-x = x -2x = x$. \\
+		      Si $car K$ est impaire, $(-x)^q = -x^q = -x$. \\
+		      Évidemment $x,y \in K' \implies xy \in K'$, car $(x*y)^q = x^qy^q = xy$\\
 		      $x\in K' x \neq 0 \implies \frac{1}{x} \in K'$.
 
-		      Alors $'$ est un sous corps de $K$.\\
+		      Alors $K'$ est un sous corps de $K$.\\
 		      Donc par la définition de corps de décomposition $K' = K$.\\
 
 		      La dérivée de $X^q-X$ est $qX^{q-1} - X$ et $qX^{q-1} - 1 = 1$\\
-		      Donc toutes les racines du polynôme sont simples et il y a exactement $q$. $K$ est bien un corps de cardinal $q$.\\
+		      Donc toutes les racines du polynôme sont simples et il y en a exactement $q$. $K$ est bien un corps de cardinal $q$.\\
 
 		      %TODO: Add rappel
 		\item Unicité:\\
@@ -56,7 +56,7 @@ $\F_p = \left( \Zn, +, \times \right)$ est un corps si et seulement si $n$ est p
 		      On sait que $\forall x \in L \setminus \{0\},\  x^{q-1} = 1$ (théorème de Lagrange).\\ %TODO: Explanation
 		      $\forall x \in L, \ x^q -x = 0$.\\
 		      $X^q-X$ est scindé dans $L$ (car il a $q$ racines distinctes).\\ %TODO: Add explanation
-		      $L$ contient un corps de décomposition pour $X^q-X$ sur $\F_p$. Autrement dit un $K_1$ qui est
+		      $L$ contient un corps de décomposition pour $X^q-X$ sur $\F_p$. Autrement dit, un $K_1$ qui est
 		      isomorphe à $K$ (d'après les propriétés de décomposition).\\
 		      $L_1 \subset L$ et $|K_1| = q = |L| \implies K_1 = L \cong K$.
 	\end{itemize}
