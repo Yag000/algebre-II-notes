@@ -11,9 +11,9 @@ Il y a plusieurs façons de le définir.
 \begin{itemize}
 	\item De manière canonique : pour toute forme $n$ linéaire alternée $f$ sur $E$ on a:
 	      $$ f \circ u = \det (u) * f$$
-	      En effet, l'espace de ces formes $n$ alternée est de dimension 1. De cette manière, $f$ et $f \circ u$ sont proportionnelles.
+	      En effet, l'espace de ces formes $n$ linéaires alternées est de dimension 1. De cette manière, $f$ et $f \circ u$ sont proportionnelles.
 
-	      On qualifie cette définition de canonique car elle ne necesite pas le choix d'une base de $E$.
+	      On qualifie cette définition de canonique car elle ne nécessite pas le choix d'une base de $E$.
 
 	\item Soit de manière matricielle : $\det u$ est un polynôme explicite en les coefficients de la matrice de $U$ prise dans une base de $E$.
 	      Ce déterminant ne dépend pas du choix de la base.
@@ -32,10 +32,10 @@ Si $u$ et $v \in \LE$,
 Alors,
 $$\det (u \circ v) = \det (u) \det (v) = \det (v \circ u) $$
 
-En particulier sir $v$ est inversible, alors
+En particulier, si $v$ est inversible, alors
 $$ \det (v^{-1}) = (\det v )^{-1} $$
 
-Le déterminant induit un morphisme de groupe
+Le déterminant induit un morphisme de groupe :
 
 
 \begin{eqnarray*}
@@ -74,22 +74,21 @@ $$ \chi_{v\circ u \circ v^{-1}} = \chi_{u}$$
 
 $\lambda \in K$ tel que $\exists x \in E$ non nul vérifiant $u(x) = \lambda x$.
 
-\subsubsection{Notion de vecteur propre associé a une valuer propre}
-
+\subsubsection{Notion de vecteur propre associé à une valeur propre}
 
 $$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
 
 \begin{prop}
-	Les vecteurs propres associés à des valeurs propres 2 à 2 disjoints forment une famille libre
+	Les vecteurs propres associés à des valeurs propres 2 à 2 disjoints forment une famille libre.
 \end{prop}
 
 \begin{coro}
-	Soit $E$ de dimension finie $n$ et $u \in \LE$, alors $u$ a aun plus $n$ valeurs propres distinctes.
+	Soit $E$ de dimension finie $n$ et $u \in \LE$, alors $u$ a au plus $n$ valeurs propres distinctes.
 \end{coro}
 
 
 \begin{prop}
-	Les sous espaces vectoriels correspondant a deux valuers propres distinctes sont en somme directe.
+	Les sous-espaces vectoriels correspondant à deux valeurs propres distinctes sont en somme directe.
 
 	Autrement dit,
 	$$E_{\lambda_1} \cap E_{\lambda_2} = \set{0} \text { si } \lambda_1 \neq \lambda_2$$
@@ -118,7 +117,7 @@ $$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
 		      $$\exists x \in E \text { non nul tel que } u(x) = \lambda x \ \nu_u(u)(x) = \nu_u(\lambda)x =0$$
 		\item $\Leftarrow$:
 		      $\nu_u(\lambda) = 0 \implies \exists Q \in K[X]$ tel que $\nu_u(X) = (X - \lambda)Q(X)$\\
-		      Si $\lambda$ n'était pas une valuer propre, alors $u-\lambda Id_E$ serait inversible
+		      Si $\lambda$ n'était pas une valeur propre, alors $u-\lambda Id_E$ serait inversible
 		      $$ (u-  \lambda Id) \circ Q = 0 \iff Q(u) = 0_{\LE}$$
 		      Ce qui contredit la minimalité de $\nu$.
 	\end{itemize}
@@ -128,7 +127,7 @@ $$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
 
 \begin{prop}
 	Soit $u \in \LE$, $E$ de dimension $n$.
-	$F$ un sous espace vectoriel de $E$ stable par $u$.
+	$F$ un sous-espace vectoriel de $E$ stable par $u$.
 	On peut définir $v \in \LE$ par $v = \restr u F$. On a alors:
 	$$\chi_v \text{ divise } \chi_u$$
 \end{prop}
@@ -145,7 +144,8 @@ $$E_n = \set{ x \in E: u (x) = \lambda x } = \ker (u - \lambda Id_E) $$
 \end{prop}
 
 \begin{proof}
-	La même que précédaient on posant $(f_{p+1}, f_n)$ une base de $E$.
-	%TODO: fix
+	La même que précédemment, on posant $(f_{p+1}, f_n)$ une base de $E$.
+	Dans ce cas-là, $B = 0$, $D = mat_{(f_{p+1}, \dots, f_n)} w$
+	$det(XI_{n_p} - D) = \chi_w(X)$
 \end{proof}
 

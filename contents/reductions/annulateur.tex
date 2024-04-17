@@ -1,4 +1,4 @@
-\subsection{Polygones annulateur et polynôme minimal}
+\subsection{Polynômes annulateurs et polynôme minimal}
 
 
 \begin{definition}
@@ -37,12 +37,32 @@
 
 
 \begin{definition}
-	Un endomorphisme $u$ est dit nilpotent si il existe $n \in \N$ tel que $u^n = 0_{\LE}$.\\
-	Dans ce cas, le polynôme minimal de $u$ est de la forme $X^n$et on appelle $n$ l'indice de nilpotence de $u$.
+	Un endomorphisme $u$ est dit nilpotent s'il existe $n \in \N$ tel que $u^n = 0_{\LE}$.\\
+	Dans ce cas, le polynôme minimal de $u$ est de la forme $X^n$ et on appelle $n$ l'indice de nilpotence de $u$.
 \end{definition}
 
 
 \begin{remarque}
-    remarque
+	Si $u$ admet un polynôme minimal $\mu_u$ de degré $d$, alors $dim K[u] = d$.
 \end{remarque}
 
+\begin{proof}
+	%TODO
+\end{proof}
+
+\begin{example}
+	Si $u$ est une homothétie de rapport $\lambda$, autrement dit si $u = \lambda id_E$, alors $\mu_u = X - \lambda$.
+\end{example}
+
+\begin{remarque}
+	On dit que $p$ est un projecteur \ssi ${p}^2 = p$.
+	$\mu_p = X^2 - X$ sauf si $p = id_E$ ou $p = 0_{\LE}$.
+\end{remarque}
+
+\begin{prop}
+	Soit $u \in \LE$ admettant un polynôme minimal $\mu_u$, alors $u$ est inversible \ssi $\mu_u(0) \neq 0$
+\end{prop}
+
+\begin{proof}
+	%TODO
+\end{proof}

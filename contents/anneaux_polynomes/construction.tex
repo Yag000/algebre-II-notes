@@ -2,14 +2,14 @@
 
 \begin{definition}[Anneau de polynômes]
 
-	Soit $A$ un anneau commutatif. On note $A^{\mathbb{N}}$ l'ensemble des suites presques nulles d'éléments de $A$.
-	On muni $A^{\mathbb{N}}$ d'une structure d'anneau en posant:
+	Soit $A$ un anneau commutatif. On note $A^{\mathbb{N}}$ l'ensemble des suites presque nulles d'éléments de $A$.
+	On munit $A^{\mathbb{N}}$ d'une structure d'anneau en posant:
 	\begin{itemize}
 		\item $(a_n)_{n \in \mathbb{N}} + (b_n)_{n \in \mathbb{N}} = (a_n + b_n)_{n \in \mathbb{N}}$
 		\item $(a_n)_{n \in \mathbb{N}} \cdot (b_n)_{n \in \mathbb{N}} = (c_n)_{n \in \mathbb{N}}$ où $c_n = \sum_{k=0}^{n} a_k b_{n-k}$
 	\end{itemize}
 
-	On note $A[X]$ l'anneau commutatif (proposition a montrer si besoin)  $A^{\mathbb{N}}$.
+	On note $A[X]$ l'anneau commutatif (proposition à montrer si besoin)  $A^{\mathbb{N}}$.
 
 \end{definition}
 
@@ -44,7 +44,7 @@
 \begin{proof}
 	\begin{itemize}
 		\item $\Rightarrow$ C'est immédiat, car un sous-anneau d'un anneau intègre est intègre.\\
-		\item $\Leftarrow$ Soient $P, Q \in A[X]$ non nuls. on a donc $\deg(P) \geqslant 0$ et $\deg(Q) \geqslant 0$.\\
+		\item $\Leftarrow$ Soient $P, Q \in A[X]$ non nuls. On a donc $\deg(P) \geqslant 0$ et $\deg(Q) \geqslant 0$.\\
 		      Mais alors, on a :
 		      $$ \deg(P Q)=\deg(P)+\deg(Q) \geqslant 0, \text{par la proposition précédente} $$
 		      Ce qui entraîne que $P Q$ est non nul, d'où l'intégrité de $A[X]$.
@@ -52,5 +52,5 @@
 \end{proof}
 
 \begin{example}
-	$\F_p=\Zn{p}$, avec $p$ premier, est intègre, donc $\F_p[X] = \Zn{p}[X]$ est intègre
+	$\F_p=\Zn{p}$, avec $p$ premier, est intègre, donc $\F_p[X] = \Zn{p}[X]$ est intègre.
 \end{example}
