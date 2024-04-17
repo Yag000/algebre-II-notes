@@ -52,7 +52,11 @@
 		      Comme $\pi$ ne divise pas le coefficient dominant de $f$, on a $\deg \bar{f} = \deg f = 0$, ce qui contredit $\deg f \geq 1$.\\
 		      Donc $<\pi, f> \neq A[X]$ et $\goatp_f = <f>$ est un idéal premier mais pas maximal.
 		\item  Soit $\pi$ irréductible de $A$, $f$ unitaire de $A[X]$ irréductible modulo $\pi$.\\
-		      $$A[X] \to A/<\pi>[X] \to (A/<\pi>[X])/<f> $$ %TODO: Add phi
+		      \begin{centering}
+			      \begin{tikzcd}
+				      A[X] \ar[r,""] \ar[rr,bend right,"\phi"'] &  A/<\pi>[X] \ar[r,""] & (A/<\pi>[X])/<f>
+			      \end{tikzcd}
+		      \end{centering}\\
 		      Le morphisme $\phi$ est surjectif de noyau $<\pi,f>$.
 		      $$ A[X]/\goatm_{\pi,f} \cong (A/<\pi>[X]/<\bar{f}>)$$
 		      Et donc $A/<\pi>[X]$ est principal.
@@ -61,7 +65,7 @@
 		      Donc $A[X]/\goatm_{\pi,f}$ est un corps, donc $\goatm_{\pi,f}$ est maximal.
 	\end{itemize}
 	\vspace{0.25cm}
-	\noindent Reciproquement, on choisit $\goatp$ un idéal non nul de $A[X]$ qui est premier. \\
+	\noindent Réciproquement, on choisit $\goatp$ un idéal non nul de $A[X]$ qui est premier. \\
 	$\goatp \cap A$ est un idéal de A premier.
 	Comme $A$ est principal, soit $\goatp \cap A = \{0\}$, soit il existe $\pi$ irréductible de $A$ tel que $\goatp \cap A = <\pi>$.
 	\begin{itemize}
