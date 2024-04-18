@@ -113,7 +113,7 @@
 	Soit $L/K$ une extension de corps et $\alpha \in L$.\\
 	Il y a équivalence entre les assertions suivantes:
 	\begin{itemize}
-		\item  $\alpha$ est algébrique sur $K$
+		\item $\alpha$ est algébrique sur $K$
 		\item $K[\alpha] = K(\alpha)$
 		\item $K[\alpha]$ est un $K$-espace vectoriel de dimension finie.
 	\end{itemize}
@@ -129,10 +129,15 @@
 		      $K[\alpha] \cong K[T]$ qui n'est pas un corps, donc on n'a pas $K[\alpha] = K(\alpha)$.
 		\item $1 \implies 3$\\
 		      Si $\pi$ est un polynôme minimal de $\alpha$ sur $K$, alors $K[\alpha] \cong K[X]/(\pi)$ qui est un $K$-espace vectoriel de dimension le degré de $\pi$.
+		      Ceci utilise la division euclidienne dans $K[X]$:\\
+		      On a que $1, \bar{X}, \ldots, \bar{X}^{\deg \pi - 1}$ est une famille génératrice de $K[X]/(\pi)$.\\
+		      On prend $P\in K[X]$ et on fait la division euclidienne de $P$ par $\pi$:
+		      $\exists Q, R \in K[X]$ tels que $P = Q\pi + R$ avec $\deg R < \deg \pi$ et $\bar{R(X)} = \bar{P(X)}$.\\
+		      S'il existe $P$ de degré $< \deg \pi$ tel que $P(\alpha) = 0$, alors $\pi$ divise $P$ et donc $P = 0$.
+		      Ainsi la famille $(1, \bar X, \ldots, \bar X^{\deg \pi - 1})$ est libre.
 		\item Réciproquement, \\
 		      Si $\alpha$ est transcendant sur $K$, le $K$-espace vectoriel $K[\alpha]$ est isomorphe a $K[X]$ qui est de dimension infinie.
 	\end{itemize}
-	%TODO: Add explanation
 \end{proof}
 
 \begin{definition}
@@ -153,8 +158,6 @@
 		\item Si $L$ est algébriquement clos, $M$ est algébriquement clos. On dit que $M$ est la clôture algébrique de $K$.
 	\end{itemize}
 \end{theorem}
-
-
 
 \begin{example}
 	$\C$ est une clôture algébrique de $\R$.
@@ -192,7 +195,7 @@
 		      donc $\alpha$ est algébrique sur $K$ et donc $\alpha \in M$.
 		\item
 		      Si $P \in M[X]$ non constant, il admet une racine $\alpha \in L$ (car $L$ est algébriquement clos). \\
-		      $\alpha$ est algébrique sur $M \implies \alpha \text{ algébrique sur K} \implies \alpha \in M$\ \\ % TODO: say that the First implies comes from the second point of the theorem.
+		      $\alpha$ est algébrique sur $M \implies \alpha \text{ algébrique sur K} \implies  \alpha \in M$ par le point précédent.\\
 		      $M$ est dont algébriquement clos.
 	\end{itemize}
 \end{proof}
