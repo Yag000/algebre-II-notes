@@ -58,7 +58,7 @@
 	$\Q(i)$ est le corps de rupture de $X^2+1$ dans $\Q$.\\
 	$\Q(\sqrt[3]{2})$ est le corps de rupture de $X^3-2$ dans $\Q$.\\
 	Mais c'est aussi le cas de $\Q(j\sqrt[3]{2})$ et $\Q(j^2\sqrt[3]{2})$, avec $j = e^{\frac{2i\pi}{3}}$.
-	De plus $\Q(\sqrt[3]{2}) \subset \R$, ce qui n'est pas le cas des autres.
+	De plus, $\Q(\sqrt[3]{2}) \subset \R$, ce qui n'est pas le cas des autres.
 
 	Lorsque $P$ est de degré 2, il n'y a qu'un seul corps de rupture. Si $\alpha$ est une racine de $P = X^2 + aX + b$,
 	alors $-a-\alpha$ est l'autre racine.
@@ -104,10 +104,10 @@
 		      On démontre par recurrence sur le degré de $P$ l'énoncé suivant:\\
 		      "Si $\phi : K \to K'$ est un isomorphisme de corps et $P$ un polynôme de $K[X]$ et $L$ et $L'$
 		      sont des corps de décomposition pour $P$ (respectivement pour $\phi(P)$) sur $K$ (respectivement sur $K'$),
-		      alors il existe un morphisme de cors $\psi: L \to L'$ qui prolonge $\phi$"
+		      alors il existe un morphisme de corps $\psi: L \to L'$ qui prolonge $\phi$"
 		      On obtiendra le résultat voulu en prenant $\phi = id_K$.\\
 
-		      Si $P$ est scindé, on a $L=K, L'= K'$ et l'affirmation est evidente.\\
+		      Si $P$ est scindé, on a $L=K, L'=K'$ et l'affirmation est évidente.\\
 
 		      Sinon on considère $\alpha$ une racine de $P$ dans $L\K$ de polynôme minimal $Q$ (on sait que $Q \mid P$).\\
 		      $\phi (Q)$ admet une racine $\alpha' \in L'$ et $K[\alpha]$ et $K'[\alpha']$ sont des corps de rupture pur $Q$(respectivement $\phi(Q)$)
@@ -115,10 +115,10 @@
 
 		      On prolonge $\phi$ en $\phi_1 : K[\alpha] \to K'[\alpha']$ en posant $\phi_1(\alpha) = \alpha'$.\\
 
-		      Soir $R\in K[X]$, $\phi_1(R(\alpha)) = \phi(R)(\alpha')$ ce qui a bien un sense puisque les polynômes minimaux de $\alpha$ et
+		      Soit $R\in K[X]$, $\phi_1(R(\alpha)) = \phi(R)(\alpha')$ ce qui a bien un sens puisque les polynômes minimaux de $\alpha$ et
 		      $\alpha'$ sur $K$ et $K'$ sont $Q$ et $\phi(Q)$ respectivement.\\
 
-		      On a $P(X) = (X-\alpha)P_1$ et $\phi(P)(X) = (X-\alpha'\phi_1(P_1)$, on ajuste a appliquer l'hypothèse de recurrence a $P_1$ et $\phi_1(P_1)$
+		      On a $P(X) = (X-\alpha)P_1$ et $\phi(P)(X) = (X-\alpha'\phi_1(P_1)$, on a juste à appliquer l'hypothèse de récurrence à $P_1$ et $\phi_1(P_1)$
 		      sur $K[\alpha]$ et $K'[\alpha']$.\\
 		      On obtient bien $\psi : L \to L'$ qui prolonge $\phi_1$ et donc $\phi$.
 	\end{itemize}

@@ -1,7 +1,7 @@
-\subsection{Polynômes irreductibles sur un corps fini}
+\subsection{Polynômes irréductibles sur un corps fini}
 
 
-Soit $I(n,q)$ le plus petit polynôme unitaire de degré $n$ irréductible sur $\F_q$ dans $\F_q[X]$.
+Soit $I(n,q)$ le plus petit polynôme unitaire de degré $n$ irréductible sur $\F_q$.
 
 \begin{theorem}
 	Pour tout $q$ puissance d'un nombre premier et $n \geq 1$ on a $I(n,q) > 0$.\\
@@ -54,21 +54,21 @@ Soit $I(n,q)$ le plus petit polynôme unitaire de degré $n$ irréductible sur $
 \begin{proof}[du théorème]
 	Il suffit de montrer que $q^n = \sum_{d|n} d I(d,q)$.\\
 
-	Considérons $Q = X^{q^n} - X$ et sa décomposition en produits de polynômes irréductibles unitaires:
+	Considérons $Q = X^{q^n} - X$ et sa décomposition en produit de polynômes irréductibles unitaires:
 	$$ Q = P_1 \ldots P_r$$
 
 	Tous les $p_j$ sont distincts car si $P_i = P_j (i \neq j)$.\\
 	$$P_j^2 | Q \implies P_j | Q' = - 1$$
 	Montrons que les $P_j$ sont exactement les polynômes irréductibles unitaires dont le degré divise $n$. Soit $P$ un
 	polynôme irréductible de degré $d$. Supposons $d | n$. Soit $x$ dans un corps de rupture pour $P$ tel que $P(x) = 0$.
-	Ce cors est de degré $d$ sur $\F_q$. Il est donc isomorphe à $\F_{q^d}$. Donc $x^{q^d} = x$.\\
+	Ce corps est de degré $d$ sur $\F_q$. Il est donc isomorphe à $\F_{q^d}$. Donc $x^{q^d} = x$.\\
 	Avec $d|n$, on a $x^{q^n} = x$. Soit $m = kd$. Si $\psi_{q^d}$ est le morphisme de Frobenius $x \mapsto x^{q^d}$, alors
 	$$\psi_{q^d}^k(x) = \psi_{q^d} \circ \dots \circ \psi_{q^d}(x) = x^{q^n} = x$$
 	On a $Q(x) = 0$. Comme $P$ est le polynôme minimal de $x$ sur $\F_q$, on a donc $P | Q$.\\
 
 	Réciproquement, si $P | Q$ de degré $d$.\\
-	Toute racine $x$ de $P$ anule $Q$, donc $\F_{q^d}$ est le corps de décomposition de $\Q$ qui contient $\F_{q^d} = F_q[x]$, donc
-	$d | n$ (comme pour le théorème de la base télescopique $\F_q \subset \F_{q^d} \subset \F_{q^n}$).\\
+	Toute racine $x$ de $P$ annule $Q$, donc $\F_{q^d}$ est le corps de décomposition de $\Q$ qui contient $\F_{q^d} = F_q[x]$, donc
+	$d | n$ (comme pour le théorème de la base télescopique, $\F_q \subset \F_{q^d} \subset \F_{q^n}$).\\
 
 	En calculant le degré de $Q$ on en déduit que
 	$$q^n = \sum_i \deg P_i = \sum_{d|n} d I(d,q)$$
