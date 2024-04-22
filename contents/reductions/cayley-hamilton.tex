@@ -70,7 +70,14 @@ $E_1 (M) = \ker (u-id) = \vect (e_1, e_3)$ donc $m_g(1) = 2$.
 
 \begin{proof}
 	Le théorème de Cayley-Hamilton nous dit que $\mu_u \mid \chi_u$. Soit $M = \text {mat} u$.
-	%TODO
+	$$\mu_u(X)I_n = \mu_u(X)I_n - \mu_u(M)$$
+	$$\exists Q_M (X) \text{ tel que } \mu_u(X) I_n = (XI_n-M)Q_M(X)$$
+	$$ X^k I_n - M^k = (XI_n - M) \sum_{i=0}^{k-1} X^i M^{k-1-i} $$
+	$$ (\sum a_k X^k)I_n - \sum a_k M^k =(XI_n-M)\underbrace{(\sum a_k \sum_{i=0}^{k-1}X^iM^{k-1-i})}_{Q_M(X)}$$
+	$$ \det (\underbrace{\mu_u(X) I_n}_{\mu_u(X)^n}) = \det (\underbrace{XI_n-M}_{\chi_u(X)})\det Q_M(X) $$
+	$\chi_u(X)$ divise $\mu_u(X)^n$.
+	Donc les facteurs irréductibles de $\chi_u$ sont les facteurs irréductibles de $\mu_u$.
+
 \end{proof}
 
 
