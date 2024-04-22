@@ -14,12 +14,12 @@
 \end{proof}
 
 
-\subsubsection{Sous espaces caractéristiques}
+\subsubsection{Sous-espaces caractéristiques}
 
 \begin{coro}
 	Soit $u \in \LE$ tel que $\chi_u$ est scindé, i.e. $\chi_u = \prod_{i=1}^r (X - \lambda_i)^{m_i}$.
-	Alors $E$ est la somme directe des sous espaces caractéristiques de $u$. En particulier, a dimension du
-	sous espace caractéristique est égale a la multiplicité de la valeur propre associée.
+	Alors $E$ est la somme directe des sous-espaces caractéristiques de $u$. En particulier, la dimension du
+	sous-espace caractéristique est égale à la multiplicité algébrique de la valeur propre associée.
 \end{coro}
 
 \begin{proof}
@@ -27,7 +27,7 @@
 	Les $P_i$ sont premiers entre eux. D'après le lemme des noyaux, on a que $E = \bigoplus_{i=1}^r \ker P_i(u)$.
 
 	Soit $v_j = \restr u {\ker P_j(u)}$. On a que $\chi_u = \prod_{j=1}^r \chi_{v_j}$. Or la seule racine de $P_i$ est $\lambda_i$,
-	$u$ annule $P_i$ et $\deg P_i = m_i$. Donc $m_i$ est bien la dimension du sous espace caractéristique associé à $\lambda_i$.
+	$u$ annule $P_i$ et $\deg P_i = m_i$. Donc $m_i$ est bien la dimension du sous-espace caractéristique associé à $\lambda_i$.
 	$$ \deg \chi_{v_i} = \dim (\ker P_i(u)) = m_i$$
 \end{proof}
 
@@ -53,7 +53,7 @@ $M - I_3 = \begin{pmatrix}
 $(M - I_3)^2 = 0$ donc $\mu_u = (X-1)^2$, d'où $m_m(1) = 2$.
 
 
-$m_g(\lambda)$ la multiplicité géométrique de $\lambda$ et est la dimension du sous espace caractéristique associé à $\lambda$.
+$m_g(\lambda)$ la multiplicité géométrique de $\lambda$ est la dimension du sous-espace caractéristique associé à $\lambda$.
 
 $E_1 (M) = \ker (u-id) = \vect (e_1, e_3)$ donc $m_g(1) = 2$.
 
@@ -61,7 +61,7 @@ $E_1 (M) = \ker (u-id) = \vect (e_1, e_3)$ donc $m_g(1) = 2$.
 \begin{prop}
 	Soit $u \in \LE$ et $\lambda$ une valeur propre de $u$. On sait que $ 1 \geq m_g(\lambda) \geq m_a(\lambda)$ et $1 \geq m_m(\lambda) \geq m_a(\lambda)$.
 
-	Ceci est une consequence du lemme suivant.
+	Ceci est une conséquence du lemme suivant.
 \end{prop}
 
 \begin{lemma}
