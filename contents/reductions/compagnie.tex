@@ -1,0 +1,94 @@
+\subsection{Matrices compagnies}
+
+
+
+\begin{definition}
+	La matrice compagnie ou matrice de Frobenius d'un polynôme unitaire $P(X)  = X^n - \sum_{k=0}^{n-1} a_k X^k$ est la matrice
+	$$ C_P = \begin{pmatrix}
+			0      & 0      & \ldots & 0      & a_0     \\
+			1      & 0      & \ldots & 0      & a_1     \\
+			0      & 1      & \ldots & 0      & a_2     \\
+			\vdots & \vdots & \ddots & \vdots & \vdots  \\
+			0      & 0      & \ldots & 1      & a_{n-1}
+		\end{pmatrix}$$
+\end{definition}
+
+\begin{remarque}
+	Soit $u$ l'endomorphise de $E$ tel que $C_p$ soit la matrice de $u$ dans une base $\mathcal{B} = (e_1, \ldots, e_n)$.
+	\begin{itemize}
+		\item $u(e_1) = e_2$
+		\item $u(e_j)$ = $e_{j+1}$ pour $j \in \{2, \ldots, n-1\}$
+		\item $u(e_n) = \sum_{k=0}^{n-1} a_k e_{k+1}$
+	\end{itemize}
+
+	%TODO add as a } 
+
+	$u^k(e_1) = e_{k+1}$ pour $i \in \{1, \ldots, n-1\}$
+	$$ (u^n - \sum_{k=0}^{n-1} a_k u^k)(e_1) = 0_E$$
+\end{remarque}
+
+\begin{remarque}
+	Un endomorphisme $u \in \LE$ est cyclique s'il existe une base $\mathcal{B}$ de $E$ telle que la matrice
+	de $u$ dans cette base soit une matrice compagnon.
+\end{remarque}
+
+\begin{proof}
+	%TODO finish proof
+	\begin{itemize}
+		\item Soit $x \in E$ tel que $E_{u,x} = E$, et on choisit $\mathcal{B} = (x, u(x), \dots, u^{n-1}(x))$.
+	\end{itemize}
+\end{proof}
+
+\subsubsection{Matrice caractéristique }
+
+\begin{prop}
+	Le polynôme caractéristique de $C_P$, la matrice compagnon associée à $P$ est $P$.
+\end{prop}
+
+\begin{proof}
+	$\Delta(a_1, \ldots, a_n)(X) = \det (XI_n - C_P) =
+		\begin{vmatrix}
+			X      & 0      & \ldots & 0      & -a_0      \\
+			-1     & X      & \ldots & 0      & -a_1      \\
+			0      & -1     & \ldots & 0      & -a_2      \\
+			\vdots & \vdots & \ddots & \vdots & \vdots    \\
+			0      & 0      & \ldots & -1     & X-a_{n-1}
+		\end{vmatrix}$
+
+	On développe par rapport a la premiere ligne.
+
+	%TODO: Explanation ??
+	$$ \Delta(a_1, \ldots, a_n)(X) = (-1)^{1+1}X\Delta(a_1, \ldots, a_n-1)(X) + (-1)^{1+n}(-1)^{n-1}a_0$$
+	et donc $\Delta(a_1, \ldots, a_n)(X) = X\Delta(a_1, \ldots, a_n-1)(X) - a_0 $
+	Et par itération on obtiens $\Delta(a_1, \ldots, a_n)(X) = X^n - \sum_{k=0}^{n-1} a_k X^k$
+\end{proof}
+
+
+
+\begin{prop}
+	Soit $u \in \LE$ cyclique et $x \in E$ tel que $E_{u,x} = E$. On choisit les $a_k \in $ tels que
+	$$u ^(x) = \sum_{k=0}^{n-1} a_k u^k(x)$$
+	Alors $\chi_u (X) = X^n - \sum_{k=0}^{n-1} a_k X^k$
+\end{prop}
+
+\begin{remarque}
+	Un corollaire direct de ce énoncé dit que tout polynôme unitaire de degré $n$ dans $\K[X]$ est le polynôme caractéristique
+	d'une matrice de $\mathcal{M}_n(\K)$.
+\end{remarque}
+
+\begin{theorem}[Cas cyclique du théorème de Cayley-Hamilton]
+	Soit $u \in \LE$ cyclique, alors $\chi_u $ le polynôme caractéristique de $u$ est un
+	polynôme annulateur de $u$.
+\end{theorem}
+
+\begin{proof}
+	Cela découle du fait que dans $(x, u(x), \ldots, u^{n-1}(x))$ la matrice de $u$ est une matrice compagnon associée à un $P \in \K[X]$.
+	$P$ est construit pour que $P(u)(x) = 0_E$.\\
+	On a $P(u) = 0_{\LE}$ et $\chi_u = P$.
+\end{proof}
+
+
+\begin{example}
+	Une condition nécessaire et suffisante pour qu'un endomorphisme nilpotent soit cyclique est
+	que son indice de nilpotence soit égal à a $n = \dim E$.
+\end{example}

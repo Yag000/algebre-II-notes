@@ -1,0 +1,82 @@
+\subsection{Théorème de Cayley-Hamilton}
+
+
+\begin{theorem}
+	Soit $u \in \LE$ et $\dim E = n$. Alors le polynôme caractéristique de $u$ est un polynôme annulateur de $u$.
+	$$ \chi_u(u) = 0_{\LE}$$
+\end{theorem}
+
+
+\begin{proof}
+	Soit $x \in E$ non nul. $E_{u,x} = \vect(u^k(x))$ stable par $u$.
+
+	%TODO
+\end{proof}
+
+
+\subsubsection{Sous espaces caractéristiques}
+
+\begin{coro}
+	Soit $u \in \LE$ tel que $\chi_u$ est scindé, i.e. $\chi_u = \prod_{i=1}^r (X - \lambda_i)^{m_i}$.
+	Alors $E$ est la somme directe des sous espaces caractéristiques de $u$. En particulier, a dimension du
+	sous espace caractéristique est égale a la multiplicité de la valeur propre associée.
+\end{coro}
+
+\begin{proof}
+	$\chi_u(X) = \prod_{i=1}^r (X - \lambda_i)^{m_i}$ où les $\lambda_i$ sont distincts, avec $P_i(X) = (X - \lambda_i)^{m_i}$.
+	Les $P_i$ sont premiers entre eux. D'après le lemme des noyaux, on a que $E = \bigoplus_{i=1}^r \ker P_i(u)$.
+
+	Soit $v_j = \restr u {\ker P_j(u)}$. On a que $\chi_u = \prod_{j=1}^r \chi_{v_j}$. Or la seule racine de $P_i$ est $\lambda_i$,
+	$u$ annule $P_i$ et $\deg P_i = m_i$. Donc $m_i$ est bien la dimension du sous espace caractéristique associé à $\lambda_i$.
+	$$ \deg \chi_{v_i} = \dim (\ker P_i(u)) = m_i$$
+\end{proof}
+
+\subsubsection{Multiplicités}
+
+$u \in \LE$ , $\lambda$ valeur propre, $\dim E = n$.
+
+$m_a(\lambda)$ la multiplicité algébrique de $\lambda$ est sa multiplicité en tant que racine du polynôme caractéristique $\chi_u$.
+$$ M = \begin{pmatrix}
+		1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
+	\end{pmatrix},  \ m_a(1) = 3$$
+
+$m_m(\lambda)$ la multiplicité minimale de $\lambda$ est la multiplicité de $\lambda$ en tant que racine du polynôme minimal $\mu_u$.
+Dans l'exemple précédent, $m_m(1) = 2$.
+
+On a que $\mu_u \mid \chi_u$ et donc $m_m(\lambda) \leq m_a(\lambda)$.
+
+$\mu_u \in  \set {(X-1), (X-1)^2, (X-1)^3}$
+
+$M - I_3 = \begin{pmatrix}
+		0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0
+	\end{pmatrix} \neq 0$ Donc $\mu_u \neq X - 1$.
+$(M - I_3)^2 = 0$ donc $\mu_u = (X-1)^2$, d'où $m_m(1) = 2$.
+
+
+$m_g(\lambda)$ la multiplicité géométrique de $\lambda$ et est la dimension du sous espace caractéristique associé à $\lambda$.
+
+$E_1 (M) = \kre (u-id) = \vect (e_1, e_3)$ donc $m_g(1) = 2$.
+
+
+\begin{prop}
+	Soit $u \in \LE$ et $\lambda$ une valeur propre de $u$. On sait que $ 1 \geq m_g(\lambda) \geq m_a(\lambda)$ et $1 \geq m_m(\lambda) \geq m_a(\lambda)$.
+
+	Ceci est une consequence du lemme suivant.
+\end{prop}
+
+\begin{lemma}
+	Soit $u \in \LE$. Les polynômes $\mu_u$ et $\chi_u$ ont les mêmes facteurs irréductibles.
+\end{lemma}
+
+\begin{proof}
+	Le théorème de Cayley-Hamilton nous dit que $\mu_u \mid \chi_u$. Soit $M = \text {mat} u$.
+	%TODO
+\end{proof}
+
+
+
+
+
+
+
+
