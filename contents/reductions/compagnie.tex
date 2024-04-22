@@ -1,9 +1,9 @@
-\subsection{Matrices compagnies}
+\subsection{Matrices compagnons}
 
 
 
 \begin{definition}
-	La matrice compagnie ou matrice de Frobenius d'un polynôme unitaire $P(X)  = X^n - \sum_{k=0}^{n-1} a_k X^k$ est la matrice
+	La matrice compagnon ou matrice de Frobenius d'un polynôme unitaire $P(X)  = X^n - \sum_{k=0}^{n-1} a_k X^k$ est la matrice
 	$$ C_P = \begin{pmatrix}
 			0      & 0      & \ldots & 0      & a_0     \\
 			1      & 0      & \ldots & 0      & a_1     \\
@@ -14,7 +14,7 @@
 \end{definition}
 
 \begin{remarque}
-	Soit $u$ l'endomorphise de $E$ tel que $C_p$ soit la matrice de $u$ dans une base $\mathcal{B} = (e_1, \ldots, e_n)$.
+	Soit $u$ l'endomorphisme de $E$ tel que $C_p$ soit la matrice de $u$ dans une base $\mathcal{B} = (e_1, \ldots, e_n)$.
 	\begin{itemize}
 		\item $u(e_1) = e_2$
 		\item $u(e_j)$ = $e_{j+1}$ pour $j \in \{2, \ldots, n-1\}$
@@ -39,10 +39,10 @@
 	\end{itemize}
 \end{proof}
 
-\subsubsection{Matrice caractéristique }
+\subsubsection{Polynôme caractéristique }
 
 \begin{prop}
-	Le polynôme caractéristique de $C_P$, la matrice compagnon associée à $P$ est $P$.
+	Le polynôme caractéristique de $C_P$, la matrice compagnon associée à $P$, est $P$.
 \end{prop}
 
 \begin{proof}
@@ -55,12 +55,12 @@
 			0      & 0      & \ldots & -1     & X-a_{n-1}
 		\end{vmatrix}$
 
-	On développe par rapport a la premiere ligne.
+	On développe par rapport à la premiere ligne.
 
 	%TODO: Explanation ??
 	$$ \Delta(a_1, \ldots, a_n)(X) = (-1)^{1+1}X\Delta(a_1, \ldots, a_n-1)(X) + (-1)^{1+n}(-1)^{n-1}a_0$$
 	et donc $\Delta(a_1, \ldots, a_n)(X) = X\Delta(a_1, \ldots, a_n-1)(X) - a_0 $
-	Et par itération on obtiens $\Delta(a_1, \ldots, a_n)(X) = X^n - \sum_{k=0}^{n-1} a_k X^k$
+	Et par itération on obtient $\Delta(a_1, \ldots, a_n)(X) = X^n - \sum_{k=0}^{n-1} a_k X^k$
 \end{proof}
 
 
@@ -72,7 +72,7 @@
 \end{prop}
 
 \begin{remarque}
-	Un corollaire direct de ce énoncé dit que tout polynôme unitaire de degré $n$ dans $\K[X]$ est le polynôme caractéristique
+	Un corollaire direct de cet énoncé dit que tout polynôme unitaire de degré $n$ dans $\K[X]$ est le polynôme caractéristique
 	d'une matrice de $\mathcal{M}_n(\K)$.
 \end{remarque}
 
@@ -90,5 +90,5 @@
 
 \begin{example}
 	Une condition nécessaire et suffisante pour qu'un endomorphisme nilpotent soit cyclique est
-	que son indice de nilpotence soit égal à a $n = \dim E$.
+	que son indice de nilpotence soit égal à $n = \dim E$.
 \end{example}
