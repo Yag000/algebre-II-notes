@@ -89,3 +89,42 @@ On a aussi $(u^k(x))_{k \in \N}$ base de $E_{u,x}$, donc en particulier, $ d = \
 	On a que $\det M = 0 $ \ssi les $\lambda_j$ sont disjoints et
 	$$ \det M = \prod_{i < j} (\lambda_j-\lambda i)$$
 \end{example}
+
+\begin{prop}
+	Soit $u \in \LE$ cyclique avec $\dim E = n$, alors le degré du polynôme minimal $\mu_u$ est égal a $n$.
+\end{prop}
+
+
+\begin{proof}
+	Soit $x \in E, \ E_{u,x} = \vect \set {u^k(x),  \in \N} = E$.
+	Si $\deg \mu_u < n$, cela implique que la famille $\set {x, u(x), \dots, u^{n-1}(x)}$ est liée, ce qui
+	contredit $E_{u,x} = E$. En effet si $\deg  \mu_u < n$ alors $\exists (\lambda_k) \ \sum_{k=0}^{\deg \mu_u} \lambda_ u^k = 0$
+	En prenant l'image de $x·, \sum_{k=0}^{\deg \mu_u} \lambda_ u^k(x) =0$. Donc $\deg \mu_k \geq n$.
+
+	La famille $\set {x, u(x), \dots , u^{n-1}(x)}$ est une base de $E$. Donc il existe $a_0, \dots, a_{n-1} \in K$ tels que
+	$$ u^n(x) = \sum_{k=0}^{n-1} a_k u^(x) $$
+	Montrons que $P(X) = X^n - \sum_{k=0}^{n-1}a_n X^k$ est un polynôme annulateur de $u$. Il suffit de montrer que $P(u)(u^(x)) = 0_E$
+	pour tout $0 \leq k \leq n-1$ car $\set {x, \dots, u^{n-1}(x)}$ est une base de $E$. C'est vrai pour $k=0$ d'après (*) %TODO add reference.
+
+	\begin{eqnarray*}
+		P(u)(u^k(x)) &=& (P(u) \circ u^k) (x)\\
+		&=& (u^ \circ P(u)) (x)
+	\end{eqnarray*}
+	car les polynômes d'endomorphismes commutent.
+
+	$$ P(u) (u^k(x)) = U^k(\underbrace{P(u)}_{=0} (x)) = 0_E$$
+
+	$P$ est u polynôme annulateur de $u$.
+	$\mu_u \mid P$ donc $\deg \mu_u \leq \deg P = n$.
+\end{proof}
+
+
+\begin{prop}
+	Soit $u \in \LE$ et $\dim E = n = \deg \mu_u$, alors $u$ est cyclique.
+\end{prop}
+
+\begin{proof}
+	On sait que $\exists x \in E$, $\mu_u = \mu_{u,x}$.
+	$\dim E_{u,x} = \deg \mu_{u,x} = n$
+	donc $u$ est cyclique.
+\end{proof}
