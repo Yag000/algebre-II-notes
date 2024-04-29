@@ -41,12 +41,18 @@
 	Dans ce cas, le polynôme minimal de $u$ est de la forme $X^n$ et on appelle $n$ l'indice de nilpotence de $u$.
 \end{definition}
 
-
 \begin{remarque}
-	Si $u$ admet un polynôme minimal $\mu_u$ de degré $d$, alors $dim K[u] = d$.
+	Si $u$ admet un polynôme minimal $\mu_u$ de degré $d$, alors $\dim K[u] = d$.
 \end{remarque}
 
 \begin{proof}
+	$$\phi : \begin{array}{rcl}
+			K[X] & \to     & K[u] \\
+			P    & \mapsto & P(u)
+		\end{array}$$
+	$$\ker \phi = <\mu_U(u)>$$
+	$$ K[u] \cong K[X] / <\mu_U>$$
+	Donc $\dim K[u] = \deg \mu_U = d$
 	%TODO
 \end{proof}
 
