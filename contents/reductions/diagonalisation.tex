@@ -1,0 +1,141 @@
+\subsection{Diagonalisation}
+
+\subsubsection{Critères de diagonalisation}
+
+\begin{remarque}
+	Comme les vecteurs colonnes d'une matrice sont les images des vecteurs de
+	la base, si la matrice est diagonale, alors la base choisie est une base de
+	vecteurs propres de la matrice.
+\end{remarque}
+
+
+\begin{definition}
+	Un endomorphisme est diagonalisable s'il existe une base dans laquelle sa matrice est diagonale, autrement dit, il
+	existe une base de vecteurs propres pour cet endomorphisme ou encore, l'espace $E$ est la somme directe des sous espaces-propres.
+\end{definition}
+
+\begin{rappel}
+	Soit $A, B \in \Mn n K$, on dit que $A$ et $B$ sont semblables s'il existe
+	$P \in \mathcal{M}_n(K)$ inversible telle que $A = PBP^{-1}$. C'est une relation d'équivalence.
+\end{rappel}
+
+\begin{example}
+	Si $M$ est diagonalisable et $M$ admet une seule valeur propre, alors il existe $\lambda \in K$ tel que $M = \lambda I_n$.
+	En effet, $M$ et $I_n$ sont semblables et donc égales car la classe d'équivalence de $I_n$ est $\{I_n\}$.
+\end{example}
+
+
+
+\begin{prop}
+	Soit $u \in \LE$ et $n = \dim E$. Si $u$ admet $n$ valeurs propres distinctes, alors $u$ est diagonalisable.
+	En particulier, une matrice triangulaire supérieure avec des coefficients diagonaux 2 à 2 distincts est diagonalisable.
+\end{prop}
+
+\begin{example}
+	$ \begin{pmatrix}
+			1 & 2 \\
+			0 & 3
+		\end{pmatrix} $ est diagonalisable car ses valeurs propres sont 1 et 3.\\
+	$\begin{pmatrix}
+			1 & 2 \\ 0 & 1
+		\end{pmatrix} $ n'est pas diagonalisable, sinon elle serait semblable à la matrice identité.
+\end{example}
+
+On a montré qu'une famille de $n$ vecteurs propres associés à des valeurs propres distinctes est une famille libre.
+
+\begin{coro}
+	Soit $u \in \LE$. Si $\chi_u$, le polynôme caractéristique de $u$, est scindé à racines simples, alors $u$ est diagonalisable.
+\end{coro}
+
+\begin{proof}
+	Si $\lambda$ est une racine de $\chi_u$, alors $\lambda$ est une valeur propre de $u$. Donc on a $n$ valeurs propres distinctes et donc $u$ est diagonalisable.
+\end{proof}
+
+\begin{theorem}
+	Soit $u \in \LE$ et $n = \dim E$. Les assertions suivantes sont équivalentes:
+	\begin{enumerate}
+		\item $u$ est diagonalisable.
+		\item $u$ admet un polynôme annulateur scindé à racines simples.
+		\item $\mu_u$, le polynôme minimal de $u$ est scindé à racines simples.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	\begin{itemize}
+		\item $(2) \implies (3)$: Si $P$ est scindé à racines simples annulateur alors $\mu_u \mid P$ e donc on a $(3)$.
+		\item $(3) \implies (1)$: On a $\mu_u \prod_{i=1}^n (X - \lambda_i)$ avec les $\lambda_i \in K$. On applique le lemme de noyaux.
+		      $$ E = \ker \mu_u(u) \oplus \bigoplus_{i=1}^n \ker(u - \lambda_i \id_E) $$
+		      Et donc $u$ est diagonalisable.
+		\item $(3) \implies (2)$: $\mu_u$ est annulateur de $u$ et donc on a $(2)$.
+		\item $(1) \implies (2)$: Dans une base des vecteurs propres, la matrice de $u$ s'écrit $D = \begin{pmatrix}
+				      \lambda_1 & 0         & \cdots & 0         \\
+				      0         & \lambda_2 & \cdots & 0         \\
+				      \vdots    & \vdots    & \ddots & \vdots    \\
+				      0         & 0         & \cdots & \lambda_n
+			      \end{pmatrix}$, où les $\lambda_i$ ne sont pas forcement distincts.
+		      Soit $P \in \K[X]$, dans cette base $P(u)$ a comme matrice
+		      $$P(D) = \begin{pmatrix}
+				      P(\lambda_1) & 0            & \cdots & 0            \\
+				      0            & P(\lambda_2) & \cdots & 0            \\
+				      \vdots       & \vdots       & \ddots & \vdots       \\
+				      0            & 0            & \cdots & P(\lambda_n)
+			      \end{pmatrix}$$
+		      On choisit $P = \prod_{i=1}^n (X - \lambda_i)$, alors $P(D) = 0$ et donc $\chi_u$ est annulateur de $u$.
+
+		      Une autre manière:
+		      \begin{eqnarray*}
+			      u \text{ diagonalisable } \implies E &=& \bigoplus_{i=1}^n \ker(u - \lambda_i \id_E) \\
+			      &=& \ker P(u) \\
+			      &\implies& P(u) = 0
+		      \end{eqnarray*}
+	\end{itemize}
+\end{proof}
+
+\begin{example}
+	Les projecteurs sont diagonalisables car ils annulent $X(X-1)$.
+
+	Les symétries vectorielles (qui vérifient $s^2 = \id$) sont diagonalisables
+	si $\car K \neq 2$, car elles annulent $X^2 - 1 = (X-1)(X+1)$ et $-1 \neq 1$.
+\end{example}
+
+
+\begin{example}
+	Soit $a \in \Mn q K$, $C \in \Mn {n-p} K$ et $B \in \mathcal{M}_{q, n-p}(K)$. %TODO Change to capital a 
+	On choisit $A = \begin{pmatrix} a & B \\ 0 & C \end{pmatrix}$.\\
+	$M$ diagonalisable $\implies$ $a$ et $C$ diagonalisables.\\
+	$P(M) = \begin{pmatrix} P(a) & * \\ 0 & P(C) \end{pmatrix}$. Si $P$ scindé à racines simples annule $M$, alors $P$ annule $a$ et $C$.
+	D'après le théorème, $a$ et $C$ sont diagonalisables.
+	La réciproque est fausse.
+\end{example}
+
+
+\begin{prop}
+	Soit $u \in \LE$ diagonalisable et $F$ stable par $U$, alors $\restr u F $ est diagonalisable.
+\end{prop}
+
+\begin{proof}
+	$\exists P$ scindé à racines simples tel que $P(u) = 0$, donc $P(\restr u F) = 0$. Donc $\restr u F$ est diagonalisable.
+\end{proof}
+
+
+\begin{theorem}
+	$u \in \LE$ est diagonalisable \ssi $\chi_u$ est scindé et la dimension de chaque sous espace vectoriel est égale a la multiplicité
+	algébrique de la valeur propre associée.
+\end{theorem}
+
+\begin{proof}
+	$u \text{ diagonalisable } \implies E = \bigoplus_{\lambda \in \spec(u)} \ker(u - \lambda \id_E)$\\
+	et donc $\chi_u = \prod_{\lambda \in \spec(u)} (X - \lambda)^{\dim \ker(u - \lambda \id_E)}$\\
+	$E = \bigoplus_{\lambda \in \spec(u)} \ker(u - \lambda \id_E)^{m_a(\lambda)}$.
+
+	%TODO
+\end{proof}
+
+
+\begin{coro}
+	$u \in \LE$ est diagonalisable \ssi $\sum_{\lambda \in \spec(u)} \dim \ker(u - \lambda \id_E) = \dim E$.
+\end{coro}
+
+\begin{proof}
+	La dimension des sous espaces propres $\leq$ la dimension du sous espace caractéristique. %TODO add stuff.
+\end{proof}
