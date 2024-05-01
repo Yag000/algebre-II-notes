@@ -62,8 +62,8 @@ On a montré qu'une famille de $n$ vecteurs propres associés à des valeurs pro
 
 \begin{proof}
 	\begin{itemize}
-		\item $(2) \implies (3)$: Si $P$ est scindé à racines simples annulateur alors $\mu_u \mid P$ e donc on a $(3)$.
-		\item $(3) \implies (1)$: On a $\mu_u \prod_{i=1}^n (X - \lambda_i)$ avec les $\lambda_i \in K$. On applique le lemme de noyaux.
+		\item $(2) \implies (3)$: Si $P$ est scindé à racines simples annulateur alors $\mu_u \mid P$ et donc on a $(3)$.
+		\item $(3) \implies (1)$: On a $\mu_u \prod_{i=1}^n (X - \lambda_i)$ avec les $\lambda_i \in K$. On applique le lemme des noyaux.
 		      $$ E = \ker \mu_u(u) \oplus \bigoplus_{i=1}^n \ker(u - \lambda_i \id_E) $$
 		      Et donc $u$ est diagonalisable.
 		\item $(3) \implies (2)$: $\mu_u$ est annulateur de $u$ et donc on a $(2)$.
@@ -72,7 +72,7 @@ On a montré qu'une famille de $n$ vecteurs propres associés à des valeurs pro
 				      0         & \lambda_2 & \cdots & 0         \\
 				      \vdots    & \vdots    & \ddots & \vdots    \\
 				      0         & 0         & \cdots & \lambda_n
-			      \end{pmatrix}$, où les $\lambda_i$ ne sont pas forcement distincts.
+			      \end{pmatrix}$, où les $\lambda_i$ ne sont pas forcément distincts.
 		      Soit $P \in \K[X]$, dans cette base $P(u)$ a comme matrice
 		      $$P(D) = \begin{pmatrix}
 				      P(\lambda_1) & 0            & \cdots & 0            \\
